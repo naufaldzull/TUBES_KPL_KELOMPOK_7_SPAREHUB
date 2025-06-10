@@ -1,30 +1,87 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-windows7.0": {}
+    "net8.0-windows7.0": {
+      "Searching/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Searching.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Searching.dll": {}
+        }
+      },
+      "SearchingData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "SearchingModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SearchingData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SearchingData.dll": {}
+        }
+      },
+      "SearchingModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Searching": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SearchingModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SearchingModel.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Searching/1.0.0": {
+      "type": "project",
+      "path": "../Searching/Searching.csproj",
+      "msbuildProject": "../Searching/Searching.csproj"
+    },
+    "SearchingData/1.0.0": {
+      "type": "project",
+      "path": "../SearchingData/SearchingData.csproj",
+      "msbuildProject": "../SearchingData/SearchingData.csproj"
+    },
+    "SearchingModel/1.0.0": {
+      "type": "project",
+      "path": "../SearchingModel/SearchingModel.csproj",
+      "msbuildProject": "../SearchingModel/SearchingModel.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0-windows7.0": []
+    "net8.0-windows7.0": [
+      "Searching >= 1.0.0",
+      "SearchingData >= 1.0.0",
+      "SearchingModel >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\naufa\\.nuget\\packages\\": {},
+    "C:\\Users\\bagas\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\SpareHub.csproj",
+      "projectUniqueName": "C:\\Projecttt\\Tubes KPL GUI 3\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj",
       "projectName": "SpareHub",
-      "projectPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\SpareHub.csproj",
-      "packagesPath": "C:\\Users\\naufa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\obj\\",
+      "projectPath": "C:\\Projecttt\\Tubes KPL GUI 3\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj",
+      "packagesPath": "C:\\Users\\bagas\\.nuget\\packages\\",
+      "outputPath": "C:\\Projecttt\\Tubes KPL GUI 3\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\naufa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bagas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -38,7 +95,17 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Projecttt\\Tubes KPL GUI 3\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SearchingData\\SearchingData.csproj": {
+              "projectPath": "C:\\Projecttt\\Tubes KPL GUI 3\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SearchingData\\SearchingData.csproj"
+            },
+            "C:\\Projecttt\\Tubes KPL GUI 3\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SearchingModel\\SearchingModel.csproj": {
+              "projectPath": "C:\\Projecttt\\Tubes KPL GUI 3\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SearchingModel\\SearchingModel.csproj"
+            },
+            "C:\\Projecttt\\Tubes KPL GUI 3\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Searching\\Searching.csproj": {
+              "projectPath": "C:\\Projecttt\\Tubes KPL GUI 3\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Searching\\Searching.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\naufa\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\naufa\\.nuget\\packages",
+      "C:\\Users\\bagas\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\bagas\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
