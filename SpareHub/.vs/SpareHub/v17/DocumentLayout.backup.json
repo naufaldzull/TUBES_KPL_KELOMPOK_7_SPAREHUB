@@ -3,14 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{84322DB7-72C8-C4A5-87A9-37C411DD1681}|..\\fitur_Order\\fitur_Order.csproj|c:\\users\\lenovo\\desktop\\kpl\\tubes sparehub gui\\tubes_kpl_kelompok_7_sparehub\\fitur_order\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\lenovo\\desktop\\kpl\\tubes sparehub gui\\tubes_kpl_kelompok_7_sparehub\\sparehub\\sistempemesanan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:sistempemesanan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82C25F86-DE3F-189A-A18D-2C25059CCF4A}|..\\unit_Test\\unit_Test.csproj|c:\\users\\lenovo\\desktop\\kpl\\tubes sparehub gui\\tubes_kpl_kelompok_7_sparehub\\unit_test\\ordertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84322DB7-72C8-C4A5-87A9-37C411DD1681}|..\\fitur_Order\\fitur_Order.csproj|c:\\users\\lenovo\\desktop\\kpl\\tubes sparehub gui\\tubes_kpl_kelompok_7_sparehub\\fitur_order\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\sistempemesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 291,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "OrderTests.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\unit_Test\\OrderTests.cs",
               "RelativeDocumentMoniker": "..\\unit_Test\\OrderTests.cs",
@@ -85,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SistemPemesanan.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SistemPemesanan.Designer.cs",
               "RelativeDocumentMoniker": "SistemPemesanan.Designer.cs",
@@ -93,8 +93,7 @@
               "RelativeToolTip": "SistemPemesanan.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T07:23:44.999Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T07:23:44.999Z"
             },
             {
               "$type": "Document",
@@ -122,15 +121,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\Order.cs",
               "RelativeDocumentMoniker": "..\\fitur_Order\\Order.cs",
               "ToolTip": "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\Order.cs",
               "RelativeToolTip": "..\\fitur_Order\\Order.cs",
-              "ViewState": "AgIAAA8BAAAAAAAAAADwv74BAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:16:42.694Z"
+              "WhenOpened": "2025-06-06T11:16:42.694Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

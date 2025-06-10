@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("fitur_Order")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c7b9cc8f9863e5d9cfddf6dc5fa409a7f7186e7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+022a1966bf57e6666d6a0a2ffb72a7470016553c")]
 [assembly: System.Reflection.AssemblyProductAttribute("fitur_Order")]
 [assembly: System.Reflection.AssemblyTitleAttribute("fitur_Order")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

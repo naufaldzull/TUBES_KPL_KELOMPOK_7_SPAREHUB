@@ -57,7 +57,6 @@ namespace SpareHub
 
         private void InitializeComponent()
         {
-            // Tambahkan inisialisasi sebelum setting properti
             nama_produkTxtBox = new TextBox();
             jumlahTxtBox = new TextBox();
             hargaTxtBox = new TextBox();
@@ -68,34 +67,103 @@ namespace SpareHub
             totalLabel = new Label();
             statusLabel = new Label();
             paymentComboBox = new ComboBox();
-
-
-            // Form settings
-            this.Text = "SpareHub - Sistem Pemesanan";
-            this.Size = new Size(900, 600);
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackColor = Color.White;
-
-            // Title
-            Label titleLabel = new Label();
-            titleLabel.Text = "SISTEM PEMESANAN";
-            titleLabel.Font = new Font("Arial", 14, FontStyle.Bold);
-            titleLabel.Location = new Point(250, 10);
-            titleLabel.Size = new Size(400, 30);
+            titleLabel = new Label();
+            ((ISupportInitialize)keranjangDGV).BeginInit();
+            SuspendLayout();
+            // 
+            // nama_produkTxtBox
+            // 
+            nama_produkTxtBox.Location = new Point(0, 0);
+            nama_produkTxtBox.Name = "nama_produkTxtBox";
+            nama_produkTxtBox.Size = new Size(100, 27);
+            nama_produkTxtBox.TabIndex = 0;
+            // 
+            // jumlahTxtBox
+            // 
+            jumlahTxtBox.Location = new Point(0, 0);
+            jumlahTxtBox.Name = "jumlahTxtBox";
+            jumlahTxtBox.Size = new Size(100, 27);
+            jumlahTxtBox.TabIndex = 0;
+            // 
+            // hargaTxtBox
+            // 
+            hargaTxtBox.Location = new Point(0, 0);
+            hargaTxtBox.Name = "hargaTxtBox";
+            hargaTxtBox.Size = new Size(100, 27);
+            hargaTxtBox.TabIndex = 0;
+            // 
+            // tambah_ke_keranjangBTN
+            // 
+            tambah_ke_keranjangBTN.Location = new Point(0, 0);
+            tambah_ke_keranjangBTN.Name = "tambah_ke_keranjangBTN";
+            tambah_ke_keranjangBTN.Size = new Size(75, 23);
+            tambah_ke_keranjangBTN.TabIndex = 0;
+            // 
+            // clearBTN
+            // 
+            clearBTN.Location = new Point(0, 0);
+            clearBTN.Name = "clearBTN";
+            clearBTN.Size = new Size(75, 23);
+            clearBTN.TabIndex = 0;
+            // 
+            // checkoutBTN
+            // 
+            checkoutBTN.Location = new Point(0, 0);
+            checkoutBTN.Name = "checkoutBTN";
+            checkoutBTN.Size = new Size(75, 23);
+            checkoutBTN.TabIndex = 0;
+            // 
+            // keranjangDGV
+            // 
+            keranjangDGV.ColumnHeadersHeight = 29;
+            keranjangDGV.Location = new Point(0, 0);
+            keranjangDGV.Name = "keranjangDGV";
+            keranjangDGV.RowHeadersWidth = 51;
+            keranjangDGV.Size = new Size(240, 150);
+            keranjangDGV.TabIndex = 0;
+            // 
+            // totalLabel
+            // 
+            totalLabel.Location = new Point(0, 0);
+            totalLabel.Name = "totalLabel";
+            totalLabel.Size = new Size(100, 23);
+            totalLabel.TabIndex = 0;
+            // 
+            // statusLabel
+            // 
+            statusLabel.Location = new Point(0, 0);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new Size(100, 23);
+            statusLabel.TabIndex = 0;
+            // 
+            // paymentComboBox
+            // 
+            paymentComboBox.Location = new Point(0, 0);
+            paymentComboBox.Name = "paymentComboBox";
+            paymentComboBox.Size = new Size(121, 28);
+            paymentComboBox.TabIndex = 0;
+            // 
+            // titleLabel
+            // 
+            titleLabel.Font = new Font("Arial", 14F, FontStyle.Bold);
             titleLabel.ForeColor = Color.DarkBlue;
-            this.Controls.Add(titleLabel);
-
-            // Input Section
-            CreateInputSection();
-
-            // Cart Section  
-            CreateCartSection();
-
-            // Payment Section
-            CreatePaymentSection();
-
-            // Status Section
-            CreateStatusSection();
+            titleLabel.Location = new Point(250, 10);
+            titleLabel.Name = "titleLabel";
+            titleLabel.Size = new Size(400, 30);
+            titleLabel.TabIndex = 0;
+            titleLabel.Text = "SISTEM PEMESANAN";
+            titleLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // SistemPemesanan
+            // 
+            BackColor = Color.White;
+            ClientSize = new Size(882, 553);
+            Controls.Add(titleLabel);
+            Name = "SistemPemesanan";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "SpareHub - Sistem Pemesanan";
+            ((ISupportInitialize)keranjangDGV).EndInit();
+            ResumeLayout(false);
         }
 
         private void CreateInputSection()
@@ -376,5 +444,6 @@ namespace SpareHub
             jumlahTxtBox.Focus();
             return true;
         }
+        private Label titleLabel;
     }
 }
