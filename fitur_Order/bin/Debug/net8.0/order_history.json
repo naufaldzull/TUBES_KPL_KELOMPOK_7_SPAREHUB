@@ -1,0 +1,18 @@
+[
+  {
+    "OrderId": "SPH20250610141459",
+    "Items": [
+      {
+        "ProductId": "cd989c28-c3dd-4b91-8319-2287c504110c",
+        "ProductName": "asdaw",
+        "Quantity": 1,
+        "Price": 12000
+      }
+    ],
+    "PaymentMethod": "Transfer",
+    "ShippingMethod": "gosend",
+    "Total": 12000,
+    "Status": "Sedang Diproses",
+    "OrderDate": "2025-06-10T14:14:59.8339288+07:00"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "OrderId": "SPH20250610155041",
+    "Items": [
+      {
+        "ProductId": "2b0e70f7-ee17-4431-985c-16a9e99c05c6",
+        "ProductName": "Lights",
+        "Quantity": 2,
+        "Price": 10000
+      }
+    ],
+    "PaymentMethod": "Transfer",
+    "ShippingMethod": "gosend",
+    "Total": 20000,
+    "Status": "Sedang Diproses",
+    "OrderDate": "2025-06-10T15:50:41.4484702+07:00"
+  }
+]

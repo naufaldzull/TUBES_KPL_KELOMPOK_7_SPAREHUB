@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpareHub", "SpareHub.csproj", "{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fitur_Order", "..\fitur_Order\fitur_Order.csproj", "{84322DB7-72C8-C4A5-87A9-37C411DD1681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unit_Test", "..\unit_Test\unit_Test.csproj", "{82C25F86-DE3F-189A-A18D-2C25059CCF4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84322DB7-72C8-C4A5-87A9-37C411DD1681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84322DB7-72C8-C4A5-87A9-37C411DD1681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84322DB7-72C8-C4A5-87A9-37C411DD1681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84322DB7-72C8-C4A5-87A9-37C411DD1681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82C25F86-DE3F-189A-A18D-2C25059CCF4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C25F86-DE3F-189A-A18D-2C25059CCF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C25F86-DE3F-189A-A18D-2C25059CCF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C25F86-DE3F-189A-A18D-2C25059CCF4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
