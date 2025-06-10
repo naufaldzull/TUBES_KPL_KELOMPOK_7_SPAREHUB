@@ -3,70 +3,90 @@
   "WorkspaceRootPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\formhapusbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formhapusbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D675BD8-B44A-4F10-976C-8F8B5D049371}|..\\ManejemenToko.API\\ManejemenToko.API.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manejementoko.api\\services\\barangapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D675BD8-B44A-4F10-976C-8F8B5D049371}|..\\ManejemenToko.API\\ManejemenToko.API.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manejementoko.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D675BD8-B44A-4F10-976C-8F8B5D049371}|..\\ManejemenToko.API\\ManejemenToko.API.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manejementoko.api\\manejementoko.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\formhapusbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formhapusbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\manajementoko.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:manajementoko.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\manajementoko.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:manajementoko.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\formubahdeskripsi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formubahdeskripsi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\formubahdeskripsi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formubahdeskripsi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9D675BD8-B44A-4F10-976C-8F8B5D049371}|..\\ManejemenToko.API\\ManejemenToko.API.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manejementoko.api\\controllers\\barangapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\formlihatbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formlihatbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\formlihatbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formlihatbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\service\\barangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:service\\barangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\formtambahbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formtambahbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\controller\\barangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:controller\\barangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\formubahdeskripsi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formubahdeskripsi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\model\\barang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:model\\barang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9D675BD8-B44A-4F10-976C-8F8B5D049371}|..\\ManejemenToko.API\\ManejemenToko.API.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manejementoko.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\formtambahbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formtambahbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\manajementoko.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:manajementoko.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\manajementoko.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:manajementoko.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\manajementoko.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:manajementoko.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\controller\\barangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:controller\\barangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\services\\barangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:services\\barangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D675BD8-B44A-4F10-976C-8F8B5D049371}|..\\ManejemenToko.API\\ManejemenToko.API.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manejementoko.api\\model\\barang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\formlihatbarang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formlihatbarang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\formlihatbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formlihatbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\formhapusbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formhapusbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\formubahdeskripsi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formubahdeskripsi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\formtambahbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formtambahbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\formubahdeskripsi.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formubahdeskripsi.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D675BD8-B44A-4F10-976C-8F8B5D049371}|..\\ManejemenToko.API\\ManejemenToko.API.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manejementoko.api\\manejementoko.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\formtambahbarang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:formtambahbarang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manajementoko\\manajementoko.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}|ManajemenToko.csproj|solutionrelative:manajementoko.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D675BD8-B44A-4F10-976C-8F8B5D049371}|..\\ManejemenToko.API\\ManejemenToko.API.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinalbanget\\tubes_kpl_kelompok_7_sparehub\\manejementoko.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -76,7 +96,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -85,184 +105,149 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "..\\ManejemenToko.API\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\WeatherForecast.cs",
-              "RelativeToolTip": "..\\ManejemenToko.API\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "BarangApiController.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\Controllers\\BarangApiController.cs",
+              "RelativeDocumentMoniker": "..\\ManejemenToko.API\\Controllers\\BarangApiController.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\Controllers\\BarangApiController.cs",
+              "RelativeToolTip": "..\\ManejemenToko.API\\Controllers\\BarangApiController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowH4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T14:08:56.671Z"
+              "WhenOpened": "2025-06-08T10:05:23.633Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ManejemenToko.API.csproj",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\ManejemenToko.API.csproj",
-              "RelativeDocumentMoniker": "..\\ManejemenToko.API\\ManejemenToko.API.csproj",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\ManejemenToko.API.csproj",
-              "RelativeToolTip": "..\\ManejemenToko.API\\ManejemenToko.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-06T14:08:38.267Z"
+              "Title": "FormLihatBarang.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormLihatBarang.cs",
+              "RelativeDocumentMoniker": "FormLihatBarang.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormLihatBarang.cs",
+              "RelativeToolTip": "FormLihatBarang.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAgwIkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T10:43:09.644Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormHapusBarang.cs",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormHapusBarang.cs",
-              "RelativeDocumentMoniker": "FormHapusBarang.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormHapusBarang.cs",
-              "RelativeToolTip": "FormHapusBarang.cs",
-              "ViewState": "AgIAABcBAAAAAAAAAAAAACsBAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Barang.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\Model\\Barang.cs",
+              "RelativeDocumentMoniker": "Model\\Barang.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\Model\\Barang.cs",
+              "RelativeToolTip": "Model\\Barang.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAUwE0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T13:52:49.754Z",
+              "WhenOpened": "2025-06-06T11:05:30.51Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FormHapusBarang.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormHapusBarang.cs",
-              "RelativeDocumentMoniker": "FormHapusBarang.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormHapusBarang.cs [Design]",
-              "RelativeToolTip": "FormHapusBarang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T13:52:46.42Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ManajemenToko.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\ManajemenToko.cs",
-              "RelativeDocumentMoniker": "ManajemenToko.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\ManajemenToko.cs [Design]",
-              "RelativeToolTip": "ManajemenToko.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:02:07.172Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ManajemenToko.cs",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\ManajemenToko.cs",
-              "RelativeDocumentMoniker": "ManajemenToko.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\ManajemenToko.cs",
-              "RelativeToolTip": "ManajemenToko.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAgwGcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:37:26.548Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "FormUbahDeskripsi.cs",
               "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormUbahDeskripsi.cs",
               "RelativeDocumentMoniker": "FormUbahDeskripsi.cs",
               "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormUbahDeskripsi.cs",
               "RelativeToolTip": "FormUbahDeskripsi.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAADkBAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAYwHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T13:39:58.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FormUbahDeskripsi.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormUbahDeskripsi.cs",
-              "RelativeDocumentMoniker": "FormUbahDeskripsi.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormUbahDeskripsi.cs [Design]",
-              "RelativeToolTip": "FormUbahDeskripsi.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "BarangApiService.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\Services\\BarangApiService.cs",
+              "RelativeDocumentMoniker": "..\\ManejemenToko.API\\Services\\BarangApiService.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\Services\\BarangApiService.cs",
+              "RelativeToolTip": "..\\ManejemenToko.API\\Services\\BarangApiService.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAAALkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T13:39:55.548Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BarangService.cs",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\Service\\BarangService.cs",
-              "RelativeDocumentMoniker": "Service\\BarangService.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\Service\\BarangService.cs",
-              "RelativeToolTip": "Service\\BarangService.cs",
-              "ViewState": "AgIAAN8AAAAAAAAAAAAAAPMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T12:14:45.826Z"
+              "WhenOpened": "2025-06-08T10:04:14.19Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "BarangService.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\Services\\BarangService.cs",
+              "RelativeDocumentMoniker": "Services\\BarangService.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\Services\\BarangService.cs",
+              "RelativeToolTip": "Services\\BarangService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwJcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T11:02:22.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\Program.cs",
+              "RelativeDocumentMoniker": "..\\ManejemenToko.API\\Program.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\Program.cs",
+              "RelativeToolTip": "..\\ManejemenToko.API\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T10:00:13.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "FormTambahBarang.cs",
               "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormTambahBarang.cs",
               "RelativeDocumentMoniker": "FormTambahBarang.cs",
               "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormTambahBarang.cs",
               "RelativeToolTip": "FormTambahBarang.cs",
-              "ViewState": "AgIAAG0BAAAAAAAAAAAqwJkBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAADwvxQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T11:51:12.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormLihatBarang.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormLihatBarang.cs",
-              "RelativeDocumentMoniker": "FormLihatBarang.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormLihatBarang.cs [Design]",
-              "RelativeToolTip": "FormLihatBarang.cs [Design]",
+              "DocumentIndex": 13,
+              "Title": "Barang.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\Model\\Barang.cs",
+              "RelativeDocumentMoniker": "..\\ManejemenToko.API\\Model\\Barang.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\Model\\Barang.cs",
+              "RelativeToolTip": "..\\ManejemenToko.API\\Model\\Barang.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAywCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T12:07:54.391Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FormLihatBarang.cs",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormLihatBarang.cs",
-              "RelativeDocumentMoniker": "FormLihatBarang.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormLihatBarang.cs",
-              "RelativeToolTip": "FormLihatBarang.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAAC8BAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T12:09:19.193Z"
+              "WhenOpened": "2025-06-08T10:01:25.564Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T10:36:30.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "BarangController.cs",
               "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\Controller\\BarangController.cs",
               "RelativeDocumentMoniker": "Controller\\BarangController.cs",
               "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\Controller\\BarangController.cs",
               "RelativeToolTip": "Controller\\BarangController.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAowMwAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAwHkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T12:13:49.235Z"
+              "WhenOpened": "2025-06-06T12:13:49.235Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Barang.cs",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\Model\\Barang.cs",
-              "RelativeDocumentMoniker": "Model\\Barang.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\Model\\Barang.cs",
-              "RelativeToolTip": "Model\\Barang.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAF0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:05:30.51Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FormTambahBarang.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormTambahBarang.cs",
-              "RelativeDocumentMoniker": "FormTambahBarang.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormTambahBarang.cs [Design]",
-              "RelativeToolTip": "FormTambahBarang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:49:44.352Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 8,
               "Title": "ManajemenToko.Designer.cs",
               "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\ManajemenToko.Designer.cs",
               "RelativeDocumentMoniker": "ManajemenToko.Designer.cs",
@@ -270,11 +255,123 @@
               "RelativeToolTip": "ManajemenToko.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:50:57.522Z"
+              "WhenOpened": "2025-06-06T11:50:57.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ManajemenToko.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\ManajemenToko.cs",
+              "RelativeDocumentMoniker": "ManajemenToko.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\ManajemenToko.cs",
+              "RelativeToolTip": "ManajemenToko.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAswBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T11:37:26.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ManajemenToko.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\ManajemenToko.cs",
+              "RelativeDocumentMoniker": "ManajemenToko.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\ManajemenToko.cs [Design]",
+              "RelativeToolTip": "ManajemenToko.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T11:02:07.172Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormLihatBarang.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormLihatBarang.Designer.cs",
+              "RelativeDocumentMoniker": "FormLihatBarang.Designer.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormLihatBarang.Designer.cs",
+              "RelativeToolTip": "FormLihatBarang.Designer.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAD4vycAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T11:06:45.657Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "FormLihatBarang.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormLihatBarang.cs",
+              "RelativeDocumentMoniker": "FormLihatBarang.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormLihatBarang.cs [Design]",
+              "RelativeToolTip": "FormLihatBarang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T11:02:55.692Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormHapusBarang.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormHapusBarang.cs",
+              "RelativeDocumentMoniker": "FormHapusBarang.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormHapusBarang.cs [Design]",
+              "RelativeToolTip": "FormHapusBarang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T13:52:46.42Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FormUbahDeskripsi.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormUbahDeskripsi.cs",
+              "RelativeDocumentMoniker": "FormUbahDeskripsi.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormUbahDeskripsi.cs [Design]",
+              "RelativeToolTip": "FormUbahDeskripsi.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T13:39:55.548Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FormTambahBarang.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormTambahBarang.cs",
+              "RelativeDocumentMoniker": "FormTambahBarang.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormTambahBarang.cs [Design]",
+              "RelativeToolTip": "FormTambahBarang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T11:49:44.352Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ManejemenToko.API.csproj",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\ManejemenToko.API.csproj",
+              "RelativeDocumentMoniker": "..\\ManejemenToko.API\\ManejemenToko.API.csproj",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\ManejemenToko.API.csproj",
+              "RelativeToolTip": "..\\ManejemenToko.API\\ManejemenToko.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-06T14:08:38.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FormUbahDeskripsi.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormUbahDeskripsi.Designer.cs",
+              "RelativeDocumentMoniker": "FormUbahDeskripsi.Designer.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormUbahDeskripsi.Designer.cs",
+              "RelativeToolTip": "FormUbahDeskripsi.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T10:39:11.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "FormTambahBarang.Designer.cs",
               "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManajemenToko\\FormTambahBarang.Designer.cs",
               "RelativeDocumentMoniker": "FormTambahBarang.Designer.cs",
@@ -282,7 +379,20 @@
               "RelativeToolTip": "FormTambahBarang.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:50:48.032Z"
+              "WhenOpened": "2025-06-06T11:50:48.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\ManejemenToko.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\appsettings.json",
+              "RelativeToolTip": "..\\ManejemenToko.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-08T09:59:40.535Z"
             }
           ]
         }

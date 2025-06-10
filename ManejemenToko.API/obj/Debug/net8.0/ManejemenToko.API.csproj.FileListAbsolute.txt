@@ -35,3 +35,4 @@ C:\Users\naufa\OneDrive\Documents\SMT 4\KPL\TubesFinalBanget\TUBES_KPL_KELOMPOK_
 C:\Users\naufa\OneDrive\Documents\SMT 4\KPL\TubesFinalBanget\TUBES_KPL_KELOMPOK_7_SPAREHUB\ManejemenToko.API\obj\Debug\net8.0\ManejemenToko.API.pdb
 C:\Users\naufa\OneDrive\Documents\SMT 4\KPL\TubesFinalBanget\TUBES_KPL_KELOMPOK_7_SPAREHUB\ManejemenToko.API\obj\Debug\net8.0\ManejemenToko.API.genruntimeconfig.cache
 C:\Users\naufa\OneDrive\Documents\SMT 4\KPL\TubesFinalBanget\TUBES_KPL_KELOMPOK_7_SPAREHUB\ManejemenToko.API\obj\Debug\net8.0\ref\ManejemenToko.API.dll
+C:\Users\naufa\OneDrive\Documents\SMT 4\KPL\TubesFinalBanget\TUBES_KPL_KELOMPOK_7_SPAREHUB\ManejemenToko.API\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll

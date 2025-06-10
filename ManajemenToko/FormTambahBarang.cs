@@ -1,4 +1,5 @@
 ﻿using ManajemenToko.Controller;
+using ManajemenToko.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,328 +14,181 @@ namespace ManajemenToko
 {
     public partial class FormTambahBarang: Form
     {
-        // Controls
-        private TextBox txtNama;
-        private TextBox txtDeskripsi;
-        private TextBox txtHarga;
-        private TextBox txtStok;
-        private TextBox txtModel;
-        private TextBox txtMerek;
-        private ComboBox cmbJenis;
-        private Label lblNama;
-        private Label lblDeskripsi;
-        private Label lblHarga;
-        private Label lblStok;
-        private Label lblModel;
-        private Label lblMerek;
-        private Label lblJenis;
-        private Label lblJudul;
-        private Button btnSimpan;
-        private Button btnBatal;
-
-        // Controller
         private readonly BarangController _controller;
+        private readonly BarangService _barangService;
+
+        // Basic controls only
+        private TextBox txtNama, txtDeskripsi, txtHarga, txtStok, txtModel, txtMerek;
+        private ComboBox cmbJenis;
+        private Button btnSimpan, btnBatal;
 
         public FormTambahBarang()
         {
             InitializeComponent();
             _controller = new BarangController();
-            SetupCustomControls();
+            _barangService = BarangService.Instance;
+            SetupForm();
             LoadJenisData();
         }
 
-        private void SetupCustomControls()
+        private void SetupForm()
         {
-            // Initialize controls
-            this.txtNama = new TextBox();
-            this.txtDeskripsi = new TextBox();
-            this.txtHarga = new TextBox();
-            this.txtStok = new TextBox();
-            this.txtModel = new TextBox();
-            this.txtMerek = new TextBox();
-            this.cmbJenis = new ComboBox();
-            this.lblNama = new Label();
-            this.lblDeskripsi = new Label();
-            this.lblHarga = new Label();
-            this.lblStok = new Label();
-            this.lblModel = new Label();
-            this.lblMerek = new Label();
-            this.lblJenis = new Label();
-            this.lblJudul = new Label();
-            this.btnSimpan = new Button();
-            this.btnBatal = new Button();
+            // Form setup
+            Text = "Tambah Sparepart Motor";
+            Size = new Size(450, 400);
+            StartPosition = FormStartPosition.CenterScreen;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
 
-            this.SuspendLayout();
+            // Create and position controls
+            int y = 20;
 
-            // Form Properties
-            this.Text = "Tambah Sparepart Motor";
-            this.Size = new Size(500, 500);
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.BackColor = Color.White;
+            CreateLabel("TAMBAH SPAREPART", 20, y, 400, true);
+            y += 40;
 
-            // Label Judul
-            this.lblJudul.Text = "TAMBAH SPAREPART MOTOR";
-            this.lblJudul.Font = new Font("Arial", 14, FontStyle.Bold);
-            this.lblJudul.ForeColor = Color.DarkBlue;
-            this.lblJudul.Location = new Point(120, 20);
-            this.lblJudul.Size = new Size(260, 25);
-            this.lblJudul.TextAlign = ContentAlignment.MiddleCenter;
+            txtNama = CreateTextBox("Nama Sparepart:", 20, y);
+            y += 50;
 
-            // Label & TextBox Nama
-            this.lblNama.Text = "Nama Sparepart: *";
-            this.lblNama.Location = new Point(50, 70);
-            this.lblNama.Size = new Size(120, 20);
-            this.lblNama.Font = new Font("Arial", 10);
-            this.lblNama.ForeColor = Color.Black;
+            txtDeskripsi = CreateTextBox("Deskripsi:", 20, y, 60);
+            txtDeskripsi.Multiline = true;
+            y += 70;
 
-            this.txtNama.Location = new Point(180, 68);
-            this.txtNama.Size = new Size(250, 22);
-            this.txtNama.Font = new Font("Arial", 10);
+            // Optional fields - simplified
+            txtModel = CreateTextBox("Model:", 20, y);
+            txtMerek = CreateTextBox("Merek:", 230, y);
+            y += 50;
 
-            // Label & TextBox Deskripsi
-            this.lblDeskripsi.Text = "Deskripsi: *";
-            this.lblDeskripsi.Location = new Point(50, 110);
-            this.lblDeskripsi.Size = new Size(120, 20);
-            this.lblDeskripsi.Font = new Font("Arial", 10);
+            cmbJenis = CreateComboBox("Jenis:", 20, y);
+            y += 50;
 
-            this.txtDeskripsi.Location = new Point(180, 108);
-            this.txtDeskripsi.Size = new Size(250, 50);
-            this.txtDeskripsi.Font = new Font("Arial", 10);
-            this.txtDeskripsi.Multiline = true;
-            this.txtDeskripsi.ScrollBars = ScrollBars.Vertical;
+            txtHarga = CreateTextBox("Harga (Rp):", 20, y);
+            txtStok = CreateTextBox("Stok:", 230, y);
+            y += 60;
 
-            // Label & TextBox Model
-            this.lblModel.Text = "Model Barang:";
-            this.lblModel.Location = new Point(50, 180);
-            this.lblModel.Size = new Size(120, 20);
-            this.lblModel.Font = new Font("Arial", 10);
-            this.lblModel.ForeColor = Color.Gray;
+            // Buttons
+            btnSimpan = CreateButton("Simpan", 150, y, Color.LightGreen);
+            btnSimpan.Click += BtnSimpan_Click;
 
-            this.txtModel.Location = new Point(180, 178);
-            this.txtModel.Size = new Size(150, 22);
-            this.txtModel.Font = new Font("Arial", 10);
-            this.txtModel.PlaceholderText = "Contoh: NGK G-Power";
+            btnBatal = CreateButton("Batal", 260, y, Color.LightCoral);
+            btnBatal.Click += (s, e) => Close();
+        }
 
-            // Label & TextBox Merek
-            this.lblMerek.Text = "Merek Barang:";
-            this.lblMerek.Location = new Point(50, 220);
-            this.lblMerek.Size = new Size(120, 20);
-            this.lblMerek.Font = new Font("Arial", 10);
-            this.lblMerek.ForeColor = Color.Gray;
+        // Helper methods untuk kurangi duplicate code
+        private Label CreateLabel(string text, int x, int y, int width = 100, bool isTitle = false)
+        {
+            var lbl = new Label
+            {
+                Text = text,
+                Location = new Point(x, y),
+                Size = new Size(width, 20),
+                Font = isTitle ? new Font("Arial", 12, FontStyle.Bold) : new Font("Arial", 9)
+            };
+            Controls.Add(lbl);
+            return lbl;
+        }
 
-            this.txtMerek.Location = new Point(180, 218);
-            this.txtMerek.Size = new Size(150, 22);
-            this.txtMerek.Font = new Font("Arial", 10);
-            this.txtMerek.PlaceholderText = "Contoh: NGK, Aspira";
+        private TextBox CreateTextBox(string labelText, int x, int y, int height = 25)
+        {
+            CreateLabel(labelText, x, y);
+            var txt = new TextBox
+            {
+                Location = new Point(x + 100, y - 2),
+                Size = new Size(100, height),
+                Font = new Font("Arial", 9)
+            };
+            Controls.Add(txt);
+            return txt;
+        }
 
-            // Label & ComboBox Jenis
-            this.lblJenis.Text = "Jenis Sparepart: *";
-            this.lblJenis.Location = new Point(50, 260);
-            this.lblJenis.Size = new Size(120, 20);
-            this.lblJenis.Font = new Font("Arial", 10);
-            this.lblJenis.ForeColor = Color.Black;
+        private ComboBox CreateComboBox(string labelText, int x, int y)
+        {
+            CreateLabel(labelText, x, y);
+            var cmb = new ComboBox
+            {
+                Location = new Point(x + 100, y - 2),
+                Size = new Size(150, 25),
+                DropDownStyle = ComboBoxStyle.DropDownList,
+                Font = new Font("Arial", 9)
+            };
+            Controls.Add(cmb);
+            return cmb;
+        }
 
-            this.cmbJenis.Location = new Point(180, 258);
-            this.cmbJenis.Size = new Size(200, 22);
-            this.cmbJenis.Font = new Font("Arial", 10);
-            this.cmbJenis.DropDownStyle = ComboBoxStyle.DropDownList;
-
-            // Label & TextBox Harga
-            this.lblHarga.Text = "Harga (Rp): *";
-            this.lblHarga.Location = new Point(50, 300);
-            this.lblHarga.Size = new Size(120, 20);
-            this.lblHarga.Font = new Font("Arial", 10);
-
-            this.txtHarga.Location = new Point(180, 298);
-            this.txtHarga.Size = new Size(150, 22);
-            this.txtHarga.Font = new Font("Arial", 10);
-            this.txtHarga.KeyPress += TxtHarga_KeyPress;
-            this.txtHarga.PlaceholderText = "Contoh: 150000";
-
-            // Label & TextBox Stok
-            this.lblStok.Text = "Stok: *";
-            this.lblStok.Location = new Point(50, 340);
-            this.lblStok.Size = new Size(120, 20);
-            this.lblStok.Font = new Font("Arial", 10);
-
-            this.txtStok.Location = new Point(180, 338);
-            this.txtStok.Size = new Size(100, 22);
-            this.txtStok.Font = new Font("Arial", 10);
-            this.txtStok.KeyPress += TxtStok_KeyPress;
-            this.txtStok.PlaceholderText = "Contoh: 10";
-
-            // Button Simpan
-            this.btnSimpan.Text = "Simpan";
-            this.btnSimpan.Location = new Point(180, 390);
-            this.btnSimpan.Size = new Size(100, 35);
-            this.btnSimpan.BackColor = Color.LightGreen;
-            this.btnSimpan.Font = new Font("Arial", 10, FontStyle.Bold);
-            this.btnSimpan.Cursor = Cursors.Hand;
-            this.btnSimpan.Click += BtnSimpan_Click;
-
-            // Button Batal
-            this.btnBatal.Text = "Batal";
-            this.btnBatal.Location = new Point(290, 390);
-            this.btnBatal.Size = new Size(100, 35);
-            this.btnBatal.BackColor = Color.LightCoral;
-            this.btnBatal.Font = new Font("Arial", 10, FontStyle.Bold);
-            this.btnBatal.Cursor = Cursors.Hand;
-            this.btnBatal.Click += BtnBatal_Click;
-
-            // Label info
-            Label lblInfo = new Label();
-            lblInfo.Text = "* = Field wajib diisi";
-            lblInfo.Location = new Point(50, 440);
-            lblInfo.Size = new Size(150, 15);
-            lblInfo.Font = new Font("Arial", 8, FontStyle.Italic);
-            lblInfo.ForeColor = Color.Gray;
-
-            // Add controls to form
-            this.Controls.Add(this.lblJudul);
-            this.Controls.Add(this.lblNama);
-            this.Controls.Add(this.txtNama);
-            this.Controls.Add(this.lblDeskripsi);
-            this.Controls.Add(this.txtDeskripsi);
-            this.Controls.Add(this.lblModel);
-            this.Controls.Add(this.txtModel);
-            this.Controls.Add(this.lblMerek);
-            this.Controls.Add(this.txtMerek);
-            this.Controls.Add(this.lblJenis);
-            this.Controls.Add(this.cmbJenis);
-            this.Controls.Add(this.lblHarga);
-            this.Controls.Add(this.txtHarga);
-            this.Controls.Add(this.lblStok);
-            this.Controls.Add(this.txtStok);
-            this.Controls.Add(this.btnSimpan);
-            this.Controls.Add(this.btnBatal);
-            this.Controls.Add(lblInfo);
-
-            this.ResumeLayout(false);
+        private Button CreateButton(string text, int x, int y, Color color)
+        {
+            var btn = new Button
+            {
+                Text = text,
+                Location = new Point(x, y),
+                Size = new Size(90, 30),
+                BackColor = color,
+                Font = new Font("Arial", 9, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
+            Controls.Add(btn);
+            return btn;
         }
 
         private void LoadJenisData()
         {
             try
             {
-                // Load jenis dari controller
                 string[] jenisOptions = _controller.GetAvailableJenis();
-
-                cmbJenis.Items.Clear();
-                cmbJenis.Items.Add("-- Pilih Jenis --"); // Default option
+                cmbJenis.Items.Add("-- Pilih --");
                 cmbJenis.Items.AddRange(jenisOptions);
-                cmbJenis.SelectedIndex = 0; // Set default selection
+                cmbJenis.SelectedIndex = 0;
             }
-            catch (Exception ex)
+            catch
             {
-                _controller.ShowErrorMessage($"Error loading jenis data: {ex.Message}");
+                MessageBox.Show("Error loading jenis data", "Error");
             }
         }
 
-        // Validasi input harga (angka + decimal)
-        private void TxtHarga_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Allow digits, decimal point, backspace
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != '\b')
-            {
-                e.Handled = true;
-            }
-
-            // Allow only one decimal point
-            if (e.KeyChar == '.' && txtHarga.Text.Contains("."))
-            {
-                e.Handled = true;
-            }
-        }
-
-        // Validasi input stok (angka only)
-        private void TxtStok_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Allow only digits and backspace
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
-            {
-                e.Handled = true;
-            }
-        }
-
-        // Event handler button Simpan
         private void BtnSimpan_Click(object sender, EventArgs e)
         {
             try
             {
-                // Ambil input dari form
-                string nama = txtNama.Text;
-                string deskripsi = txtDeskripsi.Text;
-                string harga = txtHarga.Text;
-                string stok = txtStok.Text;
-                string model = txtModel.Text;
-                string merek = txtMerek.Text;
-                string jenis = cmbJenis.SelectedIndex > 0 ? cmbJenis.SelectedItem.ToString() : "";
-
-                // Validasi menggunakan controller
-                var validationResult = _controller.ValidateBarangInput(nama, deskripsi, harga, stok, jenis);
-                if (!validationResult.IsValid)
+                // Basic validation
+                if (string.IsNullOrWhiteSpace(txtNama.Text) ||
+                    string.IsNullOrWhiteSpace(txtDeskripsi.Text) ||
+                    string.IsNullOrWhiteSpace(txtHarga.Text) ||
+                    string.IsNullOrWhiteSpace(txtStok.Text) ||
+                    cmbJenis.SelectedIndex <= 0)
                 {
-                    _controller.ShowErrorMessage(validationResult.ErrorMessage, "Validasi Error");
+                    MessageBox.Show("Lengkapi semua field yang wajib!", "Error");
                     return;
                 }
 
-                // Panggil controller untuk tambah barang
-                var result = _controller.TambahBarang(nama, deskripsi, harga, stok, model, merek, jenis);
+                // Tambah barang
+                var result = _controller.TambahBarang(
+                    txtNama.Text,
+                    txtDeskripsi.Text,
+                    txtHarga.Text,
+                    txtStok.Text,
+                    txtModel.Text,
+                    txtMerek.Text,
+                    cmbJenis.SelectedItem.ToString()
+                );
 
                 if (result.Success)
                 {
-                    // Berhasil - show success message
-                    _controller.ShowSuccessMessage(result.Message);
-
-                    // Clear form setelah berhasil
+                    MessageBox.Show(result.Message, "Success");
                     ClearForm();
+
+                    // Sync to API in background (simplified)
+                    _ = _barangService.SyncToApiAsync();
                 }
                 else
                 {
-                    // Gagal - show error message
-                    _controller.ShowErrorMessage(result.Message);
+                    MessageBox.Show(result.Message, "Error");
                 }
             }
             catch (Exception ex)
             {
-                _controller.ShowErrorMessage($"Error tidak terduga: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}", "Error");
             }
         }
 
-        // Event handler button Batal
-        private void BtnBatal_Click(object sender, EventArgs e)
-        {
-            // Cek apakah ada data yang belum disimpan
-            if (HasUnsavedChanges())
-            {
-                bool konfirmasi = _controller.ShowConfirmationDialog(
-                    "Ada data yang belum disimpan. Yakin mau keluar?",
-                    "Konfirmasi Keluar");
-
-                if (!konfirmasi)
-                {
-                    return; // User memilih tidak keluar
-                }
-            }
-
-            this.Close();
-        }
-
-        // Check apakah ada perubahan yang belum disimpan
-        private bool HasUnsavedChanges()
-        {
-            return !string.IsNullOrWhiteSpace(txtNama.Text) ||
-                   !string.IsNullOrWhiteSpace(txtDeskripsi.Text) ||
-                   !string.IsNullOrWhiteSpace(txtHarga.Text) ||
-                   !string.IsNullOrWhiteSpace(txtStok.Text) ||
-                   !string.IsNullOrWhiteSpace(txtModel.Text) ||
-                   !string.IsNullOrWhiteSpace(txtMerek.Text) ||
-                   cmbJenis.SelectedIndex > 0;
-        }
-
-        // Clear semua input
         private void ClearForm()
         {
             txtNama.Clear();
@@ -343,70 +197,8 @@ namespace ManajemenToko
             txtStok.Clear();
             txtModel.Clear();
             txtMerek.Clear();
-            cmbJenis.SelectedIndex = 0; // Reset ke default
-            txtNama.Focus(); // Set focus ke input pertama
+            cmbJenis.SelectedIndex = 0;
         }
 
-        // Method untuk set data (kalau dipanggil dari form lain untuk edit)
-        public void SetBarangData(string nama, string deskripsi, decimal harga, int stok, string model, string merek, string jenis)
-        {
-            txtNama.Text = nama;
-            txtDeskripsi.Text = deskripsi;
-            txtHarga.Text = harga.ToString();
-            txtStok.Text = stok.ToString();
-            txtModel.Text = model;
-            txtMerek.Text = merek;
-
-            // Set jenis di combobox
-            for (int i = 0; i < cmbJenis.Items.Count; i++)
-            {
-                if (cmbJenis.Items[i].ToString() == jenis)
-                {
-                    cmbJenis.SelectedIndex = i;
-                    break;
-                }
-            }
-        }
-
-        // Method untuk mengecek apakah form dalam mode edit
-        private bool _isEditMode = false;
-        private int _editId = 0;
-
-        public void SetEditMode(int id, string nama, string deskripsi, decimal harga, int stok, string model, string merek, string jenis)
-        {
-            _isEditMode = true;
-            _editId = id;
-
-            // Update UI untuk mode edit
-            this.Text = "Edit Sparepart Motor";
-            this.lblJudul.Text = "EDIT SPAREPART MOTOR";
-            this.btnSimpan.Text = "Update";
-
-            // Set data ke form
-            SetBarangData(nama, deskripsi, harga, stok, model, merek, jenis);
-        }
-
-        // Quick fill methods untuk testing (bisa dihapus nanti)
-        private void FillSampleData1()
-        {
-            txtNama.Text = "Kampas Rem Depan";
-            txtDeskripsi.Text = "Kampas rem depan original untuk motor matic";
-            txtModel.Text = "Genuine Part";
-            txtMerek.Text = "Honda";
-            cmbJenis.SelectedItem = "Kaki-kaki";
-            txtHarga.Text = "150000";
-            txtStok.Text = "10";
-        }
-
-        private void FillSampleData2()
-        {
-            txtNama.Text = "Busi Iridium";
-            txtDeskripsi.Text = "Busi iridium premium tahan lama";
-            txtModel.Text = "G-Power";
-            txtMerek.Text = "NGK";
-            cmbJenis.SelectedItem = "Kelistrikan";
-            txtHarga.Text = "85000";
-            txtStok.Text = "15";
-        }
     }
 }
