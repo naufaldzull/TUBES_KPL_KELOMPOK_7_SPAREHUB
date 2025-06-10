@@ -13,7 +13,7 @@
       "AbsoluteMoniker": "D:0:0:{84322DB7-72C8-C4A5-87A9-37C411DD1681}|..\\fitur_Order\\fitur_Order.csproj|c:\\users\\lenovo\\desktop\\kpl\\tubes sparehub gui\\tubes_kpl_kelompok_7_sparehub\\fitur_order\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\lenovo\\desktop\\kpl\\tubes sparehub gui\\tubes_kpl_kelompok_7_sparehub\\sparehub\\sistempemesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\sistempemesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:sistempemesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -58,8 +58,7 @@
               "RelativeToolTip": "..\\unit_Test\\OrderTests.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T08:51:59.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T08:51:59.421Z"
             },
             {
               "$type": "Document",
@@ -70,8 +69,7 @@
               "ToolTip": "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SistemPemesanan.cs [Design]",
               "RelativeToolTip": "SistemPemesanan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T08:29:31.987Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-10T08:29:31.987Z"
             },
             {
               "$type": "Document",
@@ -83,8 +81,7 @@
               "RelativeToolTip": "SistemPemesanan.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAqwA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T07:23:59.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T07:23:59.448Z"
             },
             {
               "$type": "Document",
@@ -94,7 +91,7 @@
               "RelativeDocumentMoniker": "SistemPemesanan.Designer.cs",
               "ToolTip": "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SistemPemesanan.Designer.cs",
               "RelativeToolTip": "SistemPemesanan.Designer.cs",
-              "ViewState": "AgIAADYBAAAAAAAAAAAAAEgBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T07:23:44.999Z",
               "EditorCaption": ""
@@ -109,8 +106,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:35:06.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T11:35:06.56Z"
             },
             {
               "$type": "Document",
@@ -134,8 +130,7 @@
               "RelativeToolTip": "..\\fitur_Order\\Order.cs",
               "ViewState": "AgIAAA8BAAAAAAAAAADwv74BAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:16:42.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T11:16:42.694Z"
             },
             {
               "$type": "Document",

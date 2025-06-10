@@ -9,20 +9,10 @@ using fitur_Order;
 
 namespace SpareHub
 {
-    /// <summary>
-    /// Form pemesanan sederhana untuk SpareHub
-    /// SIMPLE: Gak ribet, mudah dipahami pemula
-    /// </summary>
     public partial class SistemPemesanan : Form
     {
-        /// <summary>
-        /// Required designer variable - PERBAIKAN: Tambah ini untuk fix error
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used - PERBAIKAN: Override Dispose yang proper
-        /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
@@ -65,10 +55,6 @@ namespace SpareHub
             LoadCartToGrid();
         }
 
-
-        /// <summary>
-        /// Setup form - SIMPLE: Semua dalam satu method
-        /// </summary>
         private void InitializeComponent()
         {
             // Tambahkan inisialisasi sebelum setting properti
@@ -112,9 +98,6 @@ namespace SpareHub
             CreateStatusSection();
         }
 
-        /// <summary>
-        /// Buat bagian input produk - SIMPLE: Gak pake groupbox ribet
-        /// </summary>
         private void CreateInputSection()
         {
             // Labels
@@ -136,7 +119,7 @@ namespace SpareHub
             hargaLabel.Size = new Size(60, 20);
             this.Controls.Add(hargaLabel);
 
-            // TextBoxes - PERBAIKAN: Gak perlu new lagi karena udah di-initialize
+            // TextBoxes 
 
             nama_produkTxtBox.Location = new Point(20, 85);
             nama_produkTxtBox.Size = new Size(250, 25);
@@ -153,7 +136,7 @@ namespace SpareHub
             hargaTxtBox.TextChanged += hargaTxtBox_TextChanged;
             this.Controls.Add(hargaTxtBox);
 
-            // Add Button - PERBAIKAN: Gak perlu new lagi
+            // Add Button
             tambah_ke_keranjangBTN.Text = "Tambah ke Keranjang";
             tambah_ke_keranjangBTN.Location = new Point(600, 83);
             tambah_ke_keranjangBTN.Size = new Size(150, 30);
@@ -163,9 +146,7 @@ namespace SpareHub
             this.Controls.Add(tambah_ke_keranjangBTN);
         }
 
-        /// <summary>
-        /// Buat bagian keranjang - SIMPLE: Langsung bikin DataGridView
-        /// </summary>
+
         private void CreateCartSection()
         {
             Label cartLabel = new Label();
@@ -201,9 +182,6 @@ namespace SpareHub
             this.Controls.Add(clearBTN);
         }
 
-        /// <summary>
-        /// Buat bagian pembayaran - SIMPLE: Combo + Button aja
-        /// </summary>
         private void CreatePaymentSection()
         {
             Label paymentLabel = new Label();
@@ -227,9 +205,6 @@ namespace SpareHub
             this.Controls.Add(checkoutBTN);
         }
 
-        /// <summary>
-        /// Buat status bar - SIMPLE: Label aja
-        /// </summary>
         private void CreateStatusSection()
         {
             // PERBAIKAN: Gak perlu new lagi
@@ -242,9 +217,6 @@ namespace SpareHub
             this.Controls.Add(statusLabel);
         }
 
-        /// <summary>
-        /// Setup awal form - SIMPLE: Load data aja
-        /// </summary>
         private void SetupForm()
         {
             // Load payment methods
@@ -256,9 +228,6 @@ namespace SpareHub
             order.OnCartUpdated += OnCartUpdated;
         }
 
-        /// <summary>
-        /// Load cart ke grid - KEEP: Method original lu
-        /// </summary>
         private void LoadCartToGrid()
         {
             var cart = order.LoadCart();
@@ -266,9 +235,6 @@ namespace SpareHub
             UpdateTotal();
         }
 
-        /// <summary>
-        /// Update total harga - SIMPLE: Hitung total aja
-        /// </summary>
         private void UpdateTotal()
         {
             var cart = order.LoadCart();
@@ -280,17 +246,11 @@ namespace SpareHub
             totalLabel.Text = $"Total: Rp {total:N0}";
         }
 
-        /// <summary>
-        /// Update status label - SIMPLE: Ganti text aja
-        /// </summary>
         private void UpdateStatus(string message)
         {
             statusLabel.Text = message;
         }
 
-        /// <summary>
-        /// Event ketika cart diupdate - SIMPLE: Refresh grid
-        /// </summary>
         private void OnCartUpdated(List<CartItem> cart)
         {
             LoadCartToGrid();
@@ -318,9 +278,6 @@ namespace SpareHub
 
         }
 
-        /// <summary>
-        /// Tambah produk ke keranjang - IMPROVED: Pake method baru tapi tetep simple
-        /// </summary>
         private void tambah_ke_keranjangBTN_Click(object sender, EventArgs e)
         {
             try
@@ -359,9 +316,6 @@ namespace SpareHub
             }
         }
 
-        /// <summary>
-        /// Proses checkout - IMPROVED: Pake method baru
-        /// </summary>
         private void checkoutBTN_Click(object sender, EventArgs e)
         {
             var cart = order.LoadCart();
@@ -371,7 +325,6 @@ namespace SpareHub
                 return;
             }
 
-            // Konfirmasi
             var result = MessageBox.Show("Proses pesanan sekarang?", "Konfirmasi",
                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -391,9 +344,7 @@ namespace SpareHub
             }
         }
 
-        /// <summary>
-        /// Clear keranjang - SIMPLE: Method baru
-        /// </summary>
+
         private void clearBTN_Click(object sender, EventArgs e)
         {
             if (order.LoadCart().Count == 0)
@@ -413,23 +364,11 @@ namespace SpareHub
             }
         }
 
-        /// <summary>
-        /// Cleanup ketika form ditutup - SUDAH ADA DI ATAS, HAPUS INI
-        /// </summary>
-        // HAPUS: Method dispose yang duplicate
-
-        // PERBAIKAN: Tambah method untuk external access (opsional)
-        /// <summary>
-        /// Get current cart data untuk integration dengan fitur lain
-        /// </summary>
         public List<CartItem> GetCurrentCart()
         {
             return order.LoadCart();
         }
 
-        /// <summary>
-        /// Add product from external source (untuk integration)
-        /// </summary>
         public bool AddProductFromExternal(string productName, decimal price)
         {
             nama_produkTxtBox.Text = productName;
