@@ -1,14 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\",
+  "WorkspaceRootPath": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinal\\sparehub\\sparehub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\ulasandanratingproduk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:ulasandanratingproduk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\raffa\\documents\\kuliah\\semester4\\konstruksi perangkat lunak\\tubesgui\\tubes_kpl_kelompok_7_sparehub\\sparehub\\ulasandanratingproduk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:ulasandanratingproduk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\raffa\\documents\\kuliah\\semester4\\konstruksi perangkat lunak\\tubesgui\\tubes_kpl_kelompok_7_sparehub\\sparehub\\ulasandanratingproduk.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:ulasandanratingproduk.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68426139-8084-B3AB-CF7F-50A154280ADF}|..\\UlasanDanRatingProduk\\UlasanDanRatingProduk.csproj|c:\\users\\raffa\\documents\\kuliah\\semester4\\konstruksi perangkat lunak\\tubesgui\\tubes_kpl_kelompok_7_sparehub\\ulasandanratingproduk\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\raffa\\documents\\kuliah\\semester4\\konstruksi perangkat lunak\\tubesgui\\tubes_kpl_kelompok_7_sparehub\\sparehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\raffa\\documents\\kuliah\\semester4\\konstruksi perangkat lunak\\tubesgui\\tubes_kpl_kelompok_7_sparehub\\sparehub\\sparehub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:sparehub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinal\\sparehub\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{68426139-8084-B3AB-CF7F-50A154280ADF}|..\\UlasanDanRatingProduk\\UlasanDanRatingProduk.csproj|c:\\users\\raffa\\documents\\kuliah\\semester4\\konstruksi perangkat lunak\\tubesgui\\tubes_kpl_kelompok_7_sparehub\\ulasandanratingproduk\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68426139-8084-B3AB-CF7F-50A154280ADF}|..\\UlasanDanRatingProduk\\UlasanDanRatingProduk.csproj|c:\\users\\raffa\\documents\\kuliah\\semester4\\konstruksi perangkat lunak\\tubesgui\\tubes_kpl_kelompok_7_sparehub\\ulasandanratingproduk\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68426139-8084-B3AB-CF7F-50A154280ADF}|..\\UlasanDanRatingProduk\\UlasanDanRatingProduk.csproj|c:\\users\\raffa\\documents\\kuliah\\semester4\\konstruksi perangkat lunak\\tubesgui\\tubes_kpl_kelompok_7_sparehub\\ulasandanratingproduk\\reviewstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68426139-8084-B3AB-CF7F-50A154280ADF}|..\\UlasanDanRatingProduk\\UlasanDanRatingProduk.csproj|c:\\users\\raffa\\documents\\kuliah\\semester4\\konstruksi perangkat lunak\\tubesgui\\tubes_kpl_kelompok_7_sparehub\\ulasandanratingproduk\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,36 +45,129 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SpareHub",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\SpareHub.csproj",
-              "RelativeDocumentMoniker": "SpareHub.csproj",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\SpareHub.csproj",
-              "RelativeToolTip": "SpareHub.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-06T10:52:32.813Z",
-              "EditorCaption": ""
+              "Title": "UlasanDanRatingProduk.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\UlasanDanRatingProduk.cs",
+              "RelativeDocumentMoniker": "UlasanDanRatingProduk.cs",
+              "ToolTip": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\UlasanDanRatingProduk.cs [Design]",
+              "RelativeToolTip": "UlasanDanRatingProduk.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T12:00:07.746Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "Title": "UlasanDanRatingProduk.cs",
+              "DocumentMoniker": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\UlasanDanRatingProduk.cs",
+              "RelativeDocumentMoniker": "UlasanDanRatingProduk.cs",
+              "ToolTip": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\UlasanDanRatingProduk.cs",
+              "RelativeToolTip": "UlasanDanRatingProduk.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAcwIAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T10:44:14.692Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-06T15:52:45.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UlasanDanRatingProduk.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\UlasanDanRatingProduk.Designer.cs",
+              "RelativeDocumentMoniker": "UlasanDanRatingProduk.Designer.cs",
+              "ToolTip": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\UlasanDanRatingProduk.Designer.cs",
+              "RelativeToolTip": "UlasanDanRatingProduk.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T09:20:12.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T07:23:38.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReviewState.cs",
+              "DocumentMoniker": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\ReviewState.cs",
+              "RelativeDocumentMoniker": "..\\UlasanDanRatingProduk\\ReviewState.cs",
+              "ToolTip": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\ReviewState.cs",
+              "RelativeToolTip": "..\\UlasanDanRatingProduk\\ReviewState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T11:18:41.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\Product.cs",
+              "RelativeDocumentMoniker": "..\\UlasanDanRatingProduk\\Product.cs",
+              "ToolTip": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\Product.cs",
+              "RelativeToolTip": "..\\UlasanDanRatingProduk\\Product.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T11:16:04.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SpareHub.csproj",
+              "DocumentMoniker": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj",
+              "RelativeDocumentMoniker": "SpareHub.csproj",
+              "ToolTip": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj",
+              "RelativeToolTip": "SpareHub.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-10T07:09:18.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReviewService.cs",
+              "DocumentMoniker": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\ReviewService.cs",
+              "RelativeDocumentMoniker": "..\\UlasanDanRatingProduk\\ReviewService.cs",
+              "ToolTip": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\ReviewService.cs",
+              "RelativeToolTip": "..\\UlasanDanRatingProduk\\ReviewService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T11:18:39.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\Review.cs",
+              "RelativeDocumentMoniker": "..\\UlasanDanRatingProduk\\Review.cs",
+              "ToolTip": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\Review.cs",
+              "RelativeToolTip": "..\\UlasanDanRatingProduk\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T11:18:37.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\Program.cs",
+              "RelativeDocumentMoniker": "..\\UlasanDanRatingProduk\\Program.cs",
+              "ToolTip": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\Program.cs",
+              "RelativeToolTip": "..\\UlasanDanRatingProduk\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T11:15:47.344Z"
             }
           ]
         }

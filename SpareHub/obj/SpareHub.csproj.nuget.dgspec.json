@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\SpareHub.csproj": {}
+    "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj": {}
   },
   "projects": {
-    "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\SpareHub.csproj": {
+    "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\SpareHub.csproj",
+        "projectUniqueName": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj",
         "projectName": "SpareHub",
-        "projectPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\SpareHub.csproj",
-        "packagesPath": "C:\\Users\\naufa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\obj\\",
+        "projectPath": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj",
+        "packagesPath": "C:\\Users\\RAFFA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\naufa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\RAFFA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -31,7 +31,14 @@
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\UlasanDanRatingProduk.csproj": {
+                "projectPath": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\UlasanDanRatingProduk.csproj"
+              },
+              "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UnitTestUlasanDanRatingProduk\\UnitTestUlasanDanRatingProduk.csproj": {
+                "projectPath": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UnitTestUlasanDanRatingProduk\\UnitTestUlasanDanRatingProduk.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -66,6 +73,162 @@
             },
             "Microsoft.WindowsDesktop.App.WindowsForms": {
               "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\UlasanDanRatingProduk.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\UlasanDanRatingProduk.csproj",
+        "projectName": "UlasanDanRatingProduk",
+        "projectPath": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\UlasanDanRatingProduk.csproj",
+        "packagesPath": "C:\\Users\\RAFFA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RAFFA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UnitTestUlasanDanRatingProduk\\UnitTestUlasanDanRatingProduk.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UnitTestUlasanDanRatingProduk\\UnitTestUlasanDanRatingProduk.csproj",
+        "projectName": "UnitTestUlasanDanRatingProduk",
+        "projectPath": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UnitTestUlasanDanRatingProduk\\UnitTestUlasanDanRatingProduk.csproj",
+        "packagesPath": "C:\\Users\\RAFFA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UnitTestUlasanDanRatingProduk\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RAFFA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\UlasanDanRatingProduk.csproj": {
+                "projectPath": "C:\\Users\\RAFFA\\Documents\\KULIAH\\SEMESTER4\\Konstruksi Perangkat Lunak\\TubesGUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\UlasanDanRatingProduk\\UlasanDanRatingProduk.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
