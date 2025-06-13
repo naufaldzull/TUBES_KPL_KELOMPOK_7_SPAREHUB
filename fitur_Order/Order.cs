@@ -1,101 +1,87 @@
-﻿using System;
+﻿// fitur_Order.cs
+
+using System;
 using System.IO;
 using System.Text.Json;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Diagnostics;
 
-namespace fitur_Order
+namespace fitur_Order // Nama namespace sebaiknya PascalCase jika sesuai .NET convention
 {
     /// <summary>
     /// Represents an item in the shopping cart
-    /// PERBAIKAN: Added XML documentation dan proper namespace
     /// </summary>
-    public class CartItem
+    public class CartItem // ini sudah PascalCase
     {
-        public string ProductId { get; set; } = string.Empty; // PERBAIKAN: Default value untuk menghindari null
-        public string ProductName { get; set; } = string.Empty;
-        public int Quantity { get; set; }
-        public decimal Price { get; set; } // PERBAIKAN: Ubah dari int ke decimal untuk currency yang lebih akurat
+        public string ProductId { get; set; } = string.Empty; // ini sudah PascalCase, gunakan default string.Empty untuk hindari null
+        public string ProductName { get; set; } = string.Empty; // ini sudah PascalCase
+        public int Quantity { get; set; } // ini sudah PascalCase
+        public decimal Price { get; set; } // ini sudah PascalCase
 
         /// <summary>
         /// Calculate subtotal for this cart item
-        /// PERBAIKAN: Added method untuk encapsulation dan reusability
         /// </summary>
-        public decimal GetSubtotal() => Quantity * Price;
+        public decimal GetSubtotal() => Quantity * Price; // ini sudah PascalCase, method singkat & clean
     }
 
     /// <summary>
-    /// Handles order processing and cart management
-    /// PERBAIKAN: Added proper class documentation
+    /// Handles order processing dan cart management
     /// </summary>
-    public class Order // PERBAIKAN: Rename dari "Order" ke "OrderManager" karena lebih descriptive
+    public class Order // ini sudah PascalCase
     {
-        // PERBAIKAN: Use const untuk path yang tidak berubah dan private readonly untuk yang bisa di-configure
-        private readonly string _cartFilePath;
-        private const string CONFIG_FILE_PATH = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\config.json"; // PERBAIKAN: Relative path, lebih portable
-        private const string STATUS_FILE_PATH = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\status_mapping.json";
+        private readonly string _cartFilePath; // ini sudah camelCase + prefix underscore sesuai convention
+        private const string CONFIG_FILE_PATH = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\config.json"; // ini sudah UPPER_CASE untuk const
+        private const string STATUS_FILE_PATH = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\status_mapping.json"; // ini sudah UPPER_CASE untuk const
 
-        private Dictionary<string, string> _configuration; // PERBAIKAN: Pascal case untuk private fields dengan underscore
-        private Dictionary<string, string> _statusMapping;
+        private Dictionary<string, string> _configuration; // ini sudah camelCase + _
+        private Dictionary<string, string> _statusMapping; // ini sudah camelCase + _
 
-        // PERBAIKAN: Table-driven approach dengan readonly collection
-        private static readonly List<string> ValidPaymentMethods = new List<string>
+        private static readonly List<string> ValidPaymentMethods = new List<string> // ini sudah PascalCase
         {
             "COD", "Transfer", "E-Wallet", "Kartu Kredit"
         };
 
-        // PERBAIKAN: Event untuk communication dengan GUI dan fitur lain
-        public event Action<string> OnStatusUpdate;
-        public event Action<List<CartItem>> OnCartUpdated;
+        public event Action<string> OnStatusUpdate; // ini sudah PascalCase
+        public event Action<List<CartItem>> OnCartUpdated; // ini sudah PascalCase
 
         /// <summary>
-        /// Initialize OrderManager with optional cart file path
-        /// PERBAIKAN: Constructor dengan dependency injection pattern
+        /// Initialize OrderManager dengan cart file path
         /// </summary>
-        public Order(string cartFilePath = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\keranjang.json")
+        public Order(string cartFilePath = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\keranjang.json") // parameter pakai camelCase
         {
-            _cartFilePath = cartFilePath ?? throw new ArgumentNullException(nameof(cartFilePath)); // PERBAIKAN: Null check
-            _configuration = new Dictionary<string, string>();
+            _cartFilePath = cartFilePath ?? throw new ArgumentNullException(nameof(cartFilePath)); // Null check dengan throw
+            _configuration = new Dictionary<string, string>(); // inisialisasi aman
             _statusMapping = new Dictionary<string, string>();
 
-            InitializeConfiguration();
-            InitializeStatusMapping();
+            InitializeConfiguration(); // method dipanggil secara eksplisit
+            InitializeStatusMapping(); // method internal
         }
 
-        /// <summary>
-        /// Load runtime configuration from file
-        /// PERBAIKAN: Rename method untuk clarity dan error handling yang lebih baik
-        /// </summary>
-        private void InitializeConfiguration()
+        private void InitializeConfiguration() // ini sudah PascalCase
         {
             try
             {
                 if (File.Exists(CONFIG_FILE_PATH))
                 {
-                    string jsonContent = File.ReadAllText(CONFIG_FILE_PATH);
+                    string jsonContent = File.ReadAllText(CONFIG_FILE_PATH); // ini sudah camelCase
                     _configuration = JsonSerializer.Deserialize<Dictionary<string, string>>(jsonContent)
-                                   ?? GetDefaultConfiguration(); // PERBAIKAN: Null coalescing
+                                   ?? GetDefaultConfiguration(); // fallback ke default
                 }
                 else
                 {
-                    _configuration = GetDefaultConfiguration();
-                    SaveConfiguration(); // PERBAIKAN: Auto-create default config file
+                    _configuration = GetDefaultConfiguration(); // default config
+                    SaveConfiguration(); // buat file default
                 }
             }
             catch (Exception ex)
             {
-                // PERBAIKAN: Proper exception handling dengan logging
-                Debug.WriteLine($"Error loading configuration: {ex.Message}");
-                _configuration = GetDefaultConfiguration();
+                Debug.WriteLine($"Error loading configuration: {ex.Message}"); // log exception
+                _configuration = GetDefaultConfiguration(); // fallback
             }
         }
 
-        /// <summary>
-        /// Get default configuration values
-        /// PERBAIKAN: Extracted method untuk reusability
-        /// </summary>
-        private static Dictionary<string, string> GetDefaultConfiguration()
+        private static Dictionary<string, string> GetDefaultConfiguration() // ini sudah PascalCase
         {
             return new Dictionary<string, string>
             {
@@ -105,28 +91,20 @@ namespace fitur_Order
             };
         }
 
-        /// <summary>
-        /// Save current configuration to file
-        /// PERBAIKAN: Added method untuk persistence
-        /// </summary>
-        private void SaveConfiguration()
+        private void SaveConfiguration() // ini sudah PascalCase
         {
             try
             {
-                string json = JsonSerializer.Serialize(_configuration, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(CONFIG_FILE_PATH, json);
+                string json = JsonSerializer.Serialize(_configuration, new JsonSerializerOptions { WriteIndented = true }); // serialize dengan format rapi
+                File.WriteAllText(CONFIG_FILE_PATH, json); // tulis ke file
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error saving configuration: {ex.Message}");
+                Debug.WriteLine($"Error saving configuration: {ex.Message}"); // handle exception
             }
         }
 
-        /// <summary>
-        /// Initialize status mapping from file
-        /// PERBAIKAN: Better method naming dan error handling
-        /// </summary>
-        private void InitializeStatusMapping()
+        private void InitializeStatusMapping() // ini sudah PascalCase
         {
             try
             {
@@ -134,7 +112,7 @@ namespace fitur_Order
                 {
                     string jsonContent = File.ReadAllText(STATUS_FILE_PATH);
                     _statusMapping = JsonSerializer.Deserialize<Dictionary<string, string>>(jsonContent)
-                                   ?? GetDefaultStatusMapping();
+                                   ?? GetDefaultStatusMapping(); // fallback
                 }
                 else
                 {
@@ -143,16 +121,12 @@ namespace fitur_Order
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error loading status mapping: {ex.Message}");
+                Debug.WriteLine($"Error loading status mapping: {ex.Message}"); // log error
                 _statusMapping = GetDefaultStatusMapping();
             }
         }
 
-        /// <summary>
-        /// Get default status mapping
-        /// PERBAIKAN: Extracted method untuk maintainability
-        /// </summary>
-        private static Dictionary<string, string> GetDefaultStatusMapping()
+        private static Dictionary<string, string> GetDefaultStatusMapping() // ini sudah PascalCase
         {
             return new Dictionary<string, string>
             {
@@ -162,17 +136,13 @@ namespace fitur_Order
             };
         }
 
-        /// <summary>
-        /// Load cart items from file
-        /// PERBAIKAN: Better error handling dan return value
-        /// </summary>
-        public List<CartItem> LoadCart()
+        public List<CartItem> LoadCart() // ini sudah PascalCase
         {
             try
             {
                 if (!File.Exists(_cartFilePath))
                 {
-                    return new List<CartItem>();
+                    return new List<CartItem>(); // return kosong jika file tidak ada
                 }
 
                 string jsonContent = File.ReadAllText(_cartFilePath);
@@ -182,38 +152,33 @@ namespace fitur_Order
                     return new List<CartItem>();
                 }
 
-                var cartItems = JsonSerializer.Deserialize<List<CartItem>>(jsonContent) ?? new List<CartItem>();
+                var cartItems = JsonSerializer.Deserialize<List<CartItem>>(jsonContent) ?? new List<CartItem>(); // deserialisasi aman
                 return cartItems;
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"Error loading cart: {ex.Message}");
-                return new List<CartItem>(); // PERBAIKAN: Return empty list instead of throwing
+                return new List<CartItem>(); // fallback list kosong
             }
         }
 
-        /// <summary>
-        /// Add item to cart with validation
-        /// PERBAIKAN: Separated validation logic dan better parameter handling
-        /// </summary>
-        public bool AddToCart(string productName, int quantity, decimal price, out string errorMessage)
+        public bool AddToCart(string productName, int quantity, decimal price, out string errorMessage) // parameter pakai camelCase
         {
             errorMessage = string.Empty;
 
-            // PERBAIKAN: Input validation dengan specific error messages
-            if (string.IsNullOrWhiteSpace(productName))
+            if (string.IsNullOrWhiteSpace(productName)) // validasi nama
             {
                 errorMessage = "Nama produk tidak boleh kosong.";
                 return false;
             }
 
-            if (quantity <= 0)
+            if (quantity <= 0) // validasi jumlah
             {
                 errorMessage = "Jumlah harus lebih dari 0.";
                 return false;
             }
 
-            if (price <= 0)
+            if (price <= 0) // validasi harga
             {
                 errorMessage = "Harga harus lebih dari 0.";
                 return false;
@@ -221,20 +186,20 @@ namespace fitur_Order
 
             try
             {
-                List<CartItem> cart = LoadCart();
+                List<CartItem> cart = LoadCart(); // load cart dari file
 
-                var newItem = new CartItem
+                var newItem = new CartItem // objek item baru
                 {
                     ProductId = Guid.NewGuid().ToString(),
-                    ProductName = productName.Trim(), // PERBAIKAN: Trim whitespace
+                    ProductName = productName.Trim(),
                     Quantity = quantity,
                     Price = price
                 };
 
                 cart.Add(newItem);
-                SaveCart(cart); // PERBAIKAN: Extracted save logic
+                SaveCart(cart); // simpan keranjang baru
 
-                OnCartUpdated?.Invoke(cart); // PERBAIKAN: Event notification
+                OnCartUpdated?.Invoke(cart); // event callback
                 OnStatusUpdate?.Invoke($"Produk '{productName}' berhasil ditambahkan ke keranjang.");
 
                 return true;
@@ -247,20 +212,12 @@ namespace fitur_Order
             }
         }
 
-        /// <summary>
-        /// Save cart to file
-        /// PERBAIKAN: Extracted method untuk reusability
-        /// </summary>
-        private void SaveCart(List<CartItem> cart)
+        private void SaveCart(List<CartItem> cart) // ini sudah PascalCase
         {
-            string json = JsonSerializer.Serialize(cart, new JsonSerializerOptions { WriteIndented = true });
+            string json = JsonSerializer.Serialize(cart, new JsonSerializerOptions { WriteIndented = true }); // simpan file keranjang
             File.WriteAllText(_cartFilePath, json);
         }
 
-        /// <summary>
-        /// Process order with selected payment method
-        /// PERBAIKAN: Fixed status display dan detailed order processing
-        /// </summary>
         public bool ProcessOrder(int paymentMethodIndex, out string message, out decimal totalAmount)
         {
             message = string.Empty;
@@ -276,14 +233,12 @@ namespace fitur_Order
                     return false;
                 }
 
-                // PERBAIKAN: Validate payment method index
-                if (paymentMethodIndex < 0 || paymentMethodIndex >= ValidPaymentMethods.Count)
+                if (paymentMethodIndex < 0 || paymentMethodIndex >= ValidPaymentMethods.Count) // validasi index pembayaran
                 {
                     message = "Metode pembayaran tidak valid.";
                     return false;
                 }
 
-                // PERBAIKAN: Calculate total dengan validation
                 foreach (var item in cart)
                 {
                     if (item.Quantity <= 0 || item.Price <= 0)
@@ -291,19 +246,17 @@ namespace fitur_Order
                         message = $"Data produk '{item.ProductName}' tidak valid.";
                         return false;
                     }
-                    totalAmount += item.GetSubtotal();
+                    totalAmount += item.GetSubtotal(); // hitung total
                 }
 
                 string selectedPayment = ValidPaymentMethods[paymentMethodIndex];
                 _configuration["payment_method"] = selectedPayment;
-                SaveConfiguration();
+                SaveConfiguration(); // simpan metode baru
 
-                // PERBAIKAN: Generate order ID dan detailed status
-                string orderId = $"SPH{DateTime.Now:yyyyMMddHHmmss}";
+                string orderId = $"SPH{DateTime.Now:yyyyMMddHHmmss}"; // Order id buatan (sekaligus memberi tau informasi waktu saat mengorder)
                 string shippingMethod = _configuration.ContainsKey("shipping") ? _configuration["shipping"] : "J&T";
                 string orderStatus = "Sedang Diproses";
 
-                // PERBAIKAN: Create detailed order summary
                 var orderSummary = new
                 {
                     OrderId = orderId,
@@ -315,13 +268,9 @@ namespace fitur_Order
                     OrderDate = DateTime.Now
                 };
 
-                // PERBAIKAN: Save order history (optional - bisa untuk report nanti)
-                SaveOrderHistory(orderSummary);
+                SaveOrderHistory(orderSummary); // simpan riwayat pesanan
+                SaveCart(new List<CartItem>()); // kosongkan cart
 
-                // PERBAIKAN: Clear cart after successful processing
-                SaveCart(new List<CartItem>());
-
-                // PERBAIKAN: Detailed status message yang jelas
                 message = $"PESANAN BERHASIL DIPROSES!\n\n" +
                          $"Order ID: {orderId}\n" +
                          $"Total: Rp{totalAmount:N0}\n" +
@@ -330,7 +279,7 @@ namespace fitur_Order
                          $"Tanggal: {DateTime.Now:dd/MM/yyyy HH:mm}\n" +
                          $"Status: {orderStatus}";
 
-                OnCartUpdated?.Invoke(new List<CartItem>()); // PERBAIKAN: Notify cart cleared
+                OnCartUpdated?.Invoke(new List<CartItem>());
                 OnStatusUpdate?.Invoke($"Order {orderId} berhasil diproses - Total: Rp{totalAmount:N0}");
 
                 return true;
@@ -343,18 +292,13 @@ namespace fitur_Order
             }
         }
 
-        /// <summary>
-        /// Save order history untuk tracking
-        /// PERBAIKAN: Optional order history untuk report fitur
-        /// </summary>
-        private void SaveOrderHistory(object orderSummary)
+        private void SaveOrderHistory(object orderSummary) // ini sudah PascalCase
         {
             try
             {
-                string historyFile = "order_history.json";
+                string historyFile = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\order_history.json";
                 List<object> history = new List<object>();
 
-                // Load existing history
                 if (File.Exists(historyFile))
                 {
                     string existingJson = File.ReadAllText(historyFile);
@@ -364,10 +308,8 @@ namespace fitur_Order
                     }
                 }
 
-                // Add new order
                 history.Add(orderSummary);
 
-                // Save updated history
                 string json = JsonSerializer.Serialize(history, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(historyFile, json);
 
@@ -376,44 +318,21 @@ namespace fitur_Order
             catch (Exception ex)
             {
                 Debug.WriteLine($"Error saving order history: {ex.Message}");
-                // Don't fail the order process if history save fails
             }
         }
 
-        /// <summary>
-        /// Get available payment methods
-        /// PERBAIKAN: Public method untuk GUI access
-        /// </summary>
-        public List<string> GetPaymentMethods()
-        {
-            return new List<string>(ValidPaymentMethods); // PERBAIKAN: Return copy untuk immutability
-        }
+        public List<string> GetPaymentMethods() => new List<string>(ValidPaymentMethods); // akses list metode bayar
 
-        /// <summary>
-        /// Get current configuration
-        /// PERBAIKAN: Public method untuk GUI access
-        /// </summary>
-        public Dictionary<string, string> GetConfiguration()
-        {
-            return new Dictionary<string, string>(_configuration); // PERBAIKAN: Return copy
-        }
+        public Dictionary<string, string> GetConfiguration() => new Dictionary<string, string>(_configuration); // expose config
 
-        /// <summary>
-        /// Clear cart
-        /// PERBAIKAN: Public method untuk GUI functionality
-        /// </summary>
-        public void ClearCart()
+        public void ClearCart() // kosongkan keranjang
         {
             SaveCart(new List<CartItem>());
             OnCartUpdated?.Invoke(new List<CartItem>());
             OnStatusUpdate?.Invoke("Keranjang dikosongkan.");
         }
 
-        /// <summary>
-        /// Get order status options untuk GUI
-        /// PERBAIKAN: Public method untuk status tracking
-        /// </summary>
-        public List<string> GetOrderStatusOptions()
+        public List<string> GetOrderStatusOptions() // opsi status pesanan
         {
             return new List<string>
             {
@@ -425,15 +344,11 @@ namespace fitur_Order
             };
         }
 
-        /// <summary>
-        /// Get order history untuk report
-        /// PERBAIKAN: Method untuk integration dengan fitur report
-        /// </summary>
-        public List<object> GetOrderHistory()
+        public List<object> GetOrderHistory() // riwayat pesanan untuk fitur tambahan
         {
             try
             {
-                string historyFile = "order_history.json";
+                string historyFile = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\order_history.json";
                 if (File.Exists(historyFile))
                 {
                     string json = File.ReadAllText(historyFile);

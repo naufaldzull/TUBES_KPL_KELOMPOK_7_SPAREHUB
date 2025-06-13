@@ -15,7 +15,12 @@ namespace SpareHub
 
         private void SistemPemesanan_Load(object sender, EventArgs e)
         {
-               
+
+        }
+
+        private void titleLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

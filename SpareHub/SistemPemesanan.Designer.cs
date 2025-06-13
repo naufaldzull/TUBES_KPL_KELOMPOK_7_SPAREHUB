@@ -32,6 +32,7 @@ namespace SpareHub
             }
             base.Dispose(disposing);
         }
+
         private Order order;
 
         // Controls - nama simple dan jelas
@@ -45,12 +46,19 @@ namespace SpareHub
         private Button clearBTN;
         private Label totalLabel;
         private Label statusLabel;
-
+        private Label titleLabel;
 
         public SistemPemesanan()
         {
             InitializeComponent();
             order = new Order();
+
+            // PERBAIKAN: Panggil semua method create sections!
+            CreateInputSection();
+            CreateCartSection();
+            CreatePaymentSection();
+            CreateStatusSection();
+
             SetupForm();
             LoadCartToGrid();
         }
@@ -153,11 +161,12 @@ namespace SpareHub
             titleLabel.TabIndex = 0;
             titleLabel.Text = "SISTEM PEMESANAN";
             titleLabel.TextAlign = ContentAlignment.MiddleCenter;
+            titleLabel.Click += titleLabel_Click;
             // 
             // SistemPemesanan
             // 
             BackColor = Color.White;
-            ClientSize = new Size(882, 553);
+            ClientSize = new Size(900, 600);
             Controls.Add(titleLabel);
             Name = "SistemPemesanan";
             StartPosition = FormStartPosition.CenterScreen;
@@ -188,7 +197,6 @@ namespace SpareHub
             this.Controls.Add(hargaLabel);
 
             // TextBoxes 
-
             nama_produkTxtBox.Location = new Point(20, 85);
             nama_produkTxtBox.Size = new Size(250, 25);
             nama_produkTxtBox.TextChanged += nama_produkTxtBox_TextChanged;
@@ -214,7 +222,6 @@ namespace SpareHub
             this.Controls.Add(tambah_ke_keranjangBTN);
         }
 
-
         private void CreateCartSection()
         {
             Label cartLabel = new Label();
@@ -224,28 +231,35 @@ namespace SpareHub
             cartLabel.Size = new Size(200, 25);
             this.Controls.Add(cartLabel);
 
-            // PERBAIKAN: Gak perlu new lagi
+            // Setup DataGridView
             keranjangDGV.Location = new Point(20, 160);
             keranjangDGV.Size = new Size(840, 200);
             keranjangDGV.ReadOnly = true;
             keranjangDGV.AllowUserToAddRows = false;
+            keranjangDGV.AllowUserToDeleteRows = false;
             keranjangDGV.BackgroundColor = Color.LightGray;
+            keranjangDGV.BorderStyle = BorderStyle.Fixed3D;
+            keranjangDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            keranjangDGV.AutoGenerateColumns = true;
             keranjangDGV.CellContentClick += keranjangDGV_CellContentClick;
             this.Controls.Add(keranjangDGV);
 
-            // Total dan Clear button - PERBAIKAN: Gak perlu new lagi
+            // Total label
             totalLabel.Text = "Total: Rp 0";
             totalLabel.Font = new Font("Arial", 12, FontStyle.Bold);
             totalLabel.Location = new Point(650, 370);
             totalLabel.Size = new Size(200, 25);
             totalLabel.ForeColor = Color.DarkGreen;
+            totalLabel.TextAlign = ContentAlignment.MiddleRight;
             this.Controls.Add(totalLabel);
 
+            // Clear button
             clearBTN.Text = "Kosongkan Keranjang";
             clearBTN.Location = new Point(20, 370);
             clearBTN.Size = new Size(150, 30);
             clearBTN.BackColor = Color.Orange;
             clearBTN.ForeColor = Color.White;
+            clearBTN.FlatStyle = FlatStyle.Flat;
             clearBTN.Click += clearBTN_Click;
             this.Controls.Add(clearBTN);
         }
@@ -258,30 +272,33 @@ namespace SpareHub
             paymentLabel.Size = new Size(130, 20);
             this.Controls.Add(paymentLabel);
 
-            // PERBAIKAN: Gak perlu new lagi
+            // Payment ComboBox
             paymentComboBox.Location = new Point(160, 418);
             paymentComboBox.Size = new Size(150, 25);
             paymentComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             this.Controls.Add(paymentComboBox);
 
+            // Checkout button
             checkoutBTN.Text = "Proses Pesanan";
             checkoutBTN.Location = new Point(350, 415);
             checkoutBTN.Size = new Size(120, 30);
             checkoutBTN.BackColor = Color.Blue;
             checkoutBTN.ForeColor = Color.White;
+            checkoutBTN.FlatStyle = FlatStyle.Flat;
             checkoutBTN.Click += checkoutBTN_Click;
             this.Controls.Add(checkoutBTN);
         }
 
         private void CreateStatusSection()
         {
-            // PERBAIKAN: Gak perlu new lagi
+            // Status label
             statusLabel.Text = "Siap menerima pesanan...";
-            statusLabel.Location = new Point(20, 520);
+            statusLabel.Location = new Point(20, 470);
             statusLabel.Size = new Size(840, 25);
             statusLabel.BackColor = Color.LightYellow;
             statusLabel.BorderStyle = BorderStyle.FixedSingle;
             statusLabel.Padding = new Padding(5, 0, 0, 0);
+            statusLabel.TextAlign = ContentAlignment.MiddleLeft;
             this.Controls.Add(statusLabel);
         }
 
@@ -324,21 +341,20 @@ namespace SpareHub
             LoadCartToGrid();
         }
 
-        
-
+        // Event handlers - keep original lu
         private void nama_produkTxtBox_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void jumlahTxtBox_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void hargaTxtBox_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void keranjangDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -412,7 +428,6 @@ namespace SpareHub
             }
         }
 
-
         private void clearBTN_Click(object sender, EventArgs e)
         {
             if (order.LoadCart().Count == 0)
@@ -444,6 +459,5 @@ namespace SpareHub
             jumlahTxtBox.Focus();
             return true;
         }
-        private Label titleLabel;
     }
 }
