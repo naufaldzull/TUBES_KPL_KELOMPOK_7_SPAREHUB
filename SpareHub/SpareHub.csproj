@@ -10,7 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ManajemenToko\ManajemenToko.csproj" />
-    <ProjectReference Include="..\ManejemenToko.API\ManejemenToko.API.csproj" />
+    <ProjectReference Include="..\UlasanDanRatingProduk\UlasanDanRatingProduk.csproj" />
+    <ProjectReference Include="..\UnitTestUlasanDanRatingProduk\UnitTestUlasanDanRatingProduk.csproj" />
   </ItemGroup>
 
   <ItemGroup>

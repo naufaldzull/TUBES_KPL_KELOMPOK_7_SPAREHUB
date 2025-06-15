@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManajemenToko", "..\Manajem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManajemenToko.API", "..\ManejemenToko.API\ManajemenToko.API.csproj", "{5797FB51-A8BC-5826-9F7A-EAFAF8D16F5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlasanDanRatingProduk", "..\UlasanDanRatingProduk\UlasanDanRatingProduk.csproj", "{68426139-8084-B3AB-CF7F-50A154280ADF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestUlasanDanRatingProduk", "..\UnitTestUlasanDanRatingProduk\UnitTestUlasanDanRatingProduk.csproj", "{96B4FF9A-BAC7-830F-AF27-F83007EF2783}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{5797FB51-A8BC-5826-9F7A-EAFAF8D16F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5797FB51-A8BC-5826-9F7A-EAFAF8D16F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5797FB51-A8BC-5826-9F7A-EAFAF8D16F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68426139-8084-B3AB-CF7F-50A154280ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68426139-8084-B3AB-CF7F-50A154280ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68426139-8084-B3AB-CF7F-50A154280ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68426139-8084-B3AB-CF7F-50A154280ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96B4FF9A-BAC7-830F-AF27-F83007EF2783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B4FF9A-BAC7-830F-AF27-F83007EF2783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B4FF9A-BAC7-830F-AF27-F83007EF2783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B4FF9A-BAC7-830F-AF27-F83007EF2783}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

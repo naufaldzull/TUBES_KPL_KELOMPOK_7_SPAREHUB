@@ -30,23 +30,24 @@ namespace SpareHub
         /// <summary>
         /// Event handler saat form dimuat.
         /// </summary>
-        private void UlasanDanRatingProdukForm_Load(object sender, EventArgs e)
+        private async void UlasanDanRatingProdukForm_Load(object sender, EventArgs e)
         {
-            LoadProduk();
+            await LoadProdukAsync();
             SetupGrid();
             TampilkanProduk();
         }
 
+
         /// <summary>
         /// Memuat data produk dari service, atau menambahkan data dummy jika belum ada.
         /// </summary>
-        private void LoadProduk()
+        private async Task LoadProdukAsync()
         {
-            _produkList = BarangService.Instance.GetAllBarang();
+            _produkList = await BarangService.Instance.LoadFromApiAsync();
 
             if (_produkList.Count == 0)
             {
-                TambahDataDummy();
+                //TambahDataDummy();
                 _produkList = BarangService.Instance.GetAllBarang();
             }
         }
@@ -58,11 +59,14 @@ namespace SpareHub
         {
             var dummyData = new List<Barang>
             {
-                new() { Nama = "Laptop Gaming XYZ", Deskripsi = "Laptop gaming high end", Harga = 15000000, Stok = 5, Jenis = "Elektronik" },
-                new() { Nama = "Smartphone Pro 12", Deskripsi = "Smartphone flagship", Harga = 8000000, Stok = 10, Jenis = "Elektronik" },
-                new() { Nama = "Kipas Angin Turbo", Deskripsi = "Kipas angin kencang", Harga = 500000, Stok = 20, Jenis = "Elektronik" },
-                new() { Nama = "Monitor Ultrawide 34\"", Deskripsi = "Monitor gaming ultrawide", Harga = 6000000, Stok = 3, Jenis = "Elektronik" },
-                new() { Nama = "Mouse Wireless RGB", Deskripsi = "Mouse gaming wireless", Harga = 300000, Stok = 15, Jenis = "Aksesoris" }
+                new() { Nama = "Kampas Rem Depan", Deskripsi = "Kampas rem depan original untuk motor matic Honda Vario", Harga = 150000, Stok = 10, Model = "Genuine Part", Merek = "Honda", Jenis = "Kaki-kaki" },
+                new() { Nama = "Oli Mesin SAE 10W-40", Deskripsi = "Oli mesin 4T premium untuk motor bebek dan matic semua merk", Harga = 45000, Stok = 25, Model = "4T Premium", Merek = "Shell", Jenis = "Mesin" },
+                new() { Nama = "Busi Iridium NGK", Deskripsi = "Busi iridium premium tahan lama untuk performa optimal", Harga = 85000, Stok = 15, Model = "G-Power", Merek = "NGK", Jenis = "Kelistrikan" },
+                new() { Nama = "V-Belt CVT Honda", Deskripsi = "V-Belt transmisi CVT original untuk Honda Scoopy dan Vario", Harga = 120000, Stok = 8, Model = "CVT Belt", Merek = "Honda", Jenis = "Transmisi" },
+                new() { Nama = "Kaca Spion Lipat", Deskripsi = "Spion lipat universal kanan kiri untuk semua jenis motor", Harga = 75000, Stok = 12, Model = "Universal", Merek = "KTC", Jenis = "Sparepart Lainnya" },
+                new() { Nama = "Filter Udara K&N", Deskripsi = "Filter udara racing washable untuk performa maksimal", Harga = 200000, Stok = 6, Model = "Washable", Merek = "K&N", Jenis = "Mesin" },
+                new() { Nama = "Lampu LED Philips", Deskripsi = "Lampu LED headlight putih terang hemat listrik", Harga = 95000, Stok = 18, Model = "Ultinon", Merek = "Philips", Jenis = "Kelistrikan" },
+                new() { Nama = "Shock Belakang YSS", Deskripsi = "Shock absorber belakang adjustable untuk kenyamanan berkendara", Harga = 450000, Stok = 4, Model = "G-Series", Merek = "YSS", Jenis = "Kaki-kaki" }
             };
 
             foreach (var barang in dummyData)

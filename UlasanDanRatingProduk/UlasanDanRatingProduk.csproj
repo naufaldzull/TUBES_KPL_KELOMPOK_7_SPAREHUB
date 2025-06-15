@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ManajemenToko\ManajemenToko.csproj" />
-    <ProjectReference Include="..\ManejemenToko.API\ManejemenToko.API.csproj" />
+    <ProjectReference Include="..\ManejemenToko.API\ManajemenToko.API.csproj" />
   </ItemGroup>
 
 </Project>
