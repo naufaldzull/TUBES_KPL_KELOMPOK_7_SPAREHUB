@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\",
+  "WorkspaceRootPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinal\\sparehub\\sparehub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:sparehub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesbranch sparehub\\tubes_kpl_kelompok_7_sparehub\\sparehub\\menuutama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:menuutama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesfinal\\sparehub\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesbranch sparehub\\tubes_kpl_kelompok_7_sparehub\\sparehub\\menuutama.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:menuutama.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\menuutama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:menuutama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|c:\\users\\naufa\\onedrive\\documents\\smt 4\\kpl\\tubesbranch sparehub\\tubes_kpl_kelompok_7_sparehub\\sparehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +34,51 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwA0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T15:19:00.676Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SpareHub",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\SpareHub.csproj",
-              "RelativeDocumentMoniker": "SpareHub.csproj",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\SpareHub.csproj",
-              "RelativeToolTip": "SpareHub.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-06T10:52:32.813Z",
+              "Title": "MenuUtama.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\MenuUtama.cs",
+              "RelativeDocumentMoniker": "MenuUtama.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\MenuUtama.cs",
+              "RelativeToolTip": "MenuUtama.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T15:18:20.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinal\\SpareHub\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "MenuUtama.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\MenuUtama.cs",
+              "RelativeDocumentMoniker": "MenuUtama.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\MenuUtama.cs [Design]",
+              "RelativeToolTip": "MenuUtama.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T10:44:14.692Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-15T15:18:12.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuUtama.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\MenuUtama.Designer.cs",
+              "RelativeDocumentMoniker": "MenuUtama.Designer.cs",
+              "ToolTip": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\MenuUtama.Designer.cs",
+              "RelativeToolTip": "MenuUtama.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T15:17:59.969Z"
             }
           ]
         }
