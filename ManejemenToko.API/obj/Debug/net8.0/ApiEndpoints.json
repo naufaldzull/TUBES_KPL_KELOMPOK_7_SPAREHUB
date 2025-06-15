@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "ManejemenToko.API.Controllers.TokoController",
+    "ContainingType": "ManajemenToko.API.Controllers.TokoController",
     "Method": "GetAllBarang",
     "RelativePath": "api/Toko",
     "HttpMethod": "GET",
@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "ManejemenToko.API.Model.ApiResponse\u00601[[System.Collections.Generic.List\u00601[[ManejemenToko.API.Model.Barang, ManejemenToko.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "ManajemenToko.API.Model.ApiResponse\u00601[[System.Collections.Generic.List\u00601[[ManajemenToko.API.Model.Barang, ManajemenToko.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -20,7 +20,7 @@
     ]
   },
   {
-    "ContainingType": "ManejemenToko.API.Controllers.TokoController",
+    "ContainingType": "ManajemenToko.API.Controllers.TokoController",
     "Method": "GetBarangById",
     "RelativePath": "api/Toko/{id}",
     "HttpMethod": "GET",
@@ -35,7 +35,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ManejemenToko.API.Model.ApiResponse\u00601[[ManejemenToko.API.Model.Barang, ManejemenToko.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ManajemenToko.API.Model.ApiResponse\u00601[[ManajemenToko.API.Model.Barang, ManajemenToko.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "ContainingType": "ManejemenToko.API.Controllers.TokoController",
+    "ContainingType": "ManajemenToko.API.Controllers.TokoController",
     "Method": "DeleteBarang",
     "RelativePath": "api/Toko/{id}",
     "HttpMethod": "DELETE",
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ManejemenToko.API.Model.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "ManajemenToko.API.Model.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "ContainingType": "ManejemenToko.API.Controllers.TokoController",
+    "ContainingType": "ManajemenToko.API.Controllers.TokoController",
     "Method": "GetBarangByJenis",
     "RelativePath": "api/Toko/jenis/{jenis}",
     "HttpMethod": "GET",
@@ -87,7 +87,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ManejemenToko.API.Model.ApiResponse\u00601[[System.Collections.Generic.List\u00601[[ManejemenToko.API.Model.Barang, ManejemenToko.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "ManajemenToko.API.Model.ApiResponse\u00601[[System.Collections.Generic.List\u00601[[ManajemenToko.API.Model.Barang, ManajemenToko.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -98,7 +98,7 @@
     ]
   },
   {
-    "ContainingType": "ManejemenToko.API.Controllers.TokoController",
+    "ContainingType": "ManajemenToko.API.Controllers.TokoController",
     "Method": "SearchBarang",
     "RelativePath": "api/Toko/search",
     "HttpMethod": "GET",
@@ -113,7 +113,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ManejemenToko.API.Model.ApiResponse\u00601[[System.Collections.Generic.List\u00601[[ManejemenToko.API.Model.Barang, ManejemenToko.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "ManajemenToko.API.Model.ApiResponse\u00601[[System.Collections.Generic.List\u00601[[ManajemenToko.API.Model.Barang, ManajemenToko.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -124,7 +124,7 @@
     ]
   },
   {
-    "ContainingType": "ManejemenToko.API.Controllers.TokoController",
+    "ContainingType": "ManajemenToko.API.Controllers.TokoController",
     "Method": "SyncDataFromFrontend",
     "RelativePath": "api/Toko/sync",
     "HttpMethod": "POST",
@@ -133,13 +133,13 @@
     "Parameters": [
       {
         "Name": "frontendData",
-        "Type": "System.Collections.Generic.List\u00601[[ManejemenToko.API.Model.Barang, ManejemenToko.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[ManajemenToko.API.Model.Barang, ManajemenToko.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "ManejemenToko.API.Model.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "ManajemenToko.API.Model.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

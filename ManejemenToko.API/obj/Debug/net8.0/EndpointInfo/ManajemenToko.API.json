@@ -1,0 +1,370 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ManajemenToko.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Toko": {
+      "get": {
+        "tags": [
+          "Toko"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BarangListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BarangListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BarangListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Toko/{id}": {
+      "get": {
+        "tags": [
+          "Toko"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BarangApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BarangApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BarangApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Toko"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Toko/search": {
+      "get": {
+        "tags": [
+          "Toko"
+        ],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BarangListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BarangListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BarangListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Toko/jenis/{jenis}": {
+      "get": {
+        "tags": [
+          "Toko"
+        ],
+        "parameters": [
+          {
+            "name": "jenis",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BarangListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BarangListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BarangListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Toko/sync": {
+      "post": {
+        "tags": [
+          "Toko"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Barang"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Barang"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Barang"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Barang": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nama": {
+            "type": "string",
+            "nullable": true
+          },
+          "deskripsi": {
+            "type": "string",
+            "nullable": true
+          },
+          "harga": {
+            "type": "number",
+            "format": "double"
+          },
+          "stok": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "merek": {
+            "type": "string",
+            "nullable": true
+          },
+          "jenis": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BarangApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/Barang"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BarangListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Barang"
+            },
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BooleanApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "boolean"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

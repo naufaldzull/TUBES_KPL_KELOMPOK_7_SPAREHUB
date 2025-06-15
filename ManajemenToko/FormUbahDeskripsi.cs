@@ -6,18 +6,21 @@ using System.Windows.Forms;
 
 namespace ManajemenToko
 {
-    public partial class FormUbahDeskripsi : Form
+    /// <summary>
+    /// Form untuk mengubah deskripsi sparepart yang sudah ada.
+    /// </summary>
+    public partial class FormUbahDeskripsi : Form // PascalCase ✔
     {
-        private readonly BarangController _controller;
+        private readonly BarangController _controller; // camelCase untuk private field ✔
         private DataGridView dgvBarang;
         private TextBox txtDeskripsi;
         private Button btnUpdate;
-        private int _selectedId = 0;
+        private int _selectedId = 0; // camelCase dan default 0 ✔
 
         public FormUbahDeskripsi()
         {
             InitializeComponent();
-            _controller = new BarangController(); // Sudah Singleton di controller
+            _controller = new BarangController(); // Singleton ✔
             SetupForm();
             LoadData();
         }
@@ -44,22 +47,10 @@ namespace ManajemenToko
                 Size = new Size(640, 200),
                 AllowUserToAddRows = false,
                 ReadOnly = true,
-                SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                SelectionMode = DataGridViewSelectionMode.FullRowSelect,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
             };
-            dgvBarang.CellClick += (s, e) =>
-            {
-                if (e.RowIndex >= 0)
-                {
-                    _selectedId = Convert.ToInt32(dgvBarang.Rows[e.RowIndex].Cells["Id"].Value);
-                    var result = _controller.GetBarangById(_selectedId);
-                    if (result.Success)
-                    {
-                        txtDeskripsi.Text = result.Data.Deskripsi;
-                        txtDeskripsi.Enabled = true;
-                        btnUpdate.Enabled = true;
-                    }
-                }
-            };
+            dgvBarang.CellClick += DgvBarang_CellClick;
             Controls.Add(dgvBarang);
 
             var lblDesc = new Label
@@ -75,7 +66,8 @@ namespace ManajemenToko
                 Location = new Point(20, 305),
                 Size = new Size(400, 60),
                 Multiline = true,
-                Enabled = false
+                Enabled = false,
+                Font = new Font("Arial", 9)
             };
             Controls.Add(txtDeskripsi);
 
@@ -85,7 +77,8 @@ namespace ManajemenToko
                 Location = new Point(340, 380),
                 Size = new Size(80, 30),
                 BackColor = Color.LightGreen,
-                Enabled = false
+                Enabled = false,
+                Cursor = Cursors.Hand
             };
             btnUpdate.Click += BtnUpdate_Click;
             Controls.Add(btnUpdate);
@@ -95,7 +88,8 @@ namespace ManajemenToko
                 Text = "Batal",
                 Location = new Point(430, 380),
                 Size = new Size(80, 30),
-                BackColor = Color.LightCoral
+                BackColor = Color.LightCoral,
+                Cursor = Cursors.Hand
             };
             btnBatal.Click += (s, e) => Close();
             Controls.Add(btnBatal);
@@ -116,7 +110,24 @@ namespace ManajemenToko
             {
                 dgvBarang.Rows.Clear();
                 foreach (var barang in result.Data)
+                {
                     dgvBarang.Rows.Add(barang.Id, barang.Nama, barang.Deskripsi);
+                }
+            }
+        }
+
+        private void DgvBarang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                _selectedId = Convert.ToInt32(dgvBarang.Rows[e.RowIndex].Cells["Id"].Value);
+                var result = _controller.GetBarangById(_selectedId);
+                if (result.Success)
+                {
+                    txtDeskripsi.Text = result.Data.Deskripsi;
+                    txtDeskripsi.Enabled = true;
+                    btnUpdate.Enabled = true;
+                }
             }
         }
 
@@ -140,11 +151,16 @@ namespace ManajemenToko
             if (result.Success)
             {
                 LoadData();
-                _selectedId = 0;
-                txtDeskripsi.Clear();
-                txtDeskripsi.Enabled = false;
-                btnUpdate.Enabled = false;
+                ResetForm();
             }
+        }
+
+        private void ResetForm()
+        {
+            _selectedId = 0;
+            txtDeskripsi.Clear();
+            txtDeskripsi.Enabled = false;
+            btnUpdate.Enabled = false;
         }
     }
 }

@@ -9,32 +9,39 @@ using System.Threading.Tasks;
 
 namespace ManajemenToko.Services
 {
-    public class ApiResponse<T>
+    /// <summary>
+    /// Generic API response wrapper.
+    /// </summary>
+    public class ApiResponse<T> // PascalCase 
     {
-        public bool Success { get; set; }
-        public string Message { get; set; }
-        public T? Data { get; set; }
+        public bool Success { get; set; } // PascalCase 
+        public string Message { get; set; } // PascalCase 
+        public T? Data { get; set; } // Nullable + PascalCase 
     }
 
-    public class BarangService
+    /// <summary>
+    /// Service for managing Barang operations.
+    /// Singleton pattern + in-memory + API sync.
+    /// </summary>
+    public class BarangService // PascalCase 
     {
         // Singleton instance
-        private static readonly BarangService _instance = new BarangService();
-        public static BarangService Instance => _instance;
+        private static readonly BarangService _instance = new(); // camelCase for private field 
+        public static BarangService Instance => _instance; // PascalCase for public static property 
 
         // Constructor privat agar tidak bisa instance dari luar
         private BarangService() { }
 
         // Data storage
-        private readonly List<Barang> _barangList = new List<Barang>();
+        private readonly List<Barang> _barangList = new(); // camelCase 
         private int _nextId = 1;
 
         // API connection
-        private static readonly HttpClient _httpClient = new HttpClient();
-        private const string API_BASE_URL = "https://localhost:7067/api/toko";
+        private static readonly HttpClient _httpClient = new(); // camelCase 
+        private const string ApiBaseUrl = "https://localhost:7067/api/toko"; // PascalCase for constants 
 
         // CREATE - Tambah barang
-        public bool TambahBarang(Barang barang)
+        public bool TambahBarang(Barang barang) // PascalCase method, camelCase parameter 
         {
             barang.Id = _nextId++;
             _barangList.Add(barang);
@@ -53,7 +60,7 @@ namespace ManajemenToko.Services
             return _barangList.FirstOrDefault(b => b.Id == id);
         }
 
-        // UPDATE - Update barang
+        // UPDATE - Update barang lengkap
         public bool UpdateBarang(int id, Barang updatedBarang)
         {
             var barang = GetBarangById(id);
@@ -92,19 +99,20 @@ namespace ManajemenToko.Services
             return _barangList.Remove(barang);
         }
 
-        // SEARCH - Cari barang
+        // SEARCH - Cari barang by keyword
         public List<Barang> CariBarang(string keyword)
         {
             if (string.IsNullOrWhiteSpace(keyword))
                 return GetAllBarang();
 
-            keyword = keyword.ToLower();
+            var lowerKeyword = keyword.ToLower(); // camelCase 
+
             return _barangList.Where(b =>
-                b.Nama.ToLower().Contains(keyword) ||
-                b.Deskripsi.ToLower().Contains(keyword) ||
-                (b.Model?.ToLower().Contains(keyword) == true) ||
-                (b.Merek?.ToLower().Contains(keyword) == true) ||
-                b.Jenis.ToLower().Contains(keyword)
+                b.Nama.ToLower().Contains(lowerKeyword) ||
+                b.Deskripsi.ToLower().Contains(lowerKeyword) ||
+                (b.Model?.ToLower().Contains(lowerKeyword) == true) ||
+                (b.Merek?.ToLower().Contains(lowerKeyword) == true) ||
+                b.Jenis.ToLower().Contains(lowerKeyword)
             ).ToList();
         }
 
@@ -113,8 +121,9 @@ namespace ManajemenToko.Services
         {
             try
             {
-                var response = await _httpClient.GetAsync(API_BASE_URL);
+                var response = await _httpClient.GetAsync(ApiBaseUrl);
                 var json = await response.Content.ReadAsStringAsync();
+
                 var apiResponse = JsonSerializer.Deserialize<ApiResponse<List<Barang>>>(json,
                     new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
@@ -140,11 +149,11 @@ namespace ManajemenToko.Services
             {
                 var json = JsonSerializer.Serialize(_barangList);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-                await _httpClient.PostAsync($"{API_BASE_URL}/sync", content);
+                await _httpClient.PostAsync($"{ApiBaseUrl}/sync", content);
             }
             catch
             {
-                // Handle atau log errors di sini jika diinginkan
+                // Optional: log or handle error
             }
         }
     }

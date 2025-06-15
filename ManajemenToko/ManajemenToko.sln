@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManajemenToko", "ManajemenToko.csproj", "{A0F47F48-E129-4F0F-8DD8-C5A35C23958B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManejemenToko.API", "..\ManejemenToko.API\ManejemenToko.API.csproj", "{9D675BD8-B44A-4F10-976C-8F8B5D049371}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManajemenToko.API", "..\ManejemenToko.API\ManajemenToko.API.csproj", "{9D675BD8-B44A-4F10-976C-8F8B5D049371}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,7 +7,7 @@
         "Action": "Start"
       },
       {
-        "Path": "..\\ManejemenToko.API\\ManejemenToko.API.csproj",
+        "Path": "..\\ManejemenToko.API\\ManajemenToko.API.csproj",
         "Action": "Start"
       }
     ]

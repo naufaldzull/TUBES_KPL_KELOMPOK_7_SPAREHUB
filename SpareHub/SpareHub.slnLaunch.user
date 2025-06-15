@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "..\\ManajemenToko\\ManajemenToko.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\ManejemenToko.API\\ManejemenToko.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

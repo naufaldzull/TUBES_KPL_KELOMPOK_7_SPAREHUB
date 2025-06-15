@@ -1,4 +1,4 @@
-using ManejemenToko.API.Services;
+using ManajemenToko.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

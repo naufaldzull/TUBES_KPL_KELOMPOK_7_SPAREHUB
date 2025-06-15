@@ -3,17 +3,15 @@ using ManajemenToko.Models;
 using ManajemenToko.Services;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ManajemenToko
 {
-    public partial class FormLihatBarang : Form
+    /// <summary>
+    /// Form untuk menampilkan daftar barang dari data lokal/API.
+    /// </summary>
+    public partial class FormLihatBarang : Form // PascalCase 
     {
         private readonly BarangController _controller;
         private DataGridView dgvBarang;
@@ -25,8 +23,8 @@ namespace ManajemenToko
         {
             InitializeComponent();
             _controller = new BarangController();
-            SetupForm();
-            LoadData();
+            SetupForm(); // PascalCase 
+            LoadData();  // PascalCase 
         }
 
         private void SetupForm()
@@ -90,39 +88,29 @@ namespace ManajemenToko
             };
             Controls.Add(lblTotal);
 
-            btnRefresh = new Button
-            {
-                Text = "Refresh Lokal",
-                Location = new Point(480, 420),
-                Size = new Size(90, 30),
-                BackColor = Color.LightBlue
-            };
-            btnRefresh.Click += (s, e) => LoadData();
-            Controls.Add(btnRefresh);
-
-            btnRefreshApi = new Button
-            {
-                Text = "Refresh API",
-                Location = new Point(580, 420),
-                Size = new Size(90, 30),
-                BackColor = Color.LightYellow
-            };
-            btnRefreshApi.Click += async (s, e) =>
+            btnRefresh = CreateButton("Refresh Lokal", new Point(480, 420), Color.LightBlue, (s, e) => LoadData());
+            btnRefreshApi = CreateButton("Refresh API", new Point(580, 420), Color.LightYellow, async (s, e) =>
             {
                 await BarangService.Instance.LoadFromApiAsync();
                 LoadData();
-            };
-            Controls.Add(btnRefreshApi);
+            });
+            btnTutup = CreateButton("Tutup", new Point(680, 420), Color.LightCoral, (s, e) => Close());
+        }
 
-            btnTutup = new Button
+        private Button CreateButton(string text, Point location, Color color, EventHandler onClick)
+        {
+            var button = new Button
             {
-                Text = "Tutup",
-                Location = new Point(680, 420),
-                Size = new Size(80, 30),
-                BackColor = Color.LightCoral
+                Text = text,
+                Location = location,
+                Size = new Size(90, 30),
+                BackColor = color,
+                Font = new Font("Arial", 9, FontStyle.Bold),
+                Cursor = Cursors.Hand
             };
-            btnTutup.Click += (s, e) => Close();
-            Controls.Add(btnTutup);
+            button.Click += onClick;
+            Controls.Add(button);
+            return button;
         }
 
         private void SetupColumns()
@@ -136,7 +124,7 @@ namespace ManajemenToko
 
             dgvBarang.Columns["Id"].Width = 50;
             dgvBarang.Columns["Deskripsi"].Width = 300;
-            dgvBarang.Columns["Harga"].DefaultCellStyle.Format = "C0";
+            dgvBarang.Columns["Harga"].DefaultCellStyle.Format = "C0"; // currency IDR
             dgvBarang.Columns["Stok"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
@@ -173,9 +161,6 @@ namespace ManajemenToko
                 DisplayData(result.Data);
         }
 
-        private void LihatBarang_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void LihatBarang_Load(object sender, EventArgs e) { } // Event handler dari Designer, jangan dihapus
     }
 }

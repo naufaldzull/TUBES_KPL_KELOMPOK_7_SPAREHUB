@@ -2,22 +2,32 @@
 using ManajemenToko.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ManajemenToko.Controller
 {
-    class BarangController
+    /// <summary>
+    /// Controller untuk pengelolaan Barang via service layer.
+    /// Mengikuti .NET naming convention dan clean structure.
+    /// </summary>
+    public class BarangController // PascalCase 
     {
-        private readonly BarangService _barangService;
+        private readonly BarangService _barangService; // camelCase private field 
 
         public BarangController()
         {
-            _barangService = BarangService.Instance; // Singleton
+            _barangService = BarangService.Instance; // Singleton 
         }
 
-        public (bool Success, string Message) TambahBarang(string nama, string deskripsi, string harga, string stok, string model, string merek, string jenis)
+        public (bool Success, string Message) TambahBarang(
+            string nama,
+            string deskripsi,
+            string harga,
+            string stok,
+            string model,
+            string merek,
+            string jenis)
         {
             if (string.IsNullOrWhiteSpace(nama))
                 return (false, "Nama tidak boleh kosong");
@@ -35,8 +45,7 @@ namespace ManajemenToko.Controller
                 return (false, "Stok harus angka dan tidak boleh negatif");
 
             var barang = new Barang(nama, deskripsi, parsedHarga, parsedStok, model ?? "", merek ?? "", jenis);
-
-            bool result = _barangService.TambahBarang(barang);
+            var result = _barangService.TambahBarang(barang);
 
             return result
                 ? (true, "Barang berhasil ditambahkan!")
@@ -57,7 +66,15 @@ namespace ManajemenToko.Controller
                 : (false, null, "Barang tidak ditemukan");
         }
 
-        public (bool Success, string Message) UpdateBarang(int id, string nama, string deskripsi, string harga, string stok, string model, string merek, string jenis)
+        public (bool Success, string Message) UpdateBarang(
+            int id,
+            string nama,
+            string deskripsi,
+            string harga,
+            string stok,
+            string model,
+            string merek,
+            string jenis)
         {
             if (string.IsNullOrWhiteSpace(nama))
                 return (false, "Nama tidak boleh kosong");
@@ -69,7 +86,7 @@ namespace ManajemenToko.Controller
                 return (false, "Stok tidak valid");
 
             var updatedBarang = new Barang(nama, deskripsi, parsedHarga, parsedStok, model ?? "", merek ?? "", jenis);
-            bool result = _barangService.UpdateBarang(id, updatedBarang);
+            var result = _barangService.UpdateBarang(id, updatedBarang);
 
             return result
                 ? (true, "Barang berhasil diupdate!")
@@ -81,7 +98,7 @@ namespace ManajemenToko.Controller
             if (string.IsNullOrWhiteSpace(deskripsi))
                 return (false, "Deskripsi tidak boleh kosong");
 
-            bool result = _barangService.UpdateDeskripsi(id, deskripsi);
+            var result = _barangService.UpdateDeskripsi(id, deskripsi);
 
             return result
                 ? (true, "Deskripsi berhasil diupdate!")
@@ -90,7 +107,7 @@ namespace ManajemenToko.Controller
 
         public (bool Success, string Message) HapusBarang(int id)
         {
-            bool result = _barangService.HapusBarang(id);
+            var result = _barangService.HapusBarang(id);
 
             return result
                 ? (true, "Barang berhasil dihapus!")
@@ -103,19 +120,19 @@ namespace ManajemenToko.Controller
             return (true, hasil, $"Ditemukan {hasil.Count} barang");
         }
 
-        public string[] GetAvailableJenis() => Barang.GetAvailableJenis();
+        public string[] GetAvailableJenis() => Barang.GetAvailableJenis(); // PascalCase method 
 
         public void ShowSuccessMessage(string message) =>
-            MessageBox.Show(message, "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(message, "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information); // PascalCase method 
 
         public void ShowErrorMessage(string message) =>
-            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // PascalCase method 
 
         public bool ShowConfirmationDialog(string message, string title = "Konfirmasi") =>
-            MessageBox.Show(message, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+            MessageBox.Show(message, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes; // PascalCase method 
 
         // Tambahan untuk integrasi delete ke API (opsional)
-        public async Task<bool> SyncDeleteBarangToApiAsync(int id)
+        public async Task<bool> SyncDeleteBarangToApiAsync(int id) // PascalCase method 
         {
             // Tambahkan logika sync delete ke API backend jika diperlukan
             return await Task.FromResult(true);

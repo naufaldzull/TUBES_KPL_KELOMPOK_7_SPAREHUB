@@ -1,123 +1,133 @@
+using System;
+using System.Drawing; // pastikan ini ada untuk Size, Point, Font, Color
 using System.Windows.Forms;
 
 namespace ManajemenToko
 {
-    public partial class ManajemenToko : Form
+    /// <summary>
+    /// Main Menu Form untuk aplikasi Manajemen Toko.
+    /// Mengikuti .NET naming convention dan UI best practices.
+    /// </summary>
+    public partial class ManajemenToko : Form // PascalCase 
     {
         public ManajemenToko()
         {
             InitializeComponent();
-            SetupMenuStyle(); // Panggil method buat setup menu style
+            SetupMenuStyle(); // PascalCase 
         }
 
-        private void SetupMenuStyle()
+        /// <summary>
+        /// Setup tampilan awal dan elemen menu.
+        /// </summary>
+        private void SetupMenuStyle() // PascalCase 
         {
-            // Ubah form jadi menu utama
             this.Text = "Manajemen Toko - Menu Utama";
 
-            // Sembunyiin DataGridView dulu (nanti dipake di form lain)
-            if (this.Controls.Contains(dataGridViewBarang1))
+            if (this.Controls.Contains(dataGridViewBarang1)) // camelCase 
             {
                 dataGridViewBarang1.Visible = false;
             }
 
-            // Bikin button menu baru (tambahin lewat designer atau code)
             CreateMenuButtons();
         }
 
-        private void CreateMenuButtons()
+        /// <summary>
+        /// Buat tombol-tombol menu utama.
+        /// </summary>
+        private void CreateMenuButtons() // PascalCase 
         {
             // Button Tambah Barang
-            Button btnTambahBarang = new Button();
-            btnTambahBarang.Text = "1. Tambah Barang";
-            btnTambahBarang.Size = new Size(200, 50);
-            btnTambahBarang.Location = new Point(150, 100);
-            btnTambahBarang.BackColor = Color.LightBlue;
-            btnTambahBarang.Font = new Font("Arial", 10, FontStyle.Regular);
+            Button btnTambahBarang = new()
+            {
+                Text = "1. Tambah Barang",
+                Size = new Size(200, 50),
+                Location = new Point(150, 100),
+                BackColor = Color.LightBlue,
+                Font = new Font("Arial", 10, FontStyle.Regular)
+            };
             btnTambahBarang.Click += BtnTambahBarang_Click;
             this.Controls.Add(btnTambahBarang);
 
             // Button Lihat Barang
-            Button btnLihatBarang = new Button();
-            btnLihatBarang.Text = "2. Lihat Semua Barang";
-            btnLihatBarang.Size = new Size(200, 50);
-            btnLihatBarang.Location = new Point(150, 160);
-            btnLihatBarang.BackColor = Color.LightGreen;
-            btnLihatBarang.Font = new Font("Arial", 10, FontStyle.Regular);
+            Button btnLihatBarang = new()
+            {
+                Text = "2. Lihat Semua Barang",
+                Size = new Size(200, 50),
+                Location = new Point(150, 160),
+                BackColor = Color.LightGreen,
+                Font = new Font("Arial", 10, FontStyle.Regular)
+            };
             btnLihatBarang.Click += BtnLihatBarang_Click;
             this.Controls.Add(btnLihatBarang);
 
-            // Button Ubah Barang
-            Button btnUbahDeskripsi = new Button();
-            btnUbahDeskripsi.Text = "3. Ubah Deskripsi Barang";
-            btnUbahDeskripsi.Size = new Size(200, 50);
-            btnUbahDeskripsi.Location = new Point(150, 220);
-            btnUbahDeskripsi.BackColor = Color.LightYellow;
-            btnUbahDeskripsi.Font = new Font("Arial", 10, FontStyle.Regular);
-            btnUbahDeskripsi.Click += btnUbahDeskripsi_Click;
+            // Button Ubah Deskripsi Barang
+            Button btnUbahDeskripsi = new()
+            {
+                Text = "3. Ubah Deskripsi Barang",
+                Size = new Size(200, 50),
+                Location = new Point(150, 220),
+                BackColor = Color.LightYellow,
+                Font = new Font("Arial", 10, FontStyle.Regular)
+            };
+            btnUbahDeskripsi.Click += BtnUbahDeskripsi_Click;
             this.Controls.Add(btnUbahDeskripsi);
 
             // Button Hapus Barang
-            Button btnHapusBarang = new Button();
-            btnHapusBarang.Text = "4. Hapus Barang";
-            btnHapusBarang.Size = new Size(200, 50);
-            btnHapusBarang.Location = new Point(150, 280);
-            btnHapusBarang.BackColor = Color.LightCoral;
-            btnHapusBarang.Font = new Font("Arial", 10, FontStyle.Regular);
+            Button btnHapusBarang = new()
+            {
+                Text = "4. Hapus Barang",
+                Size = new Size(200, 50),
+                Location = new Point(150, 280),
+                BackColor = Color.LightCoral,
+                Font = new Font("Arial", 10, FontStyle.Regular)
+            };
             btnHapusBarang.Click += BtnHapusBarang_Click;
             this.Controls.Add(btnHapusBarang);
 
             // Label Judul
-            Label lblJudul = new Label();
-            lblJudul.Text = "MANAJEMEN BARANG TOKO";
-            lblJudul.Font = new Font("Arial", 16, FontStyle.Bold);
-            lblJudul.ForeColor = Color.DarkBlue;
-            lblJudul.Size = new Size(400, 40);
-            lblJudul.Location = new Point(100, 30);
-            lblJudul.TextAlign = ContentAlignment.MiddleCenter;
+            Label lblJudul = new()
+            {
+                Text = "MANAJEMEN BARANG TOKO",
+                Font = new Font("Arial", 16, FontStyle.Bold),
+                ForeColor = Color.DarkBlue,
+                Size = new Size(400, 40),
+                Location = new Point(100, 30),
+                TextAlign = ContentAlignment.MiddleCenter
+            };
             this.Controls.Add(lblJudul);
         }
 
-        // Event handlers untuk menu buttons
-        private void BtnTambahBarang_Click(object sender, EventArgs e)
+        // Event handler: Tambah Barang
+        private void BtnTambahBarang_Click(object sender, EventArgs e) // PascalCase 
         {
-            // Buka form tambah barang
-            FormTambahBarang formTambah = new FormTambahBarang();
-            formTambah.ShowDialog(); // ShowDialog biar modal
+            using FormTambahBarang formTambah = new(); // using untuk modal form 
+            formTambah.ShowDialog();
         }
 
+        // Event handler: Lihat Semua Barang
         private void BtnLihatBarang_Click(object sender, EventArgs e)
         {
-            FormLihatBarang formLihat = new FormLihatBarang();
+            using FormLihatBarang formLihat = new();
             formLihat.ShowDialog();
         }
 
-        private void btnUbahDeskripsi_Click(object sender, EventArgs e)
+        // Event handler: Ubah Deskripsi Barang
+        private void BtnUbahDeskripsi_Click(object sender, EventArgs e)
         {
-            FormUbahDeskripsi formUbah = new FormUbahDeskripsi();
+            using FormUbahDeskripsi formUbah = new();
             formUbah.ShowDialog();
         }
 
+        // Event handler: Hapus Barang
         private void BtnHapusBarang_Click(object sender, EventArgs e)
         {
-            FormHapusBarang formHapus = new FormHapusBarang();
+            using FormHapusBarang formHapus = new();
             formHapus.ShowDialog();
         }
 
-        // Event handlers yang udah ada - jangan dihapus
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Nanti dipake buat form lihat barang
-        }
-
-        private void txtNama_TextChanged(object sender, EventArgs e)
-        {
-            // Nanti dipake buat validation
-        }
-
-        private void ManajemenToko_Load(object sender, EventArgs e)
-        {
-            // Load form event - bisa dipake buat inisialisasi data
-        }
+        // Handler tambahan dari designer (jangan dihapus)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { } // camelCase 
+        private void txtNama_TextChanged(object sender, EventArgs e) { }
+        private void ManajemenToko_Load(object sender, EventArgs e) { }
     }
 }

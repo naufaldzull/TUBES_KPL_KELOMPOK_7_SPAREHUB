@@ -466,9 +466,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\ManejemenToko.API.csproj",
-      "projectName": "ManejemenToko.API",
-      "projectPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\ManejemenToko.API.csproj",
+      "projectUniqueName": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\ManajemenToko.API.csproj",
+      "projectName": "ManajemenToko.API",
+      "projectPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\ManajemenToko.API.csproj",
       "packagesPath": "C:\\Users\\naufa\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesFinalBanget\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\ManejemenToko.API\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,23 +1,21 @@
 ﻿using ManajemenToko.Controller;
 using ManajemenToko.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ManajemenToko
 {
-    public partial class FormTambahBarang: Form
+    /// <summary>
+    /// Form untuk menambahkan data barang ke sistem.
+    /// Mengikuti .NET naming convention dan WinForms best practice.
+    /// </summary>
+    public partial class FormTambahBarang : Form // PascalCase 
     {
-        private readonly BarangController _controller;
+        private readonly BarangController _controller; // camelCase private readonly 
         private readonly BarangService _barangService;
 
-        // Basic controls only
+        // Controls
         private TextBox txtNama, txtDeskripsi, txtHarga, txtStok, txtModel, txtMerek;
         private ComboBox cmbJenis;
         private Button btnSimpan, btnBatal;
@@ -27,20 +25,19 @@ namespace ManajemenToko
             InitializeComponent();
             _controller = new BarangController();
             _barangService = BarangService.Instance;
+
             SetupForm();
             LoadJenisData();
         }
 
-        private void SetupForm()
+        private void SetupForm() // PascalCase 
         {
-            // Form setup
             Text = "Tambah Sparepart Motor";
             Size = new Size(450, 400);
             StartPosition = FormStartPosition.CenterScreen;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
 
-            // Create and position controls
             int y = 20;
 
             CreateLabel("TAMBAH SPAREPART", 20, y, 400, true);
@@ -53,7 +50,6 @@ namespace ManajemenToko
             txtDeskripsi.Multiline = true;
             y += 70;
 
-            // Optional fields - simplified
             txtModel = CreateTextBox("Model:", 20, y);
             txtMerek = CreateTextBox("Merek:", 230, y);
             y += 50;
@@ -63,9 +59,8 @@ namespace ManajemenToko
 
             txtHarga = CreateTextBox("Harga (Rp):", 20, y);
             txtStok = CreateTextBox("Stok:", 230, y);
-            y += 60;
+            y += 40;
 
-            // Buttons
             btnSimpan = CreateButton("Simpan", 150, y, Color.LightGreen);
             btnSimpan.Click += BtnSimpan_Click;
 
@@ -73,50 +68,49 @@ namespace ManajemenToko
             btnBatal.Click += (s, e) => Close();
         }
 
-        // Helper methods untuk kurangi duplicate code
-        private Label CreateLabel(string text, int x, int y, int width = 100, bool isTitle = false)
+        private Label CreateLabel(string text, int x, int y, int width = 100, bool isTitle = false) // camelCase parameter 
         {
-            var lbl = new Label
+            var label = new Label
             {
                 Text = text,
                 Location = new Point(x, y),
                 Size = new Size(width, 20),
                 Font = isTitle ? new Font("Arial", 12, FontStyle.Bold) : new Font("Arial", 9)
             };
-            Controls.Add(lbl);
-            return lbl;
+            Controls.Add(label);
+            return label;
         }
 
         private TextBox CreateTextBox(string labelText, int x, int y, int height = 25)
         {
             CreateLabel(labelText, x, y);
-            var txt = new TextBox
+            var textBox = new TextBox
             {
                 Location = new Point(x + 100, y - 2),
                 Size = new Size(100, height),
                 Font = new Font("Arial", 9)
             };
-            Controls.Add(txt);
-            return txt;
+            Controls.Add(textBox);
+            return textBox;
         }
 
         private ComboBox CreateComboBox(string labelText, int x, int y)
         {
             CreateLabel(labelText, x, y);
-            var cmb = new ComboBox
+            var comboBox = new ComboBox
             {
                 Location = new Point(x + 100, y - 2),
                 Size = new Size(150, 25),
                 DropDownStyle = ComboBoxStyle.DropDownList,
                 Font = new Font("Arial", 9)
             };
-            Controls.Add(cmb);
-            return cmb;
+            Controls.Add(comboBox);
+            return comboBox;
         }
 
         private Button CreateButton(string text, int x, int y, Color color)
         {
-            var btn = new Button
+            var button = new Button
             {
                 Text = text,
                 Location = new Point(x, y),
@@ -125,8 +119,8 @@ namespace ManajemenToko
                 Font = new Font("Arial", 9, FontStyle.Bold),
                 Cursor = Cursors.Hand
             };
-            Controls.Add(btn);
-            return btn;
+            Controls.Add(button);
+            return button;
         }
 
         private void LoadJenisData()
@@ -148,7 +142,6 @@ namespace ManajemenToko
         {
             try
             {
-                // Basic validation
                 if (string.IsNullOrWhiteSpace(txtNama.Text) ||
                     string.IsNullOrWhiteSpace(txtDeskripsi.Text) ||
                     string.IsNullOrWhiteSpace(txtHarga.Text) ||
@@ -159,7 +152,6 @@ namespace ManajemenToko
                     return;
                 }
 
-                // Tambah barang
                 var result = _controller.TambahBarang(
                     txtNama.Text,
                     txtDeskripsi.Text,
@@ -175,8 +167,7 @@ namespace ManajemenToko
                     MessageBox.Show(result.Message, "Success");
                     ClearForm();
 
-                    // Sync to API in background (simplified)
-                    _ = _barangService.SyncToApiAsync();
+                    _ = _barangService.SyncToApiAsync(); // fire-and-forget 
                 }
                 else
                 {
@@ -199,6 +190,5 @@ namespace ManajemenToko
             txtMerek.Clear();
             cmbJenis.SelectedIndex = 0;
         }
-
     }
 }
