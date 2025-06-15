@@ -41,7 +41,7 @@ namespace CS
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Kosong, jika kamu ingin tampilkan detail saat dipilih, bisa tambahkan logika di sini
+        
         }
     }
 

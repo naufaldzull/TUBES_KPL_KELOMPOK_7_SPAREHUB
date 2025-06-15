@@ -3,36 +3,6 @@
   "WorkspaceRootPath": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{46B8C0E8-E03D-4962-A64F-9A83E4061BDA}|..\\CS\\CS.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\cs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46B8C0E8-E03D-4962-A64F-9A83E4061BDA}|..\\CS\\CS.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\cs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4CD9C52-52E3-2665-85A2-D8F9BEB33894}|..\\Customerservis\\Customerservis\\Customerservis.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\customerservis\\customerservis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4CD9C52-52E3-2665-85A2-D8F9BEB33894}|..\\Customerservis\\Customerservis\\Customerservis.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\customerservis\\customerservis\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4CD9C52-52E3-2665-85A2-D8F9BEB33894}|..\\Customerservis\\Customerservis\\Customerservis.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\customerservis\\customerservis\\model\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4CD9C52-52E3-2665-85A2-D8F9BEB33894}|..\\Customerservis\\Customerservis\\Customerservis.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\customerservis\\customerservis\\controllers\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\sparehub\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\sparehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\sparehub\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,8 +11,43 @@
       "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\sparehub\\wishlist.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:wishlist.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\sparehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CD9C52-52E3-2665-85A2-D8F9BEB33894}|..\\Customerservis\\Customerservis\\Customerservis.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\customerservis\\customerservis\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\customerserviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:customerserviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\sparehub\\customerserviceform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:customerserviceform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\sparehub\\customerserviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:customerserviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2767CC-5E30-6E42-7B32-356FBBEAE658}|..\\Wishlist\\Wishlist\\Wishlist.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\wishlist\\wishlist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\sparehub\\sparehub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|solutionrelative:sparehub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CD9C52-52E3-2665-85A2-D8F9BEB33894}|..\\Customerservis\\Customerservis\\Customerservis.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\customerservis\\customerservis\\model\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CD9C52-52E3-2665-85A2-D8F9BEB33894}|..\\Customerservis\\Customerservis\\Customerservis.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\customerservis\\customerservis\\controllers\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CD9C52-52E3-2665-85A2-D8F9BEB33894}|..\\Customerservis\\Customerservis\\Customerservis.csproj|d:\\kpl\\kosong ygy\\tubes_kpl_kelompok_7_sparehub\\customerservis\\customerservis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD130D1F-2ADE-4BB4-AA8E-1461383E4FD9}|SpareHub.csproj|D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -56,7 +61,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -64,32 +69,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\CS\\Form1.cs",
-              "RelativeDocumentMoniker": "..\\CS\\Form1.cs",
-              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\CS\\Form1.cs",
-              "RelativeToolTip": "..\\CS\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Wishlist.Designer.cs",
+              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Wishlist.Designer.cs",
+              "RelativeDocumentMoniker": "Wishlist.Designer.cs",
+              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Wishlist.Designer.cs",
+              "RelativeToolTip": "Wishlist.Designer.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAcwGQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T14:32:43.649Z",
+              "WhenOpened": "2025-06-15T11:24:27.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\CS\\Form1.cs",
-              "RelativeDocumentMoniker": "..\\CS\\Form1.cs",
-              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\CS\\Form1.cs [Design]",
-              "RelativeToolTip": "..\\CS\\Form1.cs [Design]",
+              "DocumentIndex": 6,
+              "Title": "CustomerServiceForm.Designer.cs",
+              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\CustomerServiceForm.Designer.cs",
+              "RelativeDocumentMoniker": "CustomerServiceForm.Designer.cs",
+              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\CustomerServiceForm.Designer.cs",
+              "RelativeToolTip": "CustomerServiceForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T14:31:51.367Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-15T11:05:16.048Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
+              "Title": "CustomerServiceForm.cs [Design]",
+              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\CustomerServiceForm.cs",
+              "RelativeDocumentMoniker": "CustomerServiceForm.cs",
+              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\CustomerServiceForm.cs [Design]",
+              "RelativeToolTip": "CustomerServiceForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T10:51:10.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CustomerServiceForm.cs",
+              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\CustomerServiceForm.cs",
+              "RelativeDocumentMoniker": "CustomerServiceForm.cs",
+              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\CustomerServiceForm.cs",
+              "RelativeToolTip": "CustomerServiceForm.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T10:46:12.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Wishlist\\Wishlist\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Wishlist\\Wishlist\\Program.cs",
+              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Wishlist\\Wishlist\\Program.cs",
+              "RelativeToolTip": "..\\Wishlist\\Wishlist\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T10:40:24.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Customerservis\\Customerservis\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "..\\Customerservis\\Customerservis\\WeatherForecast.cs",
@@ -101,38 +141,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CustomerService.cs",
-              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\CustomerService.cs",
-              "RelativeDocumentMoniker": "CustomerService.cs",
-              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\CustomerService.cs",
-              "RelativeToolTip": "CustomerService.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAgwHwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Wishlist.cs [Design]",
+              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Wishlist.cs",
+              "RelativeDocumentMoniker": "Wishlist.cs",
+              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Wishlist.cs [Design]",
+              "RelativeToolTip": "Wishlist.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T13:47:03.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T11:53:06.902Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:50:03.167Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "Wishlist.cs",
               "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Wishlist.cs",
               "RelativeDocumentMoniker": "Wishlist.cs",
               "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Wishlist.cs",
               "RelativeToolTip": "Wishlist.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAASwIUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAwFEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T11:53:11.095Z",
               "EditorCaption": ""
@@ -140,64 +167,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Wishlist.cs [Design]",
-              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Wishlist.cs",
-              "RelativeDocumentMoniker": "Wishlist.cs",
-              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Wishlist.cs [Design]",
-              "RelativeToolTip": "Wishlist.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:53:06.902Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Customerservis\\Customerservis\\Model\\CustomerService.cs",
               "RelativeDocumentMoniker": "..\\Customerservis\\Customerservis\\Model\\CustomerService.cs",
               "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Customerservis\\Customerservis\\Model\\CustomerService.cs",
               "RelativeToolTip": "..\\Customerservis\\Customerservis\\Model\\CustomerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T11:22:49.176Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CustomerService.cs",
-              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Customerservis\\Customerservis\\Controllers\\CustomerService.cs",
-              "RelativeDocumentMoniker": "..\\Customerservis\\Customerservis\\Controllers\\CustomerService.cs",
-              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Customerservis\\Customerservis\\Controllers\\CustomerService.cs",
-              "RelativeToolTip": "..\\Customerservis\\Customerservis\\Controllers\\CustomerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:22:46.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Customerservis\\Customerservis\\Program.cs",
-              "RelativeDocumentMoniker": "..\\Customerservis\\Customerservis\\Program.cs",
-              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Customerservis\\Customerservis\\Program.cs",
-              "RelativeToolTip": "..\\Customerservis\\Customerservis\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T11:22:41.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CustomerService.cs [Design]",
-              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\CustomerService.cs",
-              "RelativeDocumentMoniker": "CustomerService.cs",
-              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\CustomerService.cs [Design]",
-              "RelativeToolTip": "CustomerService.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T13:45:57.449Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "SpareHub.csproj",
               "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj",
               "RelativeDocumentMoniker": "SpareHub.csproj",
@@ -209,7 +190,44 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T11:50:03.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Customerservis\\Customerservis\\Controllers\\CustomerService.cs",
+              "RelativeDocumentMoniker": "..\\Customerservis\\Customerservis\\Controllers\\CustomerService.cs",
+              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Customerservis\\Customerservis\\Controllers\\CustomerService.cs",
+              "RelativeToolTip": "..\\Customerservis\\Customerservis\\Controllers\\CustomerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T11:22:46.891Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Customerservis\\Customerservis\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Customerservis\\Customerservis\\Program.cs",
+              "ToolTip": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\Customerservis\\Customerservis\\Program.cs",
+              "RelativeToolTip": "..\\Customerservis\\Customerservis\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T11:22:41.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\KPL\\kosong ygy\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",

@@ -12,7 +12,7 @@ namespace SpareHub
             // see https://aka.ms/applicationconfiguration.
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomerService()); // atau form utama
+            Application.Run(new Wishlist()); // atau form utama
         }
     }
 }

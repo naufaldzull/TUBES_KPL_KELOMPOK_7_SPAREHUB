@@ -1,155 +1,147 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SpareHub
 {
     public partial class Wishlist : Form
     {
-        private List<string> wishlistItems;
+        // List untuk menyimpan item wishlist
+        private List<string> _wishlistItems = new();
 
         public Wishlist()
         {
-            InitializeComponent();
-            wishlistItems = new List<string>();
-            UpdateStatus();
+            InitializeComponent(); // Inisialisasi komponen GUI
+            UpdateStatus();        // Tampilkan status awal
         }
 
+        /// <summary>
+        /// Event saat form pertama kali dimuat.
+        /// </summary>
         private void Wishlist_Load(object sender, EventArgs e)
         {
-            // Set initial focus to textbox
-            textBox1.Focus();
+            textBox1.Focus(); // Fokuskan kursor ke inputan
         }
 
+        /// <summary>
+        /// Event saat isi teks berubah, digunakan untuk mengaktifkan atau menonaktifkan tombol Tambah.
+        /// </summary>
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // Optional: Enable/disable add button based on text input
             button1.Enabled = !string.IsNullOrWhiteSpace(textBox1.Text);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        /// <summary>
+        /// Event saat user menekan Enter pada textbox — akan menambahkan item.
+        /// </summary>
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Optional: Custom painting for the panel if needed
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                button1_Click(sender, e); // Jalankan tombol Tambah
+                e.Handled = true;
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Event saat item di list dipilih — aktifkan tombol Hapus.
+        /// </summary>
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Optional: Handle label click if needed
+            button2.Enabled = listBox1.SelectedIndex >= 0;
         }
 
-        // Tombol "Tambah" - Add item to wishlist
+        /// <summary>
+        /// Event saat user double-click item di list — akan menghapus item.
+        /// </summary>
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex >= 0)
+                button2_Click(sender, e);
+        }
+
+        /// <summary>
+        /// Tombol Tambah — menambahkan item baru ke wishlist.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             string newItem = textBox1.Text.Trim();
 
-            if (!string.IsNullOrEmpty(newItem))
-            {
-                // Check if item already exists
-                if (!wishlistItems.Contains(newItem))
-                {
-                    wishlistItems.Add(newItem);
-                    UpdateWishlistDisplay();
-                    textBox1.Clear();
-                    textBox1.Focus();
-                    UpdateStatus();
-                }
-                else
-                {
-                    MessageBox.Show("Item sudah ada dalam wishlist!", "Duplikat Item",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else
+            if (string.IsNullOrEmpty(newItem))
             {
                 MessageBox.Show("Silakan masukkan item terlebih dahulu!", "Input Kosong",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+
+            if (_wishlistItems.Contains(newItem))
+            {
+                MessageBox.Show("Item sudah ada dalam wishlist!", "Duplikat Item",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            _wishlistItems.Add(newItem);
+            textBox1.Clear();      // Bersihkan input setelah ditambahkan
+            textBox1.Focus();      // Kembalikan fokus
+            UpdateWishlistDisplay();
+            UpdateStatus();
         }
 
-        // Tombol "Hapus" - Remove selected item from wishlist
+        /// <summary>
+        /// Tombol Hapus — menghapus item yang dipilih dari wishlist.
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex >= 0)
-            {
-                DialogResult result = MessageBox.Show($"Apakah Anda yakin ingin menghapus '{listBox1.SelectedItem}'?",
-                                                    "Konfirmasi Hapus",
-                                                    MessageBoxButtons.YesNo,
-                                                    MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    int selectedIndex = listBox1.SelectedIndex;
-                    wishlistItems.RemoveAt(selectedIndex);
-                    UpdateWishlistDisplay();
-                    UpdateStatus();
-                }
-            }
-            else
+            if (listBox1.SelectedIndex < 0)
             {
                 MessageBox.Show("Silakan pilih item yang ingin dihapus!", "Tidak Ada Pilihan",
-                              MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var selectedItem = listBox1.SelectedItem.ToString();
+            var result = MessageBox.Show($"Apakah Anda yakin ingin menghapus '{selectedItem}'?",
+                                         "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                _wishlistItems.RemoveAt(listBox1.SelectedIndex);
+                UpdateWishlistDisplay();
+                UpdateStatus();
             }
         }
 
-        // Update the display of wishlist items
+        #region Helper Methods
+
+        /// <summary>
+        /// Memperbarui tampilan daftar item di listbox.
+        /// </summary>
         private void UpdateWishlistDisplay()
         {
             listBox1.Items.Clear();
-            foreach (string item in wishlistItems)
+            foreach (var item in _wishlistItems)
             {
                 listBox1.Items.Add(item);
             }
         }
 
-        // Update status label
+        /// <summary>
+        /// Memperbarui status label dan tombol hapus.
+        /// </summary>
         private void UpdateStatus()
         {
-            if (wishlistItems.Count == 0)
+            if (_wishlistItems.Count == 0)
             {
                 label1.Text = "Status: Kosong";
                 button2.Enabled = false;
             }
             else
             {
-                label1.Text = $"Status: {wishlistItems.Count} item dalam wishlist";
-                button2.Enabled = true;
+                label1.Text = $"Status: {_wishlistItems.Count} item dalam wishlist";
+                button2.Enabled = listBox1.SelectedIndex >= 0;
             }
         }
-
-        // Handle Enter key press in textbox to add item
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                button1_Click(sender, e);
-                e.Handled = true;
-            }
-        }
-
-        // Handle double-click on listbox to remove item
-        private void listBox1_DoubleClick(object sender, EventArgs e)
-        {
-            if (listBox1.SelectedIndex >= 0)
-            {
-                button2_Click(sender, e);
-            }
-        }
-
-        // Handle selection change in listbox
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            button2.Enabled = listBox1.SelectedIndex >= 0 && wishlistItems.Count > 0;
-        }
-
-        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
     }
 }

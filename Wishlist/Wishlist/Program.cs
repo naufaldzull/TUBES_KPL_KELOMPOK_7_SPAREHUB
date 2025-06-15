@@ -1,35 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
-using Wishlist;
 
-namespace Wishlist
+namespace WishlistApp
 {
+    // Enum untuk merepresentasikan status dari wishlist
     public enum StatusWishlist
     {
-        Kosong, AdaItem
+        Kosong,
+        AdaItem
     }
 
+    // Class utama yang menangani logika wishlist
     public class WishlistClass
     {
-        private List<string> items = new List<string>();
+        // List untuk menyimpan item wishlist
+        private List<string> _items = new List<string>();
+
+        // Properti untuk menyimpan status wishlist (Kosong / AdaItem)
         public StatusWishlist Status { get; private set; } = StatusWishlist.Kosong;
 
+        /// <summary>
+        /// Menambahkan item ke dalam daftar wishlist.
+        /// Akan melempar exception jika item kosong.
+        /// </summary>
+        /// <param name="_item">Nama item yang ingin ditambahkan</param>
         public void TambahItem(string item)
         {
             if (string.IsNullOrWhiteSpace(item))
             {
-                throw new ArgumentException("Item tidak boleh kosong ygy");
+                throw new ArgumentException("Item tidak boleh kosong.");
             }
-            items.Add(item);
-            UpdateStatus();
+
+            _items.Add(item);
+            UpdateStatus(); // Perbarui status setelah menambah item
             Console.WriteLine($"'{item}' ditambahkan.");
         }
 
+        /// <summary>
+        /// Menghapus item dari wishlist jika ditemukan.
+        /// </summary>
+        /// <param name="item">Nama item yang ingin dihapus</param>
         public void HapusItem(string item)
         {
-            if (items.Remove(item))
+            if (_items.Remove(item))
             {
-                UpdateStatus();
+                UpdateStatus(); // Perbarui status setelah menghapus item
                 Console.WriteLine($"'{item}' dihapus.");
             }
             else
@@ -38,74 +53,92 @@ namespace Wishlist
             }
         }
 
+        /// <summary>
+        /// Menampilkan seluruh item dalam wishlist.
+        /// Jika kosong, akan ditampilkan pesan 'Kosong.'
+        /// </summary>
         public void TampilkanWishlist()
         {
-            Console.WriteLine("Wishlist Kamu: ");
-            if (items.Count == 0)
+            Console.WriteLine("Wishlist Kamu:");
+            if (_items.Count == 0)
             {
                 Console.WriteLine("Kosong.");
             }
             else
             {
-                foreach (var item in items)
+                foreach (var item in _items)
                 {
                     Console.WriteLine($"- {item}");
                 }
             }
         }
 
+        /// <summary>
+        /// Memperbarui status wishlist sesuai jumlah item saat ini.
+        /// </summary>
         private void UpdateStatus()
         {
-            Status = items.Count == 0 ? StatusWishlist.Kosong : StatusWishlist.AdaItem;
+            Status = _items.Count == 0 ? StatusWishlist.Kosong : StatusWishlist.AdaItem;
         }
     }
-}
 
-class Program
-{
-    static void Main(string[] args)
+
+    // Program utama (console app)
+    class Program
     {
-        WishlistClass wishlist = new WishlistClass();
-
-        Console.WriteLine("=== Wishlist Console App ===");
-        while (true)
+        static void Main(string[] args)
         {
-            Console.WriteLine("\nMenu:");
-            Console.WriteLine("1. Tambah item");
-            Console.WriteLine("2. Hapus item");
-            Console.WriteLine("3. Tampilkan wishlist");
-            Console.WriteLine("4. Keluar");
-            Console.Write("Pilih opsi (1-4): ");
-            string input = Console.ReadLine();
+            // Inisialisasi objek wishlist
+            var wishlist = new WishlistClass();
 
-            switch (input)
+            Console.WriteLine("=== Wishlist Console App ===");
+
+            // Loop utama menu
+            while (true)
             {
-                case "1":
-                    Console.Write("Masukkan item: ");
-                    string item = Console.ReadLine();
-                    try
-                    {
-                        wishlist.TambahItem(item);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Error: " + ex.Message);
-                    }
-                    break;
-                case "2":
-                    Console.Write("Item yang ingin dihapus: ");
-                    string hapus = Console.ReadLine();
-                    wishlist.HapusItem(hapus);
-                    break;
-                case "3":
-                    wishlist.TampilkanWishlist();
-                    break;
-                case "4":
-                    Console.WriteLine("Terima kasih, program selesai.");
-                    return;
-                default:
-                    Console.WriteLine("Opsi tidak valid.");
-                    break;
+                // Tampilkan menu
+                Console.WriteLine("\nMenu:");
+                Console.WriteLine("1. Tambah item");
+                Console.WriteLine("2. Hapus item");
+                Console.WriteLine("3. Tampilkan wishlist");
+                Console.WriteLine("4. Keluar");
+                Console.Write("Pilih opsi (1-4): ");
+                string pilihan = Console.ReadLine();
+
+                // Logika menu
+                switch (pilihan)
+                {
+                    case "1":
+                        Console.Write("Masukkan item: ");
+                        string item = Console.ReadLine();
+                        try
+                        {
+                            wishlist.TambahItem(item); // Tambah item ke wishlist
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Error: " + ex.Message);
+                        }
+                        break;
+
+                    case "2":
+                        Console.Write("Item yang ingin dihapus: ");
+                        string itemHapus = Console.ReadLine();
+                        wishlist.HapusItem(itemHapus); // Hapus item dari wishlist
+                        break;
+
+                    case "3":
+                        wishlist.TampilkanWishlist(); // Tampilkan isi wishlist
+                        break;
+
+                    case "4":
+                        Console.WriteLine("Terima kasih, program selesai.");
+                        return;
+
+                    default:
+                        Console.WriteLine("Opsi tidak valid."); // Opsi tidak dikenal
+                        break;
+                }
             }
         }
     }
