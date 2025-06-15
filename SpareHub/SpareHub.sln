@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpareHub", "SpareHub.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlasanDanRatingProduk", "..\UlasanDanRatingProduk\UlasanDanRatingProduk.csproj", "{68426139-8084-B3AB-CF7F-50A154280ADF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManajemenToko", "..\ManajemenToko\ManajemenToko.csproj", "{0A079328-E402-A58C-145F-EF22E46A0964}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManejemenToko.API", "..\ManejemenToko.API\ManejemenToko.API.csproj", "{9CAAD83C-33A8-E5B6-7381-8086826EF294}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestUlasanDanRatingProduk", "..\UnitTestUlasanDanRatingProduk\UnitTestUlasanDanRatingProduk.csproj", "{96B4FF9A-BAC7-830F-AF27-F83007EF2783}"
 EndProject
 Global
@@ -23,6 +27,14 @@ Global
 		{68426139-8084-B3AB-CF7F-50A154280ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68426139-8084-B3AB-CF7F-50A154280ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68426139-8084-B3AB-CF7F-50A154280ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A079328-E402-A58C-145F-EF22E46A0964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A079328-E402-A58C-145F-EF22E46A0964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A079328-E402-A58C-145F-EF22E46A0964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A079328-E402-A58C-145F-EF22E46A0964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CAAD83C-33A8-E5B6-7381-8086826EF294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CAAD83C-33A8-E5B6-7381-8086826EF294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CAAD83C-33A8-E5B6-7381-8086826EF294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CAAD83C-33A8-E5B6-7381-8086826EF294}.Release|Any CPU.Build.0 = Release|Any CPU
 		{96B4FF9A-BAC7-830F-AF27-F83007EF2783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96B4FF9A-BAC7-830F-AF27-F83007EF2783}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96B4FF9A-BAC7-830F-AF27-F83007EF2783}.Release|Any CPU.ActiveCfg = Release|Any CPU

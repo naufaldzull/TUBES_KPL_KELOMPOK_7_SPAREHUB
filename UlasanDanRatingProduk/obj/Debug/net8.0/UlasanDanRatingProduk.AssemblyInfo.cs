@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UlasanDanRatingProduk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cef8d919cd3b295bc678ee14387e8c2412bb23c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f16f150037edaa8987109f6e19eebd9ca1d78655")]
 [assembly: System.Reflection.AssemblyProductAttribute("UlasanDanRatingProduk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UlasanDanRatingProduk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

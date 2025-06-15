@@ -42,3 +42,6 @@ C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\TU
 C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\TUBES_KPL_KELOMPOK_7_SPAREHUB\UlasanDanRatingProduk\obj\Debug\net8.0\UlasanDanRatingProduk.pdb
 C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\TUBES_KPL_KELOMPOK_7_SPAREHUB\UlasanDanRatingProduk\obj\Debug\net8.0\UlasanDanRatingProduk.genruntimeconfig.cache
 C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\TUBES_KPL_KELOMPOK_7_SPAREHUB\UlasanDanRatingProduk\obj\Debug\net8.0\ref\UlasanDanRatingProduk.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\UlasanDanRatingProduk\obj\Debug\net8.0\UlasanDanRatingProduk.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\UlasanDanRatingProduk\obj\Debug\net8.0\refint\UlasanDanRatingProduk.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\UlasanDanRatingProduk\obj\Debug\net8.0\UlasanDanRatingProduk.pdb

@@ -113,3 +113,91 @@ C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\TU
 C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.genruntimeconfig.cache
 C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\ref\SpareHub.dll
 C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.Properties.Resources.resources
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\Microsoft.OpenApi.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManajemenToko.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManejemenToko.API.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\UlasanDanRatingProduk.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManajemenToko.pdb
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManejemenToko.API.pdb
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\UlasanDanRatingProduk.pdb
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.csproj.AssemblyReference.cache
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.Form1.resources
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.Properties.Resources.resources
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.UlasanDanRatingProduk.resources
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.csproj.GenerateResource.cache
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.AssemblyInfoInputs.cache
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.AssemblyInfo.cs
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.csproj.CoreCompileInputs.cache
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.sourcelink.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.csproj.Up2Date
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\refint\SpareHub.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.pdb
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManajemenToko.deps.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManajemenToko.runtimeconfig.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManajemenToko.exe
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManejemenToko.API.deps.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManejemenToko.API.runtimeconfig.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\appsettings.Development.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\appsettings.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManejemenToko.API.staticwebassets.endpoints.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManejemenToko.API.exe
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\UlasanDanRatingProduk.deps.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\UlasanDanRatingProduk.runtimeconfig.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\UlasanDanRatingProduk.exe
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\SpareHub.exe
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\SpareHub.deps.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\SpareHub.runtimeconfig.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\SpareHub.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\SpareHub.pdb
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.genruntimeconfig.cache
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\pnuya dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\ref\SpareHub.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\appsettings.Development.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\appsettings.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManejemenToko.API.staticwebassets.endpoints.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManajemenToko.deps.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManajemenToko.runtimeconfig.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManajemenToko.exe
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManejemenToko.API.deps.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManejemenToko.API.runtimeconfig.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManejemenToko.API.exe
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\UlasanDanRatingProduk.deps.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\UlasanDanRatingProduk.runtimeconfig.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\UlasanDanRatingProduk.exe
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\SpareHub.exe
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\SpareHub.deps.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\SpareHub.runtimeconfig.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\SpareHub.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\SpareHub.pdb
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\Microsoft.OpenApi.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManajemenToko.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManejemenToko.API.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\UlasanDanRatingProduk.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManajemenToko.pdb
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\ManejemenToko.API.pdb
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\bin\Debug\net8.0-windows\UlasanDanRatingProduk.pdb
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.csproj.AssemblyReference.cache
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.Form1.resources
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.Properties.Resources.resources
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.csproj.GenerateResource.cache
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.AssemblyInfoInputs.cache
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.AssemblyInfo.cs
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.csproj.CoreCompileInputs.cache
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.sourcelink.json
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.csproj.Up2Date
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\refint\SpareHub.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.pdb
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.genruntimeconfig.cache
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\ref\SpareHub.dll
+C:\Users\RAFFA\Documents\KULIAH\SEMESTER4\Konstruksi Perangkat Lunak\TubesGUI\Integrasi sama fitur dzul\TUBES_KPL_KELOMPOK_7_SPAREHUB\SpareHub\obj\Debug\net8.0-windows\SpareHub.UlasanDanRatingProdukForm.resources
