@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ManajemenToko")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f16f150037edaa8987109f6e19eebd9ca1d78655")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c5d5d3a0f321c1d4b5d0ded6dca876dd75d8ce4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ManajemenToko")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ManajemenToko")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
