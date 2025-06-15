@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SearchingModel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cef8d919cd3b295bc678ee14387e8c2412bb23c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8dbea26185e9c3e22f59be322720bfc5ac6afe27")]
 [assembly: System.Reflection.AssemblyProductAttribute("SearchingModel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SearchingModel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
