@@ -67,6 +67,28 @@
     "ShippingMethod": "gosend",
     "Total": 180000,
     "Status": "Sedang Diproses",
-    "OrderDate": "2025-06-16T12:05:31.652863+07:00"
+    "OrderDate": "2025-06-16T12:05:31.652863\u002B07:00"
+  },
+  {
+    "OrderId": "SPH20250616134231",
+    "Items": [
+      {
+        "ProductId": "81d2583f-4417-4c12-89cd-51951daee8e5",
+        "ProductName": "jakdjabjkd",
+        "Quantity": 1231,
+        "Price": 10000000
+      },
+      {
+        "ProductId": "67da7101-033d-4187-8870-00c983ab083b",
+        "ProductName": "aksjdgajhsgdjhagdjha",
+        "Quantity": 34,
+        "Price": 28374628374
+      }
+    ],
+    "PaymentMethod": "Transfer",
+    "ShippingMethod": "gosend",
+    "Total": 977047364716,
+    "Status": "Sedang Diproses",
+    "OrderDate": "2025-06-16T13:42:31.3085671+07:00"
   }
 ]

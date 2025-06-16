@@ -1,6 +1,4 @@
-﻿// fitur_Order.cs
-
-using System;
+﻿using System;
 using System.IO;
 using System.Text.Json;
 using System.Collections.Generic;
@@ -48,7 +46,7 @@ namespace fitur_Order // Nama namespace sebaiknya PascalCase jika sesuai .NET co
         /// <summary>
         /// Initialize OrderManager dengan cart file path
         /// </summary>
-        public Order(string cartFilePath = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\keranjang.json") // parameter pakai camelCase
+        public Order(string cartFilePath = "../../../../fitur_Order/keranjang.json") // parameter pakai camelCase
         {
             _cartFilePath = cartFilePath ?? throw new ArgumentNullException(nameof(cartFilePath)); // Null check dengan throw
             _configuration = new Dictionary<string, string>(); // inisialisasi aman

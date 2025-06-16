@@ -171,6 +171,7 @@ namespace SpareHub
             Name = "SistemPemesanan";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SpareHub - Sistem Pemesanan";
+            Load += SistemPemesanan_Load_1;
             ((ISupportInitialize)keranjangDGV).EndInit();
             ResumeLayout(false);
         }
