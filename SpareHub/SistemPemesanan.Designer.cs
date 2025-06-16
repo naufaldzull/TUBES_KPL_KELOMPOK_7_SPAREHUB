@@ -216,7 +216,7 @@ namespace SpareHub
             tambah_ke_keranjangBTN.Text = "Tambah ke Keranjang";
             tambah_ke_keranjangBTN.Location = new Point(600, 83);
             tambah_ke_keranjangBTN.Size = new Size(150, 30);
-            tambah_ke_keranjangBTN.BackColor = Color.Green;
+            tambah_ke_keranjangBTN.BackColor = Color.Blue;
             tambah_ke_keranjangBTN.ForeColor = Color.White;
             tambah_ke_keranjangBTN.Click += tambah_ke_keranjangBTN_Click;
             this.Controls.Add(tambah_ke_keranjangBTN);
@@ -257,7 +257,7 @@ namespace SpareHub
             clearBTN.Text = "Kosongkan Keranjang";
             clearBTN.Location = new Point(20, 370);
             clearBTN.Size = new Size(150, 30);
-            clearBTN.BackColor = Color.Orange;
+            clearBTN.BackColor = Color.Blue;
             clearBTN.ForeColor = Color.White;
             clearBTN.FlatStyle = FlatStyle.Flat;
             clearBTN.Click += clearBTN_Click;

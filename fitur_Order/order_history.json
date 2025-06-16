@@ -51,6 +51,22 @@
     "ShippingMethod": "gosend",
     "Total": 100000,
     "Status": "Sedang Diproses",
-    "OrderDate": "2025-06-13T21:31:02.4041362+07:00"
+    "OrderDate": "2025-06-13T21:31:02.4041362\u002B07:00"
+  },
+  {
+    "OrderId": "SPH20250616120531",
+    "Items": [
+      {
+        "ProductId": "d3c7c269-4504-468f-8314-1e9ef4489968",
+        "ProductName": "lampu",
+        "Quantity": 1,
+        "Price": 180000
+      }
+    ],
+    "PaymentMethod": "COD",
+    "ShippingMethod": "gosend",
+    "Total": 180000,
+    "Status": "Sedang Diproses",
+    "OrderDate": "2025-06-16T12:05:31.652863+07:00"
   }
 ]
