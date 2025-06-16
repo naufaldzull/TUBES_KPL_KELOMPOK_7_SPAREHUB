@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpareHub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cef8d919cd3b295bc678ee14387e8c2412bb23c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aeb4eeb581bef8a059c97e89751c49c2e2b6a67d")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpareHub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpareHub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

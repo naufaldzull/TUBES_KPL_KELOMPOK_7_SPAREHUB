@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj": {}
+    "D:\\KPL\\Branch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj": {}
   },
   "projects": {
-    "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj": {
+    "D:\\KPL\\Branch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj",
+        "projectUniqueName": "D:\\KPL\\Branch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj",
         "projectName": "SpareHub",
-        "projectPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj",
-        "packagesPath": "C:\\Users\\naufa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\naufa\\OneDrive\\Documents\\SMT 4\\KPL\\TubesBranch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\obj\\",
+        "projectPath": "D:\\KPL\\Branch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\SpareHub.csproj",
+        "packagesPath": "C:\\Users\\L E N O V O\\.nuget\\packages\\",
+        "outputPath": "D:\\KPL\\Branch SpareHub\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\SpareHub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\naufa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\L E N O V O\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
