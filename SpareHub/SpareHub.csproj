@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\TubesFinalBanget - Copy\TUBES_KPL_KELOMPOK_7_SPAREHUB\ManejemenToko.API\ManajemenToko.API.csproj" />
+    <ProjectReference Include="..\ManajemenToko\ManajemenToko.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="MenuRegister.cs">
       <SubType>Form</SubType>
     </Compile>

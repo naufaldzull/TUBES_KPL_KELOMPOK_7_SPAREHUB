@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using ManajemenToko;
 
 namespace SpareHub
 {
@@ -18,7 +19,10 @@ namespace SpareHub
 
         private void btnKelolaToko_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Fitur \"Kelola Toko\" diklik!");
+            ManajemenToko.ManajemenToko formManajemenToko = new ManajemenToko.ManajemenToko();
+            this.Hide();
+            formManajemenToko.ShowDialog();
+            this.Show();
         }
 
         private void btnPemesanan_Click(object sender, EventArgs e)
