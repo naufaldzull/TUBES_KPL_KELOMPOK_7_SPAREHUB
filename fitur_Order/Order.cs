@@ -29,8 +29,8 @@ namespace fitur_Order // Nama namespace sebaiknya PascalCase jika sesuai .NET co
     public class Order // ini sudah PascalCase
     {
         private readonly string _cartFilePath; // ini sudah camelCase + prefix underscore sesuai convention
-        private const string CONFIG_FILE_PATH = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\config.json"; // ini sudah UPPER_CASE untuk const
-        private const string STATUS_FILE_PATH = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\status_mapping.json"; // ini sudah UPPER_CASE untuk const
+        private const string CONFIG_FILE_PATH = "../../../../fitur_Order/config.json"; // ini sudah UPPER_CASE untuk const
+        private const string STATUS_FILE_PATH = "../../../../fitur_Order/status_mapping.json"; // ini sudah UPPER_CASE untuk const
 
         private Dictionary<string, string> _configuration; // ini sudah camelCase + _
         private Dictionary<string, string> _statusMapping; // ini sudah camelCase + _
@@ -294,7 +294,7 @@ namespace fitur_Order // Nama namespace sebaiknya PascalCase jika sesuai .NET co
         {
             try
             {
-                string historyFile = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\order_history.json";
+                string historyFile = "../../../../fitur_Order/order_history.json";
                 List<object> history = new List<object>();
 
                 if (File.Exists(historyFile))
@@ -346,7 +346,7 @@ namespace fitur_Order // Nama namespace sebaiknya PascalCase jika sesuai .NET co
         {
             try
             {
-                string historyFile = "C:\\Users\\Lenovo\\Desktop\\KPL\\TUBES SPAREHUB GUI\\TUBES_KPL_KELOMPOK_7_SPAREHUB\\fitur_Order\\order_history.json";
+                string historyFile = "../../../../fitur_Order/order_history.json";
                 if (File.Exists(historyFile))
                 {
                     string json = File.ReadAllText(historyFile);

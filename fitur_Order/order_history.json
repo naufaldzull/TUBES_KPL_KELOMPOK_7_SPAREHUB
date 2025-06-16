@@ -1,110 +1,18 @@
 [
   {
-    "OrderId": "SPH20250613205453",
+    "OrderId": "SPH20250616164519",
     "Items": [
       {
-        "ProductId": "d2ce91ed-2573-494c-b828-7bff09bfc663",
-        "ProductName": "lampu",
-        "Quantity": 2,
-        "Price": 180000
+        "ProductId": "e6ff27df-c083-4e58-a7e2-c07a50ed2c5b",
+        "ProductName": "Lampu",
+        "Quantity": 1,
+        "Price": 200000
       }
     ],
     "PaymentMethod": "Transfer",
     "ShippingMethod": "gosend",
-    "Total": 360000,
+    "Total": 200000,
     "Status": "Sedang Diproses",
-    "OrderDate": "2025-06-13T20:54:53.552086\u002B07:00"
-  },
-  {
-    "OrderId": "SPH20250613212436",
-    "Items": [
-      {
-        "ProductId": "b338911c-1b22-42f3-a35f-81e612b7afff",
-        "ProductName": "lampu",
-        "Quantity": 2,
-        "Price": 140000
-      },
-      {
-        "ProductId": "20c0b7fd-728e-4187-bb58-90c50349615c",
-        "ProductName": "rim roda motor",
-        "Quantity": 2,
-        "Price": 500000
-      }
-    ],
-    "PaymentMethod": "COD",
-    "ShippingMethod": "gosend",
-    "Total": 1280000,
-    "Status": "Sedang Diproses",
-    "OrderDate": "2025-06-13T21:24:36.0905368\u002B07:00"
-  },
-  {
-    "OrderId": "SPH20250613213102",
-    "Items": [
-      {
-        "ProductId": "2f5fc449-503e-46f6-a067-1463d91bd3a6",
-        "ProductName": "aksjdaks",
-        "Quantity": 1,
-        "Price": 100000
-      }
-    ],
-    "PaymentMethod": "COD",
-    "ShippingMethod": "gosend",
-    "Total": 100000,
-    "Status": "Sedang Diproses",
-    "OrderDate": "2025-06-13T21:31:02.4041362\u002B07:00"
-  },
-  {
-    "OrderId": "SPH20250616120531",
-    "Items": [
-      {
-        "ProductId": "d3c7c269-4504-468f-8314-1e9ef4489968",
-        "ProductName": "lampu",
-        "Quantity": 1,
-        "Price": 180000
-      }
-    ],
-    "PaymentMethod": "COD",
-    "ShippingMethod": "gosend",
-    "Total": 180000,
-    "Status": "Sedang Diproses",
-    "OrderDate": "2025-06-16T12:05:31.652863\u002B07:00"
-  },
-  {
-    "OrderId": "SPH20250616134231",
-    "Items": [
-      {
-        "ProductId": "81d2583f-4417-4c12-89cd-51951daee8e5",
-        "ProductName": "jakdjabjkd",
-        "Quantity": 1231,
-        "Price": 10000000
-      },
-      {
-        "ProductId": "67da7101-033d-4187-8870-00c983ab083b",
-        "ProductName": "aksjdgajhsgdjhagdjha",
-        "Quantity": 34,
-        "Price": 28374628374
-      }
-    ],
-    "PaymentMethod": "Transfer",
-    "ShippingMethod": "gosend",
-    "Total": 977047364716,
-    "Status": "Sedang Diproses",
-    "OrderDate": "2025-06-16T13:42:31.3085671\u002B07:00"
-  },
-  {
-    "OrderId": "SPH20250616142916",
-    "Items": [
-      {
-        "ProductId": "48762e99-ce45-4b00-ba21-442e93aa81c6",
-        "ProductName": "akshdkajsh",
-        "Quantity": 1,
-        "Price": 23874324
-      }
-    ],
-    "PaymentMethod": "Kartu Kredit",
-    "ShippingMethod": "gosend",
-    "Total": 23874324,
-    "Status": "Sedang Diproses",
-    "OrderDate": "2025-06-16T14:29:16.5334643+07:00"
+    "OrderDate": "2025-06-16T16:45:19.599521+07:00"
   }
 ]

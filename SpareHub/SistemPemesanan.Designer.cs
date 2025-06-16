@@ -54,7 +54,6 @@ namespace SpareHub
         private Button addToCartButton;                  // camelCase + English + full word
         private Button checkoutButton;                   // camelCase + full word
         private Button clearCartButton;                  // camelCase + descriptive name
-        private Button backToMainMenuButton;             // camelCase + descriptive name
         private Label totalLabel;                        // camelCase
         private Label statusLabel;                       // camelCase
         private Label titleLabel;                        // camelCase
@@ -70,7 +69,6 @@ namespace SpareHub
             CreateInputSection();
             CreateCartSection();
             CreatePaymentSection();
-            CreateNavigationSection();
             CreateStatusSection();
 
             SetupForm();
@@ -89,7 +87,6 @@ namespace SpareHub
             addToCartButton = new Button();              // camelCase + English + full word
             clearCartButton = new Button();              // camelCase + descriptive name
             checkoutButton = new Button();               // camelCase + full word
-            backToMainMenuButton = new Button();         // camelCase + descriptive name
             cartDataGridView = new DataGridView();       // camelCase + English + no abbreviation
             totalLabel = new Label();
             statusLabel = new Label();
@@ -140,13 +137,6 @@ namespace SpareHub
             checkoutButton.Name = "checkoutButton";            // Full word + camelCase
             checkoutButton.Size = new Size(75, 23);
             checkoutButton.TabIndex = 0;
-            // 
-            // backToMainMenuButton
-            // 
-            backToMainMenuButton.Location = new Point(0, 0);
-            backToMainMenuButton.Name = "backToMainMenuButton";    // Descriptive name + camelCase
-            backToMainMenuButton.Size = new Size(75, 23);
-            backToMainMenuButton.TabIndex = 0;
             // 
             // cartDataGridView
             // 
@@ -324,23 +314,6 @@ namespace SpareHub
             checkoutButton.FlatStyle = FlatStyle.Flat;
             checkoutButton.Click += checkoutButton_Click;
             this.Controls.Add(checkoutButton);
-        }
-
-        /// <summary>
-        /// Membuat section navigasi dengan tombol kembali ke main menu
-        /// </summary>
-        private void CreateNavigationSection()
-        {
-            // Back to main menu button - positioned at top right corner
-            backToMainMenuButton.Text = "Kembali ke Menu";
-            backToMainMenuButton.Location = new Point(730, 15);
-            backToMainMenuButton.Size = new Size(140, 35);
-            backToMainMenuButton.BackColor = Color.Gray;
-            backToMainMenuButton.ForeColor = Color.White;
-            backToMainMenuButton.FlatStyle = FlatStyle.Flat;
-            backToMainMenuButton.Font = new Font("Arial", 9, FontStyle.Bold);
-            backToMainMenuButton.Click += backToMainMenuButton_Click;
-            this.Controls.Add(backToMainMenuButton);
         }
 
         /// <summary>
@@ -542,33 +515,6 @@ namespace SpareHub
                 order.ClearCart();
                 LoadCartToGrid();
                 MessageBox.Show("Keranjang dikosongkan!");
-            }
-        }
-
-        /// <summary>
-        /// Event handler untuk tombol kembali ke main menu
-        /// Menutup form sistem pemesanan dan kembali ke menu utama
-        /// </summary>
-        private void backToMainMenuButton_Click(object sender, EventArgs e)
-        {
-            var result = MessageBox.Show("Kembali ke menu utama?", "Konfirmasi",
-                                       MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                // Clear keranjang jika ada isinya sebelum keluar
-                if (order.LoadCart().Count > 0)
-                {
-                    var clearCart = MessageBox.Show("Kosongkan keranjang sebelum keluar?", "Konfirmasi",
-                                                   MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (clearCart == DialogResult.Yes)
-                    {
-                        order.ClearCart();
-                    }
-                }
-
-                this.Close();
-                
             }
         }
 
