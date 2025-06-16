@@ -9,9 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Customerservis\Customerservis\Customerservis.csproj" />
     <ProjectReference Include="..\ManajemenToko\ManajemenToko.csproj" />
     <ProjectReference Include="..\ManejemenToko.API\ManajemenToko.API.csproj" />
     <ProjectReference Include="..\UlasanDanRatingProduk\UlasanDanRatingProduk.csproj" />
+    <ProjectReference Include="..\Wishlist\Wishlist\Wishlist.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -40,12 +40,18 @@ namespace SpareHub
 
         private void btnWishlist_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Fitur \"Wishlist\" diklik!");
+            Wishlist wishlistForm = new Wishlist();
+            this.Hide();
+            wishlistForm.ShowDialog();
+            this.Show();
         }
 
         private void btnKeluhan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Fitur \"Keluhan\" diklik!");
+            CustomerServiceForm customerServiceForm = new CustomerServiceForm();
+            this.Hide();
+            customerServiceForm.ShowDialog();
+            this.Show();
         }
     }
 }
