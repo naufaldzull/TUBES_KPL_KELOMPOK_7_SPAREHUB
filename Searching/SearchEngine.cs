@@ -149,7 +149,7 @@ namespace Searching
         /// </summary>
         public List<T> CariBerdasarkanKategori(string kategori)
         {
-            var sanitizedKategori = SanitizeSearchInput(kategori, "Kategori");
+            var sanitizedKategori = ValidateSearchInput(kategori, "Kategori");
             return _tabelKategori.TryGetValue(sanitizedKategori, out var list) ? new List<T>(list) : new List<T>();
         }
 
@@ -158,7 +158,7 @@ namespace Searching
         /// </summary>
         public List<T> CariBerdasarkanMerek(string merek)
         {
-            var sanitizedMerek = SanitizeSearchInput(merek, "Merek");
+            var sanitizedMerek = ValidateSearchInput(merek, "Merek");
             return _tabelMerek.TryGetValue(sanitizedMerek, out var list) ? new List<T>(list) : new List<T>();
         }
 
@@ -167,7 +167,7 @@ namespace Searching
         /// </summary>
         public List<T> CariBerdasarkanKompatibilitas(string motor)
         {
-            var sanitizedMotor = SanitizeSearchInput(motor, "Nama motor");
+            var sanitizedMotor = ValidateSearchInput(motor, "Nama motor");
 
             var hasil = new List<T>();
             foreach (var item in _daftarSparepart)
@@ -226,7 +226,10 @@ namespace Searching
                    $"Jumlah Merek: {_tabelMerek.Count}";
         }
 
-        private static string SanitizeSearchInput(string input, string parameterName)
+        /// <summary>
+        /// Menambahkan validasi input untuk pencarian.
+        /// </summary>
+        private static string ValidateSearchInput(string input, string parameterName)
         {
             if (string.IsNullOrWhiteSpace(input))
                 throw new ArgumentException($"{parameterName} tidak boleh kosong", nameof(input));
