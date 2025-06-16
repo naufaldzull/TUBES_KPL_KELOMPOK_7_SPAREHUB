@@ -14,7 +14,10 @@ namespace SpareHub
 
         private void btnPencarianProduk_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Fitur \"Pencarian Produk\" diklik!");
+           SearchingView searchingView = new SearchingView();
+            this.Hide();
+            searchingView.ShowDialog();
+            this.Show();
         }
 
         private void btnKelolaToko_Click(object sender, EventArgs e)

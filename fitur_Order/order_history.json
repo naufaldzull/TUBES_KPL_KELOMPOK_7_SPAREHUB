@@ -51,6 +51,22 @@
     "ShippingMethod": "gosend",
     "Total": 1,
     "Status": "Sedang Diproses",
-    "OrderDate": "2025-06-16T18:38:50.1455559+07:00"
+    "OrderDate": "2025-06-16T18:38:50.1455559\u002B07:00"
+  },
+  {
+    "OrderId": "SPH20250616193809",
+    "Items": [
+      {
+        "ProductId": "8b228fee-10cc-4910-8119-bc055b105353",
+        "ProductName": "tes",
+        "Quantity": 1,
+        "Price": 5000
+      }
+    ],
+    "PaymentMethod": "COD",
+    "ShippingMethod": "gosend",
+    "Total": 5000,
+    "Status": "Sedang Diproses",
+    "OrderDate": "2025-06-16T19:38:09.5589895+07:00"
   }
 ]

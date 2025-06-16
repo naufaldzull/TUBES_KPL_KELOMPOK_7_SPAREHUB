@@ -13,6 +13,9 @@
     <ProjectReference Include="..\fitur_Order\fitur_Order.csproj" />
     <ProjectReference Include="..\ManajemenToko\ManajemenToko.csproj" />
     <ProjectReference Include="..\ManejemenToko.API\ManajemenToko.API.csproj" />
+    <ProjectReference Include="..\SearchingData\SearchingData.csproj" />
+    <ProjectReference Include="..\SearchingModel\SearchingModel.csproj" />
+    <ProjectReference Include="..\Searching\Searching.csproj" />
     <ProjectReference Include="..\UlasanDanRatingProduk\UlasanDanRatingProduk.csproj" />
     <ProjectReference Include="..\Wishlist\Wishlist\Wishlist.csproj" />
   </ItemGroup>
