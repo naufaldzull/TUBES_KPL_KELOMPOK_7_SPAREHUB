@@ -2,15 +2,24 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UlasanDanRatingProduk
 {
+    /// <summary>
+    /// Service untuk menyimpan dan mengelola review produk secara lokal.
+    /// </summary>
     public class ReviewService
     {
-        private readonly Dictionary<string, List<Review>> reviewMap = new();
+        private static readonly ReviewService _instance = new();
+        public static ReviewService Instance => _instance;
 
+        private readonly Dictionary<string, List<Review>> _reviewMap = new();
+
+        private ReviewService() { }
+
+        /// <summary>
+        /// Menambahkan review ke produk tertentu.
+        /// </summary>
         public void AddReview(string productId, Review review)
         {
             if (string.IsNullOrWhiteSpace(productId))
@@ -21,12 +30,15 @@ namespace UlasanDanRatingProduk
             Debug.Assert(!string.IsNullOrWhiteSpace(productId), "Product ID tidak boleh kosong");
             Debug.Assert(review != null, "Review tidak boleh null");
 
-            if (!reviewMap.ContainsKey(productId))
-                reviewMap[productId] = new List<Review>();
+            if (!_reviewMap.ContainsKey(productId))
+                _reviewMap[productId] = new List<Review>();
 
-            reviewMap[productId].Add(review);
+            _reviewMap[productId].Add(review);
         }
 
+        /// <summary>
+        /// Menampilkan review yang sudah dikirim ke console (debug use).
+        /// </summary>
         public void ShowReviews(string productId)
         {
             if (string.IsNullOrWhiteSpace(productId))
@@ -35,34 +47,37 @@ namespace UlasanDanRatingProduk
                 return;
             }
 
-            Debug.Assert(!string.IsNullOrWhiteSpace(productId), "Product ID tidak boleh kosong");
+            Debug.Assert(!string.IsNullOrWhiteSpace(productId));
 
-            if (!reviewMap.ContainsKey(productId) || reviewMap[productId].Count == 0)
+            if (!_reviewMap.ContainsKey(productId) || _reviewMap[productId].Count == 0)
             {
                 Console.WriteLine("Belum ada ulasan untuk produk ini.");
                 return;
             }
 
-            foreach (var review in reviewMap[productId])
+            foreach (var review in _reviewMap[productId])
             {
                 review.Display();
             }
         }
 
+        /// <summary>
+        /// Menampilkan draft review (belum dikirim) untuk produk tertentu.
+        /// </summary>
         public void ShowDrafts(string productId)
         {
             if (string.IsNullOrWhiteSpace(productId))
                 throw new ArgumentException("ID produk tidak boleh kosong");
 
-            Debug.Assert(!string.IsNullOrWhiteSpace(productId), "ID produk tidak boleh kosong");
+            Debug.Assert(!string.IsNullOrWhiteSpace(productId));
 
-            if (!reviewMap.ContainsKey(productId))
+            if (!_reviewMap.ContainsKey(productId))
             {
                 Console.WriteLine("Belum ada review untuk produk ini.");
                 return;
             }
 
-            var drafts = reviewMap[productId]
+            var drafts = _reviewMap[productId]
                 .Where(r => r.State == ReviewState.Draft)
                 .ToList();
 
@@ -78,21 +93,23 @@ namespace UlasanDanRatingProduk
             }
         }
 
+        /// <summary>
+        /// Submit draft review berdasarkan indeks.
+        /// </summary>
         public void SubmitDraft(string productId, int index)
         {
             if (string.IsNullOrWhiteSpace(productId))
                 throw new ArgumentException("ID produk tidak boleh kosong");
-
             if (index < 1)
                 throw new ArgumentOutOfRangeException(nameof(index), "Index harus lebih dari 0");
 
-            Debug.Assert(!string.IsNullOrWhiteSpace(productId), "ID produk tidak boleh kosong");
-            Debug.Assert(index >= 1, "Index harus lebih dari atau sama dengan 1");
+            Debug.Assert(!string.IsNullOrWhiteSpace(productId));
+            Debug.Assert(index >= 1);
 
-            if (!reviewMap.ContainsKey(productId))
+            if (!_reviewMap.ContainsKey(productId))
                 throw new InvalidOperationException("Tidak ditemukan review untuk produk ini.");
 
-            var drafts = reviewMap[productId]
+            var drafts = _reviewMap[productId]
                 .Where(r => r.State == ReviewState.Draft)
                 .ToList();
 
@@ -109,6 +126,22 @@ namespace UlasanDanRatingProduk
             {
                 Console.WriteLine("Gagal mengirim draft: " + ex.Message);
             }
+        }
+
+        /// <summary>
+        /// Mendapatkan semua review yang sudah disubmit untuk produk tertentu.
+        /// </summary>
+        public List<Review> GetSubmittedReviews(string productId)
+        {
+            if (string.IsNullOrWhiteSpace(productId))
+                return new();
+
+            if (!_reviewMap.ContainsKey(productId))
+                return new();
+
+            return _reviewMap[productId]
+                .Where(r => r.State == ReviewState.Submitted)
+                .ToList();
         }
     }
 }

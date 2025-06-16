@@ -2,5 +2,13 @@
   {
     "email": "Zaddy@gmail.com",
     "passwordHash": "9c192efdc753b2a1bd209d7cbdffeda2d0e2e49868e3f07d89b77ffb072c469a"
+  },
+  {
+    "email": "raffa@e.co",
+    "passwordHash": "45333ad49213f4d2c0f7cc64761f2c48cebeb06eea381dcb1805a53f92011574"
+  },
+  {
+    "email": "raffa@e.c",
+    "passwordHash": "45333ad49213f4d2c0f7cc64761f2c48cebeb06eea381dcb1805a53f92011574"
   }
 ]

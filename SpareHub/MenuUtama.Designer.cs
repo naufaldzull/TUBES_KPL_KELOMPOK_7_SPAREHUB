@@ -36,6 +36,7 @@ namespace SpareHub
             btnUlasanRating = new Button();
             btnWishlist = new Button();
             btnKeluhan = new Button();
+            lihatProduk = new Button();
             sidebar.SuspendLayout();
             SuspendLayout();
             // 
@@ -84,7 +85,7 @@ namespace SpareHub
             btnPencarianProduk.TabIndex = 1;
             btnPencarianProduk.Text = "🔍 Pencarian Produk";
             btnPencarianProduk.UseVisualStyleBackColor = false;
-            btnPencarianProduk.Click += btnPencarianProduk_Click;
+            btnPencarianProduk.Click += BtnPencarianProduk_Click;
             // 
             // btnKelolaToko
             // 
@@ -99,7 +100,7 @@ namespace SpareHub
             btnKelolaToko.TabIndex = 2;
             btnKelolaToko.Text = "🏪 Kelola Toko";
             btnKelolaToko.UseVisualStyleBackColor = false;
-            btnKelolaToko.Click += btnKelolaToko_Click;
+            btnKelolaToko.Click += BtnKelolaToko_Click;
             // 
             // btnPemesanan
             // 
@@ -114,7 +115,7 @@ namespace SpareHub
             btnPemesanan.TabIndex = 3;
             btnPemesanan.Text = "\U0001f6d2 Pemesanan";
             btnPemesanan.UseVisualStyleBackColor = false;
-            btnPemesanan.Click += btnPemesanan_Click;
+            btnPemesanan.Click += BtnPemesanan_Click;
             // 
             // btnUlasanRating
             // 
@@ -129,7 +130,7 @@ namespace SpareHub
             btnUlasanRating.TabIndex = 4;
             btnUlasanRating.Text = "🌟 Ulasan & Rating";
             btnUlasanRating.UseVisualStyleBackColor = false;
-            btnUlasanRating.Click += btnUlasanRating_Click;
+            btnUlasanRating.Click += BtnUlasanRating_Click;
             // 
             // btnWishlist
             // 
@@ -144,7 +145,7 @@ namespace SpareHub
             btnWishlist.TabIndex = 5;
             btnWishlist.Text = "❤️ Wishlist";
             btnWishlist.UseVisualStyleBackColor = false;
-            btnWishlist.Click += btnWishlist_Click;
+            btnWishlist.Click += BtnWishlist_Click;
             // 
             // btnKeluhan
             // 
@@ -159,11 +160,27 @@ namespace SpareHub
             btnKeluhan.TabIndex = 6;
             btnKeluhan.Text = "📞 Keluhan";
             btnKeluhan.UseVisualStyleBackColor = false;
-            btnKeluhan.Click += btnKeluhan_Click;
+            btnKeluhan.Click += BtnKeluhan_Click;
+            // 
+            // lihatProduk
+            // 
+            lihatProduk.BackColor = Color.White;
+            lihatProduk.Cursor = Cursors.Hand;
+            lihatProduk.FlatAppearance.BorderColor = Color.RoyalBlue;
+            lihatProduk.FlatStyle = FlatStyle.Flat;
+            lihatProduk.Font = new Font("Segoe UI", 10F);
+            lihatProduk.Location = new Point(484, 450);
+            lihatProduk.Name = "lihatProduk";
+            lihatProduk.Size = new Size(220, 40);
+            lihatProduk.TabIndex = 7;
+            lihatProduk.Text = "📦 Lihat Produk";
+            lihatProduk.UseVisualStyleBackColor = false;
+            lihatProduk.Click += BtnLihatProduk_Click;
             // 
             // MenuUtama
             // 
             ClientSize = new Size(900, 600);
+            Controls.Add(lihatProduk);
             Controls.Add(sidebar);
             Controls.Add(btnPencarianProduk);
             Controls.Add(btnKelolaToko);
@@ -180,5 +197,6 @@ namespace SpareHub
             sidebar.PerformLayout();
             ResumeLayout(false);
         }
+        private Button lihatProduk;
     }
 }

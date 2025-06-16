@@ -1,63 +1,70 @@
 using System;
 using System.Windows.Forms;
-using ManajemenToko;
 
 namespace SpareHub
 {
+    /// <summary>
+    /// Form utama navigasi aplikasi SpareHub.
+    /// </summary>
     public partial class MenuUtama : Form
     {
         public MenuUtama()
         {
             InitializeComponent();
-            this.Hide();
+            Hide(); // auto-hide saat diinisialisasi (perlu dijelaskan kenapa)
         }
 
-        private void btnPencarianProduk_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Membuka form target secara modal, sambil menyembunyikan form utama sementara.
+        /// </summary>
+        /// <param name="form">Instance form yang ingin dibuka</param>
+        private void OpenFormDialog(Form form)
         {
-           SearchingView searchingView = new SearchingView();
-            this.Hide();
-            searchingView.ShowDialog();
-            this.Show();
+            Hide();
+            form.ShowDialog();
+            Show();
         }
 
-        private void btnKelolaToko_Click(object sender, EventArgs e)
+        private void BtnPencarianProduk_Click(object sender, EventArgs e)
         {
-            ManajemenToko.ManajemenToko formManajemenToko = new ManajemenToko.ManajemenToko();
-            this.Hide();
-            formManajemenToko.ShowDialog();
-            this.Show();
+            var searchingView = new SearchingView();
+            OpenFormDialog(searchingView);
         }
 
-        private void btnPemesanan_Click(object sender, EventArgs e)
+        private void BtnKelolaToko_Click(object sender, EventArgs e)
         {
-            SistemPemesanan sistemPemesananForm = new SistemPemesanan();
-            this.Hide();
-            sistemPemesananForm.ShowDialog();
-            this.Show();
+            var formManajemenToko = new ManajemenToko.ManajemenToko();
+            OpenFormDialog(formManajemenToko);
         }
 
-        private void btnUlasanRating_Click(object sender, EventArgs e)
+        private void BtnPemesanan_Click(object sender, EventArgs e)
         {
-            UlasanDanRatingProdukForm ulasanDanRatingProdukForm = new UlasanDanRatingProdukForm();
-            this.Hide();
-            ulasanDanRatingProdukForm.ShowDialog();
-            this.Show();
+            var sistemPemesananForm = new SistemPemesanan();
+            OpenFormDialog(sistemPemesananForm);
         }
 
-        private void btnWishlist_Click(object sender, EventArgs e)
+        private void BtnUlasanRating_Click(object sender, EventArgs e)
         {
-            Wishlist wishlistForm = new Wishlist();
-            this.Hide();
-            wishlistForm.ShowDialog();
-            this.Show();
+            var ulasanForm = new UlasanDanRatingProdukForm();
+            OpenFormDialog(ulasanForm);
         }
 
-        private void btnKeluhan_Click(object sender, EventArgs e)
+        private void BtnWishlist_Click(object sender, EventArgs e)
         {
-            CustomerServiceForm customerServiceForm = new CustomerServiceForm();
-            this.Hide();
-            customerServiceForm.ShowDialog();
-            this.Show();
+            var wishlistForm = new Wishlist();
+            OpenFormDialog(wishlistForm);
+        }
+
+        private void BtnKeluhan_Click(object sender, EventArgs e)
+        {
+            var customerServiceForm = new CustomerServiceForm();
+            OpenFormDialog(customerServiceForm);
+        }
+
+        private void BtnLihatProduk_Click(object sender, EventArgs e)
+        {
+            var lihatBarangForm = new LihatBarangAll();
+            OpenFormDialog(lihatBarangForm);
         }
     }
 }

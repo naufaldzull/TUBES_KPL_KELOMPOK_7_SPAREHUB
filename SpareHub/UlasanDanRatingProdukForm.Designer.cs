@@ -37,6 +37,8 @@
             btnKirim = new Button();
             btnClear = new Button();
             labelJudul = new Label();
+            labelNama = new Label();
+            textBoxNama = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -61,7 +63,7 @@
             // 
             // fieldRating
             // 
-            fieldRating.Location = new Point(155, 219);
+            fieldRating.Location = new Point(155, 264);
             fieldRating.Name = "fieldRating";
             fieldRating.Size = new Size(27, 27);
             fieldRating.TabIndex = 2;
@@ -69,7 +71,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 222);
+            label2.Location = new Point(12, 267);
             label2.Name = "label2";
             label2.Size = new Size(137, 20);
             label2.TabIndex = 3;
@@ -78,7 +80,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 264);
+            label3.Location = new Point(12, 309);
             label3.Name = "label3";
             label3.Size = new Size(115, 20);
             label3.TabIndex = 4;
@@ -86,7 +88,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(155, 264);
+            textBox2.Location = new Point(155, 309);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(902, 154);
@@ -95,7 +97,7 @@
             // btnKirim
             // 
             btnKirim.BackColor = Color.LightGreen;
-            btnKirim.Location = new Point(453, 462);
+            btnKirim.Location = new Point(453, 507);
             btnKirim.Name = "btnKirim";
             btnKirim.Size = new Size(94, 29);
             btnKirim.TabIndex = 6;
@@ -105,7 +107,7 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(570, 462);
+            btnClear.Location = new Point(570, 507);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(94, 29);
             btnClear.TabIndex = 7;
@@ -124,11 +126,29 @@
             labelJudul.TabIndex = 8;
             labelJudul.Text = "ULAS PRODUK";
             // 
-            // UlasanDanRatingProduk
+            // labelNama
+            // 
+            labelNama.AutoSize = true;
+            labelNama.Location = new Point(12, 225);
+            labelNama.Name = "labelNama";
+            labelNama.Size = new Size(111, 20);
+            labelNama.TabIndex = 10;
+            labelNama.Text = "Nama Pengulas";
+            // 
+            // textBoxNama
+            // 
+            textBoxNama.Location = new Point(155, 222);
+            textBoxNama.Name = "textBoxNama";
+            textBoxNama.Size = new Size(99, 27);
+            textBoxNama.TabIndex = 9;
+            // 
+            // UlasanDanRatingProdukForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1069, 565);
+            Controls.Add(labelNama);
+            Controls.Add(textBoxNama);
             Controls.Add(labelJudul);
             Controls.Add(btnClear);
             Controls.Add(btnKirim);
@@ -138,7 +158,7 @@
             Controls.Add(fieldRating);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
-            Name = "UlasanDanRatingProduk";
+            Name = "UlasanDanRatingProdukForm";
             Text = "UlasanDanRatingProduk";
             Load += UlasanDanRatingProdukForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -157,5 +177,7 @@
         private Button btnKirim;
         private Button btnClear;
         private Label labelJudul;
+        private Label labelNama;
+        private TextBox textBoxNama;
     }
 }

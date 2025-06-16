@@ -10,21 +10,23 @@ using System.Windows.Forms;
 
 namespace SpareHub
 {
+    /// <summary>
+    /// Form registrasi akun baru untuk pengguna.
+    /// </summary>
     public partial class MenuRegister : Form
     {
-        private string usersFilePath;
+        private readonly string _usersFilePath = "../../../users.json";
 
         public MenuRegister()
         {
             InitializeComponent();
-            usersFilePath = "../../../users.json";
 
             SetPlaceholder(txtEmail, "Email address");
             SetPlaceholder(txtPassword, "Password");
             SetPlaceholder(txtConfirmPassword, "Confirm Password");
 
             btnSignUp.Click += BtnSignUp_Click;
-            btnLogin.Click += (s, e) => this.Close();
+            btnLogin.Click += (s, e) => Close();
 
             showPassword.CheckedChanged += (s, e) =>
             {
@@ -33,9 +35,11 @@ namespace SpareHub
             };
         }
 
+        /// <summary>
+        /// Mengatur visibilitas karakter password.
+        /// </summary>
         private void TogglePasswordVisibility(TextBox textBox, bool visible, string placeholder)
         {
-            // Kalau lagi nampilkan placeholder, jangan ubah tampilannya
             if (textBox.Text == placeholder && textBox.ForeColor == Color.Gray)
             {
                 textBox.PasswordChar = '\0';
@@ -45,42 +49,46 @@ namespace SpareHub
             textBox.PasswordChar = visible ? '\0' : '●';
         }
 
+        /// <summary>
+        /// Event klik tombol Sign Up. Validasi dan simpan akun baru.
+        /// </summary>
         private void BtnSignUp_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
-            string confirm = txtConfirmPassword.Text.Trim();
+            string confirmPassword = txtConfirmPassword.Text.Trim();
 
             if (IsPlaceholder(email, "Email address") ||
                 IsPlaceholder(password, "Password") ||
-                IsPlaceholder(confirm, "Confirm Password"))
+                IsPlaceholder(confirmPassword, "Confirm Password"))
             {
-                MessageBox.Show("Harap isi semua field.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ShowWarning("Harap isi semua field.");
                 return;
             }
 
-            if (!Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            if (!IsValidEmail(email))
             {
-                MessageBox.Show("Format email tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowError("Format email tidak valid.");
                 return;
             }
 
             if (password.Length < 6)
             {
-                MessageBox.Show("Password minimal 6 karakter.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowError("Password minimal 6 karakter.");
                 return;
             }
 
-            if (password != confirm)
+            if (password != confirmPassword)
             {
-                MessageBox.Show("Konfirmasi password tidak cocok.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowError("Konfirmasi password tidak cocok.");
                 return;
             }
 
             var users = LoadUsers();
+
             if (users.Exists(u => u.email.Equals(email, StringComparison.OrdinalIgnoreCase)))
             {
-                MessageBox.Show("Email sudah terdaftar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowError("Email sudah terdaftar.");
                 return;
             }
 
@@ -91,10 +99,13 @@ namespace SpareHub
             });
 
             SaveUsers(users);
-            MessageBox.Show("Registrasi berhasil!");
-            this.Close();
+            MessageBox.Show("Registrasi berhasil!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
         }
 
+        /// <summary>
+        /// Mengatur placeholder untuk TextBox.
+        /// </summary>
         private void SetPlaceholder(TextBox textBox, string placeholder)
         {
             textBox.Text = placeholder;
@@ -108,7 +119,7 @@ namespace SpareHub
                     textBox.Text = "";
                     textBox.ForeColor = Color.Black;
 
-                    if (placeholder.ToLower().Contains("password") && !showPassword.Checked)
+                    if (placeholder.Contains("Password", StringComparison.OrdinalIgnoreCase) && !showPassword.Checked)
                         textBox.PasswordChar = '●';
                 }
             };
@@ -120,55 +131,92 @@ namespace SpareHub
                     textBox.Text = placeholder;
                     textBox.ForeColor = Color.Gray;
 
-                    if (placeholder.ToLower().Contains("password"))
+                    if (placeholder.Contains("Password", StringComparison.OrdinalIgnoreCase))
                         textBox.PasswordChar = '\0';
                 }
             };
         }
 
-
+        /// <summary>
+        /// Cek apakah input masih placeholder.
+        /// </summary>
         private bool IsPlaceholder(string text, string placeholder)
         {
             return string.IsNullOrWhiteSpace(text) || text == placeholder;
         }
 
-        private string Hash(string raw)
+        /// <summary>
+        /// Validasi email menggunakan regex.
+        /// </summary>
+        private bool IsValidEmail(string email)
         {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(raw));
-                StringBuilder sb = new StringBuilder();
-                foreach (var b in bytes)
-                    sb.Append(b.ToString("x2"));
-                return sb.ToString();
-            }
+            return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
         }
 
+        /// <summary>
+        /// Menampilkan pesan error.
+        /// </summary>
+        private void ShowError(string message)
+        {
+            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        /// <summary>
+        /// Menampilkan pesan warning.
+        /// </summary>
+        private void ShowWarning(string message)
+        {
+            MessageBox.Show(message, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        /// <summary>
+        /// Menghasilkan hash SHA-256 dari string input.
+        /// </summary>
+        private string Hash(string raw)
+        {
+            using SHA256 sha256 = SHA256.Create();
+            byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(raw));
+            StringBuilder sb = new();
+
+            foreach (var b in bytes)
+                sb.Append(b.ToString("x2"));
+
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Memuat user dari file JSON.
+        /// </summary>
         private List<UserCredential> LoadUsers()
         {
             try
             {
-                if (!File.Exists(usersFilePath)) return new List<UserCredential>();
-                string json = File.ReadAllText(usersFilePath);
+                if (!File.Exists(_usersFilePath))
+                    return new List<UserCredential>();
+
+                string json = File.ReadAllText(_usersFilePath);
                 return JsonSerializer.Deserialize<List<UserCredential>>(json) ?? new List<UserCredential>();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal memuat data user: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowError("Gagal memuat data user: " + ex.Message);
                 return new List<UserCredential>();
             }
         }
 
+        /// <summary>
+        /// Menyimpan daftar user ke file JSON.
+        /// </summary>
         private void SaveUsers(List<UserCredential> users)
         {
             try
             {
                 string json = JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(usersFilePath, json);
+                File.WriteAllText(_usersFilePath, json);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal menyimpan data user: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowError("Gagal menyimpan data user: " + ex.Message);
             }
         }
     }

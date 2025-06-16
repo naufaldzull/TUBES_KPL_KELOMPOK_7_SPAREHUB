@@ -1,29 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text.Json;
 using System.Windows.Forms;
-using ManajemenToko.Services;
 using ManajemenToko.Models;
+using ManajemenToko.Services;
+using ManajemenToko.Controller;
 using UlasanDanRatingProduk;
 
 namespace SpareHub
 {
     public partial class UlasanDanRatingProdukForm : Form
     {
-        /// <summary>
-        /// Daftar produk yang tersedia.
-        /// </summary>
-        private List<Barang> _produkList = new();
+        private readonly ReviewService _reviewService = ReviewService.Instance;
+        private readonly BarangController _barangController = new();
 
         /// <summary>
-        /// Service untuk mengelola review dan rating produk.
-        /// </summary>
-        private readonly ReviewService _reviewService = new();
-
-        /// <summary>
-        /// Inisialisasi form.
+        /// Inisialisasi form ulasan dan rating produk.
         /// </summary>
         public UlasanDanRatingProdukForm()
         {
@@ -31,118 +23,60 @@ namespace SpareHub
         }
 
         /// <summary>
-        /// Event handler saat form dimuat.
+        /// Event saat form dimuat. Langsung memuat data barang ke DataGridView.
         /// </summary>
         private void UlasanDanRatingProdukForm_Load(object sender, EventArgs e)
         {
-            LoadOrderData();
-            SetupGrid();
+            LoadBarangToGrid();
         }
 
         /// <summary>
-        /// Memuat data order dari file JSON lokal.
+        /// Memuat data barang dari controller dan menampilkannya di DataGridView.
+        /// Hanya kolom Id dan Nama yang ditampilkan.
         /// </summary>
-        private void LoadOrderData()
+        private void LoadBarangToGrid()
         {
-            try
+            var result = _barangController.GetAllBarang();
+            if (!result.Success)
             {
-                string filePath = "../../../../fitur_Order/order_history.json";
-
-                if (!File.Exists(filePath))
-                {
-                    MessageBox.Show("File orders.json tidak ditemukan.");
-                    return;
-                }
-
-                string json = File.ReadAllText(filePath);
-                var orders = JsonSerializer.Deserialize<List<Order>>(json);
-
-                if (orders == null || orders.Count == 0)
-                {
-                    MessageBox.Show("Data pesanan kosong.");
-                    return;
-                }
-
-                var itemsToShow = orders
-                    .SelectMany(order => order.Items.Select(item => new
-                    {
-                        order.OrderId,
-                        item.ProductName,
-                        item.Quantity,
-                        item.Price
-                    }))
-                    .ToList();
-
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = itemsToShow;
+                _barangController.ShowErrorMessage(result.Message);
+                return;
             }
-            catch (Exception ex)
+
+            var dataToShow = result.Data.Select(b => new
             {
-                MessageBox.Show($"Gagal memuat data order: {ex.Message}");
-            }
+                b.Id,
+                b.Nama
+            }).ToList();
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = dataToShow;
+
+            SetupGridKolomBarang();
         }
 
         /// <summary>
-        /// Menambahkan data dummy produk ke service.
+        /// Mengatur tampilan kolom DataGridView hanya untuk Id dan Nama produk.
         /// </summary>
-        private void TambahDataDummy()
-        {
-            var dummyData = new List<Barang>
-            {
-                new() { Nama = "Kampas Rem Depan", Deskripsi = "Kampas rem depan original untuk motor matic Honda Vario", Harga = 150000, Stok = 10, Model = "Genuine Part", Merek = "Honda", Jenis = "Kaki-kaki" },
-                new() { Nama = "Oli Mesin SAE 10W-40", Deskripsi = "Oli mesin 4T premium untuk motor bebek dan matic semua merk", Harga = 45000, Stok = 25, Model = "4T Premium", Merek = "Shell", Jenis = "Mesin" },
-                new() { Nama = "Busi Iridium NGK", Deskripsi = "Busi iridium premium tahan lama untuk performa optimal", Harga = 85000, Stok = 15, Model = "G-Power", Merek = "NGK", Jenis = "Kelistrikan" },
-                new() { Nama = "V-Belt CVT Honda", Deskripsi = "V-Belt transmisi CVT original untuk Honda Scoopy dan Vario", Harga = 120000, Stok = 8, Model = "CVT Belt", Merek = "Honda", Jenis = "Transmisi" },
-                new() { Nama = "Kaca Spion Lipat", Deskripsi = "Spion lipat universal kanan kiri untuk semua jenis motor", Harga = 75000, Stok = 12, Model = "Universal", Merek = "KTC", Jenis = "Sparepart Lainnya" },
-                new() { Nama = "Filter Udara K&N", Deskripsi = "Filter udara racing washable untuk performa maksimal", Harga = 200000, Stok = 6, Model = "Washable", Merek = "K&N", Jenis = "Mesin" },
-                new() { Nama = "Lampu LED Philips", Deskripsi = "Lampu LED headlight putih terang hemat listrik", Harga = 95000, Stok = 18, Model = "Ultinon", Merek = "Philips", Jenis = "Kelistrikan" },
-                new() { Nama = "Shock Belakang YSS", Deskripsi = "Shock absorber belakang adjustable untuk kenyamanan berkendara", Harga = 450000, Stok = 4, Model = "G-Series", Merek = "YSS", Jenis = "Kaki-kaki" }
-            };
-
-            foreach (var barang in dummyData)
-            {
-                BarangService.Instance.TambahBarang(barang);
-            }
-        }
-
-        /// <summary>
-        /// Mengatur tampilan kolom-kolom pada DataGridView.
-        /// </summary>
-        private void SetupGrid()
+        private void SetupGridKolomBarang()
         {
             dataGridView1.Columns.Clear();
             dataGridView1.AutoGenerateColumns = false;
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
             {
-                HeaderText = "Order ID",
-                DataPropertyName = "OrderId",
-                Name = "OrderId",
-                Width = 150
+                HeaderText = "ID",
+                DataPropertyName = "Id",
+                Name = "Id",
+                Width = 80
             });
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Nama Produk",
-                DataPropertyName = "ProductName",
-                Name = "ProductName",
+                DataPropertyName = "Nama",
+                Name = "Nama",
                 Width = 200
-            });
-
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Quantity",
-                DataPropertyName = "Quantity",
-                Name = "Quantity",
-                Width = 100
-            });
-
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Harga",
-                DataPropertyName = "Price",
-                Name = "Price",
-                Width = 100
             });
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -153,30 +87,31 @@ namespace SpareHub
         }
 
         /// <summary>
-        /// Event handler tombol Kirim Review. Validasi input dan submit ulasan.
+        /// Event tombol Kirim diklik. Melakukan validasi dan menyimpan review ke service.
         /// </summary>
         private void BtnKirim_Click(object sender, EventArgs e)
         {
             try
             {
-                if (!TryGetSelectedProductId(out _, out string namaProduk))
+                if (!TryGetSelectedProduct(out string namaProduk))
                 {
                     MessageBox.Show("Pilih satu produk terlebih dahulu.");
                     return;
                 }
 
+                string reviewer = textBoxNama.Text.Trim();
                 string ratingInput = fieldRating.Text.Trim();
                 string ulasan = textBox2.Text.Trim();
 
-                if (!int.TryParse(ratingInput, out int rating))
+                if (string.IsNullOrWhiteSpace(reviewer))
                 {
-                    MessageBox.Show("Rating harus berupa angka.");
+                    MessageBox.Show("Nama pengulas tidak boleh kosong.");
                     return;
                 }
 
-                if (rating is < 1 or > 5)
+                if (!int.TryParse(ratingInput, out int rating) || rating < 1 || rating > 5)
                 {
-                    MessageBox.Show("Rating harus antara 1 dan 5.");
+                    MessageBox.Show("Rating harus angka antara 1 sampai 5.");
                     return;
                 }
 
@@ -186,20 +121,15 @@ namespace SpareHub
                     return;
                 }
 
-                const string reviewer = "User";
                 var review = new Review(reviewer, ulasan, rating);
-
                 _reviewService.AddReview(namaProduk, review);
                 review.Submit();
 
-                MessageBox.Show($"Review untuk {namaProduk} berhasil dikirim!");
+                MessageBox.Show($"Review dari {reviewer} untuk {namaProduk} berhasil dikirim!");
 
                 fieldRating.Clear();
                 textBox2.Clear();
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show($"Input tidak valid: {ex.Message}");
+                textBoxNama.Clear();
             }
             catch (Exception ex)
             {
@@ -208,34 +138,33 @@ namespace SpareHub
         }
 
         /// <summary>
-        /// Event handler tombol Bersihkan. Mengosongkan input rating dan ulasan.
+        /// Event tombol Bersihkan diklik. Mengosongkan input rating, ulasan, dan nama.
         /// </summary>
         private void BtnBersihkan_Click(object sender, EventArgs e)
         {
             fieldRating.Clear();
             textBox2.Clear();
+            textBoxNama.Clear();
         }
 
         /// <summary>
-        /// Menampilkan review yang telah disimpan untuk produk yang dipilih.
+        /// Menampilkan review yang sudah disimpan untuk produk yang dipilih.
         /// </summary>
         private void ShowExistingReviews()
         {
-            if (TryGetSelectedProductId(out _, out string namaProduk))
+            if (TryGetSelectedProduct(out string namaProduk))
             {
                 _reviewService.ShowReviews(namaProduk);
             }
         }
 
         /// <summary>
-        /// Mengambil nama produk yang dipilih dari DataGridView.
+        /// Mengambil nama produk dari baris terpilih di DataGridView.
         /// </summary>
-        /// <param name="productId">ID produk (dummy karena tidak lagi digunakan)</param>
-        /// <param name="namaProduk">Nama produk terpilih</param>
-        /// <returns>True jika baris valid dipilih</returns>
-        private bool TryGetSelectedProductId(out int productId, out string namaProduk)
+        /// <param name="namaProduk">Nama produk yang dipilih</param>
+        /// <returns>True jika satu baris valid dipilih</returns>
+        private bool TryGetSelectedProduct(out string namaProduk)
         {
-            productId = 0;
             namaProduk = string.Empty;
 
             if (dataGridView1.SelectedRows.Count != 1)
@@ -243,36 +172,11 @@ namespace SpareHub
 
             var row = dataGridView1.SelectedRows[0];
 
-            if (row.Cells["ProductName"].Value is not string name || string.IsNullOrWhiteSpace(name))
+            if (row.Cells["Nama"]?.Value is not string name || string.IsNullOrWhiteSpace(name))
                 return false;
 
             namaProduk = name;
             return true;
-        }
-
-        /// <summary>
-        /// Representasi item pesanan dari JSON.
-        /// </summary>
-        public class OrderItem
-        {
-            public string ProductId { get; set; }
-            public string ProductName { get; set; }
-            public int Quantity { get; set; }
-            public int Price { get; set; }
-        }
-
-        /// <summary>
-        /// Representasi pesanan dari JSON.
-        /// </summary>
-        public class Order
-        {
-            public string OrderId { get; set; }
-            public List<OrderItem> Items { get; set; }
-            public string PaymentMethod { get; set; }
-            public string ShippingMethod { get; set; }
-            public int Total { get; set; }
-            public string Status { get; set; }
-            public DateTime OrderDate { get; set; }
         }
     }
 }

@@ -21,6 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="LihatBarangAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MenuRegister.cs">
       <SubType>Form</SubType>
     </Compile>
