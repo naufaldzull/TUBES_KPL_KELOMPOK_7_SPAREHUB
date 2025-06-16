@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Forms;
+
 namespace SpareHub
 {
     public partial class MenuUtama : Form
@@ -5,6 +8,37 @@ namespace SpareHub
         public MenuUtama()
         {
             InitializeComponent();
+            this.Hide();
+        }
+
+        private void btnPencarianProduk_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Fitur \"Pencarian Produk\" diklik!");
+        }
+
+        private void btnKelolaToko_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Fitur \"Kelola Toko\" diklik!");
+        }
+
+        private void btnPemesanan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Fitur \"Pemesanan\" diklik!");
+        }
+
+        private void btnUlasanRating_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Fitur \"Ulasan & Rating\" diklik!");
+        }
+
+        private void btnWishlist_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Fitur \"Wishlist\" diklik!");
+        }
+
+        private void btnKeluhan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Fitur \"Keluhan\" diklik!");
         }
     }
 }

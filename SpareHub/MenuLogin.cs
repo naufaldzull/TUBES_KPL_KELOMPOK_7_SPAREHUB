@@ -1,187 +1,80 @@
 ﻿using System;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
+using System.IO;
+using System.Text.Json;
+using System.Security.Cryptography;
+using System.Text;
+using System.Collections.Generic;
+using Microsoft.Win32;
+
 
 namespace SpareHub
 {
     public partial class MenuLogin : Form
     {
+
+        MenuRegister register = new MenuRegister();
         public MenuLogin()
         {
-            this.Text = "SpareHub - Login";
-            this.Size = new Size(800, 500);
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
+            InitializeComponent();
 
-            InitUI();
-        }
+            SetPlaceholder(textBoxEmail, "Email address");
+            SetPlaceholder(textBoxPassword, "Password");
 
-        private void InitUI()
-        {
-            // Panel kanan (form login)
-            Panel panelRight = new Panel()
+            showPassword.CheckedChanged += (s, e) =>
             {
-                Dock = DockStyle.Fill,
-                BackColor = Color.White
-            };
-            this.Controls.Add(panelRight);
-
-            // Panel kiri (branding)
-            Panel panelLeft = new Panel()
-            {
-                BackColor = Color.FromArgb(50, 90, 255),
-                Size = new Size(350, this.Height),
-                Dock = DockStyle.Left
-            };
-            this.Controls.Add(panelLeft);
-
-            // Logo
-            PictureBox logoImg = new PictureBox()
-            {
-                Size = new Size(60, 60),
-                Location = new Point(30, 30),
-                SizeMode = PictureBoxSizeMode.Zoom
-            };
-            if (File.Exists("Resources/logo.png"))
-                logoImg.Image = Image.FromFile("Resources/logo.png");
-            panelLeft.Controls.Add(logoImg);
-
-            Label title = new Label()
-            {
-                Text = "Hello,\nwelcome!",
-                ForeColor = Color.White,
-                Font = new Font("Segoe UI", 24, FontStyle.Bold),
-                Location = new Point(30, 130),
-                AutoSize = true
-            };
-            panelLeft.Controls.Add(title);
-
-            Label subText = new Label()
-            {
-                Text = "Welcome to SpareHub.\nBest place to find your spare parts.",
-                ForeColor = Color.White,
-                Font = new Font("Segoe UI", 10),
-                Location = new Point(30, 240),
-                AutoSize = true
-            };
-            panelLeft.Controls.Add(subText);
-
-            // Form controls
-            int formStartX = 50;
-
-            TextBox txtEmail = new TextBox()
-            {
-                Width = 300,
-                Location = new Point(formStartX, 120)
-            };
-            panelRight.Controls.Add(txtEmail);
-            SetPlaceholder(txtEmail, "Email address");
-
-            TextBox txtPassword = new TextBox()
-            {
-                Width = 300,
-                Location = new Point(formStartX, 170)
-            };
-            panelRight.Controls.Add(txtPassword);
-            SetPlaceholder(txtPassword, "Password");
-
-            CheckBox rememberMe = new CheckBox()
-            {
-                Text = "Remember me",
-                Location = new Point(formStartX, 220),
-                AutoSize = true
-            };
-            panelRight.Controls.Add(rememberMe);
-
-            LinkLabel forgotLink = new LinkLabel()
-            {
-                Text = "Forgot password?",
-                AutoSize = true,
-                Location = new Point(formStartX + 200, 220)
-            };
-            panelRight.Controls.Add(forgotLink);
-
-            Button loginButton = new Button()
-            {
-                Text = "Login",
-                Size = new Size(130, 35),
-                BackColor = Color.FromArgb(50, 90, 255),
-                ForeColor = Color.White,
-                Location = new Point(formStartX, 270),
-                FlatStyle = FlatStyle.Flat
-            };
-            loginButton.FlatAppearance.BorderSize = 0;
-            panelRight.Controls.Add(loginButton);
-
-            loginButton.Click += (s, e) =>
-            {
-                string username = txtEmail.Text.Trim();
-                string password = txtPassword.Text;
-
-                if (username != "Email address" && password != "Password")
+                if (textBoxPassword.Text != "Password" && textBoxPassword.ForeColor != Color.Gray)
                 {
-                    if (username.Equals("kelompok7", StringComparison.OrdinalIgnoreCase) && password == "1234567")
-                    {
-                        MessageBox.Show("Login berhasil!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // TODO: Bisa tambahkan buka form baru di sini
-                    }
-                    else
-                    {
-                        MessageBox.Show("Username atau password salah.", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    textBoxPassword.PasswordChar = showPassword.Checked ? '\0' : '●';
+                }
+            };
+
+            buttonLogin.Click += (s, e) =>
+            {
+                string email = textBoxEmail.Text.Trim();
+                string password = textBoxPassword.Text;
+
+                if (email == "Email address" || password == "Password")
+                {
+                    MessageBox.Show("Silakan masukkan email dan password terlebih dahulu.", "Perhatian", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var users = LoadUsers();
+                string passwordHash = Hash(password);
+
+                var matchedUser = users.Find(u =>
+                    u.email.Equals(email, StringComparison.OrdinalIgnoreCase) &&
+                    u.passwordHash == passwordHash);
+
+                if (matchedUser != null)
+                {
+                    MessageBox.Show("Login berhasil!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MenuUtama menuUtama = new MenuUtama();
+                    this.Hide();
+                    menuUtama.ShowDialog();
+                    this.Dispose();
                 }
                 else
                 {
-                    MessageBox.Show("Silakan masukkan username dan password terlebih dahulu.", "Perhatian", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Email atau password salah.", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
 
-            Button signupButton = new Button()
+            buttonSignup.Click += (s, e) =>
             {
-                Text = "Sign up",
-                Size = new Size(130, 35),
-                Location = new Point(formStartX + 150, 270),
-                BackColor = Color.White,
-                ForeColor = Color.FromArgb(50, 90, 255),
-                FlatStyle = FlatStyle.Flat
+                this.Hide();
+                register.ShowDialog();
+                this.Show();
             };
-            signupButton.FlatAppearance.BorderColor = Color.FromArgb(50, 90, 255);
-            signupButton.FlatAppearance.BorderSize = 1;
-            panelRight.Controls.Add(signupButton);
-
-            Label followLabel = new Label()
-            {
-                Text = "Follow us:",
-                Location = new Point(formStartX + 100, 330),
-                AutoSize = true
-            };
-            panelRight.Controls.Add(followLabel);
-
-            // Icons
-            string[] iconFiles = { "facebook.png", "twitter.png", "instagram.png" };
-            for (int i = 0; i < iconFiles.Length; i++)
-            {
-                PictureBox iconBox = new PictureBox()
-                {
-                    Size = new Size(32, 32),
-                    Location = new Point(formStartX + 100 + (i * 40), 360),
-                    SizeMode = PictureBoxSizeMode.Zoom
-                };
-
-                string path = Path.Combine("Resources", iconFiles[i]);
-                if (File.Exists(path))
-                    iconBox.Image = Image.FromFile(path);
-
-                panelRight.Controls.Add(iconBox);
-            }
         }
 
         private void SetPlaceholder(TextBox textBox, string placeholder)
         {
             textBox.Text = placeholder;
             textBox.ForeColor = Color.Gray;
+            textBox.PasswordChar = '\0';
 
             textBox.GotFocus += (s, e) =>
             {
@@ -189,8 +82,9 @@ namespace SpareHub
                 {
                     textBox.Text = "";
                     textBox.ForeColor = Color.Black;
+
                     if (placeholder.ToLower().Contains("password"))
-                        textBox.UseSystemPasswordChar = true;
+                        textBox.PasswordChar = showPassword.Checked ? '\0' : '●';
                 }
             };
 
@@ -200,10 +94,39 @@ namespace SpareHub
                 {
                     textBox.Text = placeholder;
                     textBox.ForeColor = Color.Gray;
+
                     if (placeholder.ToLower().Contains("password"))
-                        textBox.UseSystemPasswordChar = false;
+                        textBox.PasswordChar = '\0';
                 }
             };
+        }
+
+        private string Hash(string raw)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(raw));
+                StringBuilder sb = new StringBuilder();
+                foreach (var b in bytes)
+                    sb.Append(b.ToString("x2"));
+                return sb.ToString();
+            }
+        }
+
+        private List<UserCredential> LoadUsers()
+        {
+            string path = "../../../users.json";
+            try
+            {
+                if (!File.Exists(path)) return new List<UserCredential>();
+                string json = File.ReadAllText(path);
+                return JsonSerializer.Deserialize<List<UserCredential>>(json) ?? new List<UserCredential>();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal membaca data user: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<UserCredential>();
+            }
         }
     }
 }
