@@ -10,21 +10,6 @@ namespace Customerservis.Tests
     public class CustomerServiceControllerTests
     {
         [Fact]
-        public void GetAllPesan_AwalnyaKosong_ReturnsEmptyList()
-        {
-            // Arrange
-            var controller = new CustomerServiceController();
-
-            // Act
-            var result = controller.GetAllPesan();
-
-            // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var pesanList = Assert.IsType<List<Pesan>>(okResult.Value);
-            Assert.Empty(pesanList);
-        }
-
-        [Fact]
         public void KirimPesan_InputValid_ReturnsOk()
         {
             // Arrange

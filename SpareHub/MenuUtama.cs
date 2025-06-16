@@ -27,7 +27,10 @@ namespace SpareHub
 
         private void btnPemesanan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Fitur \"Pemesanan\" diklik!");
+            SistemPemesanan sistemPemesananForm = new SistemPemesanan();
+            this.Hide();
+            sistemPemesananForm.ShowDialog();
+            this.Show();
         }
 
         private void btnUlasanRating_Click(object sender, EventArgs e)

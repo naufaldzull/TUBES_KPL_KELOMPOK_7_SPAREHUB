@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Customerservis\Customerservis\Customerservis.csproj" />
+    <ProjectReference Include="..\fitur_Order\fitur_Order.csproj" />
     <ProjectReference Include="..\ManajemenToko\ManajemenToko.csproj" />
     <ProjectReference Include="..\ManejemenToko.API\ManajemenToko.API.csproj" />
     <ProjectReference Include="..\UlasanDanRatingProduk\UlasanDanRatingProduk.csproj" />

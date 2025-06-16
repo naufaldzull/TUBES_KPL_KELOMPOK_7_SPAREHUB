@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text.Json;
 using System.Windows.Forms;
 using ManajemenToko.Services;
 using ManajemenToko.Models;
@@ -30,25 +33,52 @@ namespace SpareHub
         /// <summary>
         /// Event handler saat form dimuat.
         /// </summary>
-        private async void UlasanDanRatingProdukForm_Load(object sender, EventArgs e)
+        private void UlasanDanRatingProdukForm_Load(object sender, EventArgs e)
         {
-            await LoadProdukAsync();
+            LoadOrderData();
             SetupGrid();
-            TampilkanProduk();
         }
 
-
         /// <summary>
-        /// Memuat data produk dari service, atau menambahkan data dummy jika belum ada.
+        /// Memuat data order dari file JSON lokal.
         /// </summary>
-        private async Task LoadProdukAsync()
+        private void LoadOrderData()
         {
-            _produkList = await BarangService.Instance.LoadFromApiAsync();
-
-            if (_produkList.Count == 0)
+            try
             {
-                //TambahDataDummy();
-                _produkList = BarangService.Instance.GetAllBarang();
+                string filePath = "../../../../fitur_Order/order_history.json";
+
+                if (!File.Exists(filePath))
+                {
+                    MessageBox.Show("File orders.json tidak ditemukan.");
+                    return;
+                }
+
+                string json = File.ReadAllText(filePath);
+                var orders = JsonSerializer.Deserialize<List<Order>>(json);
+
+                if (orders == null || orders.Count == 0)
+                {
+                    MessageBox.Show("Data pesanan kosong.");
+                    return;
+                }
+
+                var itemsToShow = orders
+                    .SelectMany(order => order.Items.Select(item => new
+                    {
+                        order.OrderId,
+                        item.ProductName,
+                        item.Quantity,
+                        item.Price
+                    }))
+                    .ToList();
+
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = itemsToShow;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Gagal memuat data order: {ex.Message}");
             }
         }
 
@@ -85,16 +115,34 @@ namespace SpareHub
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
             {
-                HeaderText = "ID",
-                DataPropertyName = "Id",
-                Width = 100
+                HeaderText = "Order ID",
+                DataPropertyName = "OrderId",
+                Name = "OrderId",
+                Width = 150
             });
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Nama Produk",
-                DataPropertyName = "Nama",
-                Width = 300
+                DataPropertyName = "ProductName",
+                Name = "ProductName",
+                Width = 200
+            });
+
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Quantity",
+                DataPropertyName = "Quantity",
+                Name = "Quantity",
+                Width = 100
+            });
+
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Harga",
+                DataPropertyName = "Price",
+                Name = "Price",
+                Width = 100
             });
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -105,22 +153,13 @@ namespace SpareHub
         }
 
         /// <summary>
-        /// Menampilkan daftar produk ke DataGridView.
-        /// </summary>
-        private void TampilkanProduk()
-        {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = _produkList;
-        }
-
-        /// <summary>
         /// Event handler tombol Kirim Review. Validasi input dan submit ulasan.
         /// </summary>
         private void BtnKirim_Click(object sender, EventArgs e)
         {
             try
             {
-                if (!TryGetSelectedProductId(out int productId, out string namaProduk))
+                if (!TryGetSelectedProductId(out _, out string namaProduk))
                 {
                     MessageBox.Show("Pilih satu produk terlebih dahulu.");
                     return;
@@ -150,7 +189,7 @@ namespace SpareHub
                 const string reviewer = "User";
                 var review = new Review(reviewer, ulasan, rating);
 
-                _reviewService.AddReview(productId.ToString(), review);
+                _reviewService.AddReview(namaProduk, review);
                 review.Submit();
 
                 MessageBox.Show($"Review untuk {namaProduk} berhasil dikirim!");
@@ -182,18 +221,18 @@ namespace SpareHub
         /// </summary>
         private void ShowExistingReviews()
         {
-            if (TryGetSelectedProductId(out int productId, out _))
+            if (TryGetSelectedProductId(out _, out string namaProduk))
             {
-                _reviewService.ShowReviews(productId.ToString());
+                _reviewService.ShowReviews(namaProduk);
             }
         }
 
         /// <summary>
-        /// Mengambil ID dan nama produk yang dipilih dari DataGridView.
+        /// Mengambil nama produk yang dipilih dari DataGridView.
         /// </summary>
-        /// <param name="productId">Output ID produk.</param>
-        /// <param name="namaProduk">Output nama produk.</param>
-        /// <returns>True jika produk valid dipilih, otherwise false.</returns>
+        /// <param name="productId">ID produk (dummy karena tidak lagi digunakan)</param>
+        /// <param name="namaProduk">Nama produk terpilih</param>
+        /// <returns>True jika baris valid dipilih</returns>
         private bool TryGetSelectedProductId(out int productId, out string namaProduk)
         {
             productId = 0;
@@ -202,12 +241,38 @@ namespace SpareHub
             if (dataGridView1.SelectedRows.Count != 1)
                 return false;
 
-            if (dataGridView1.SelectedRows[0].Cells[0].Value is not int id)
+            var row = dataGridView1.SelectedRows[0];
+
+            if (row.Cells["ProductName"].Value is not string name || string.IsNullOrWhiteSpace(name))
                 return false;
 
-            productId = id;
-            namaProduk = dataGridView1.SelectedRows[0].Cells[1].Value?.ToString() ?? "Produk";
+            namaProduk = name;
             return true;
+        }
+
+        /// <summary>
+        /// Representasi item pesanan dari JSON.
+        /// </summary>
+        public class OrderItem
+        {
+            public string ProductId { get; set; }
+            public string ProductName { get; set; }
+            public int Quantity { get; set; }
+            public int Price { get; set; }
+        }
+
+        /// <summary>
+        /// Representasi pesanan dari JSON.
+        /// </summary>
+        public class Order
+        {
+            public string OrderId { get; set; }
+            public List<OrderItem> Items { get; set; }
+            public string PaymentMethod { get; set; }
+            public string ShippingMethod { get; set; }
+            public int Total { get; set; }
+            public string Status { get; set; }
+            public DateTime OrderDate { get; set; }
         }
     }
 }
