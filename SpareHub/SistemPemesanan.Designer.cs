@@ -9,11 +9,18 @@ using fitur_Order;
 
 namespace SpareHub
 {
+    /// <summary>
+    /// Form sistem pemesanan untuk aplikasi SpareHub
+    /// Mengelola input produk, keranjang belanja, dan proses checkout
+    /// </summary>
     public partial class SistemPemesanan : Form
     {
         private System.ComponentModel.IContainer components = null;
 
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <summary>
+        /// Dispose managed dan unmanaged resources
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -33,102 +40,122 @@ namespace SpareHub
             base.Dispose(disposing);
         }
 
+        /// <summary>
+        /// Instance Order class untuk mengelola logika bisnis pemesanan
+        /// </summary>
         private Order order;
 
-        // Controls - nama simple dan jelas
-        private DataGridView keranjangDGV;
-        private TextBox nama_produkTxtBox;
-        private TextBox jumlahTxtBox;
-        private TextBox hargaTxtBox;
-        private ComboBox paymentComboBox;
-        private Button tambah_ke_keranjangBTN;
-        private Button checkoutBTN;
-        private Button clearBTN;
-        private Label totalLabel;
-        private Label statusLabel;
-        private Label titleLabel;
+        // Private fields: camelCase + English + full words (no abbreviations)
+        private DataGridView cartDataGridView;           // camelCase + English + no abbreviation
+        private TextBox productNameTextBox;              // camelCase + English + no underscore
+        private TextBox quantityTextBox;                 // camelCase + English
+        private TextBox priceTextBox;                    // camelCase + English
+        private ComboBox paymentComboBox;                // camelCase
+        private Button addToCartButton;                  // camelCase + English + full word
+        private Button checkoutButton;                   // camelCase + full word
+        private Button clearCartButton;                  // camelCase + descriptive name
+        private Button backToMainMenuButton;             // camelCase + descriptive name
+        private Label totalLabel;                        // camelCase
+        private Label statusLabel;                       // camelCase
+        private Label titleLabel;                        // camelCase
 
+        /// <summary>
+        /// Constructor - Inisialisasi form dan komponen sistem pemesanan
+        /// </summary>
         public SistemPemesanan()
         {
             InitializeComponent();
             order = new Order();
 
-            // PERBAIKAN: Panggil semua method create sections!
             CreateInputSection();
             CreateCartSection();
             CreatePaymentSection();
+            CreateNavigationSection();
             CreateStatusSection();
 
             SetupForm();
             LoadCartToGrid();
         }
 
+        /// <summary>
+        /// Inisialisasi komponen UI form
+        /// </summary>
         private void InitializeComponent()
         {
-            nama_produkTxtBox = new TextBox();
-            jumlahTxtBox = new TextBox();
-            hargaTxtBox = new TextBox();
-            tambah_ke_keranjangBTN = new Button();
-            clearBTN = new Button();
-            checkoutBTN = new Button();
-            keranjangDGV = new DataGridView();
+            // Component initialization: camelCase + English
+            productNameTextBox = new TextBox();          // camelCase + English
+            quantityTextBox = new TextBox();             // camelCase + English
+            priceTextBox = new TextBox();                // camelCase + English
+            addToCartButton = new Button();              // camelCase + English + full word
+            clearCartButton = new Button();              // camelCase + descriptive name
+            checkoutButton = new Button();               // camelCase + full word
+            backToMainMenuButton = new Button();         // camelCase + descriptive name
+            cartDataGridView = new DataGridView();       // camelCase + English + no abbreviation
             totalLabel = new Label();
             statusLabel = new Label();
             paymentComboBox = new ComboBox();
             titleLabel = new Label();
-            ((ISupportInitialize)keranjangDGV).BeginInit();
+
+            ((ISupportInitialize)cartDataGridView).BeginInit();
             SuspendLayout();
             // 
-            // nama_produkTxtBox
+            // productNameTextBox
             // 
-            nama_produkTxtBox.Location = new Point(0, 0);
-            nama_produkTxtBox.Name = "nama_produkTxtBox";
-            nama_produkTxtBox.Size = new Size(100, 27);
-            nama_produkTxtBox.TabIndex = 0;
+            productNameTextBox.Location = new Point(0, 0);
+            productNameTextBox.Name = "productNameTextBox";    // Consistent naming
+            productNameTextBox.Size = new Size(100, 27);
+            productNameTextBox.TabIndex = 0;
             // 
-            // jumlahTxtBox
+            // quantityTextBox
             // 
-            jumlahTxtBox.Location = new Point(0, 0);
-            jumlahTxtBox.Name = "jumlahTxtBox";
-            jumlahTxtBox.Size = new Size(100, 27);
-            jumlahTxtBox.TabIndex = 0;
+            quantityTextBox.Location = new Point(0, 0);
+            quantityTextBox.Name = "quantityTextBox";          // English + camelCase
+            quantityTextBox.Size = new Size(100, 27);
+            quantityTextBox.TabIndex = 0;
             // 
-            // hargaTxtBox
+            // priceTextBox
             // 
-            hargaTxtBox.Location = new Point(0, 0);
-            hargaTxtBox.Name = "hargaTxtBox";
-            hargaTxtBox.Size = new Size(100, 27);
-            hargaTxtBox.TabIndex = 0;
+            priceTextBox.Location = new Point(0, 0);
+            priceTextBox.Name = "priceTextBox";                // English + camelCase
+            priceTextBox.Size = new Size(100, 27);
+            priceTextBox.TabIndex = 0;
             // 
-            // tambah_ke_keranjangBTN
+            // addToCartButton
             // 
-            tambah_ke_keranjangBTN.Location = new Point(0, 0);
-            tambah_ke_keranjangBTN.Name = "tambah_ke_keranjangBTN";
-            tambah_ke_keranjangBTN.Size = new Size(75, 23);
-            tambah_ke_keranjangBTN.TabIndex = 0;
+            addToCartButton.Location = new Point(0, 0);
+            addToCartButton.Name = "addToCartButton";          // English + full word + camelCase
+            addToCartButton.Size = new Size(75, 23);
+            addToCartButton.TabIndex = 0;
             // 
-            // clearBTN
+            // clearCartButton
             // 
-            clearBTN.Location = new Point(0, 0);
-            clearBTN.Name = "clearBTN";
-            clearBTN.Size = new Size(75, 23);
-            clearBTN.TabIndex = 0;
+            clearCartButton.Location = new Point(0, 0);
+            clearCartButton.Name = "clearCartButton";          // Descriptive name + camelCase
+            clearCartButton.Size = new Size(75, 23);
+            clearCartButton.TabIndex = 0;
             // 
-            // checkoutBTN
+            // checkoutButton
             // 
-            checkoutBTN.Location = new Point(0, 0);
-            checkoutBTN.Name = "checkoutBTN";
-            checkoutBTN.Size = new Size(75, 23);
-            checkoutBTN.TabIndex = 0;
+            checkoutButton.Location = new Point(0, 0);
+            checkoutButton.Name = "checkoutButton";            // Full word + camelCase
+            checkoutButton.Size = new Size(75, 23);
+            checkoutButton.TabIndex = 0;
             // 
-            // keranjangDGV
+            // backToMainMenuButton
             // 
-            keranjangDGV.ColumnHeadersHeight = 29;
-            keranjangDGV.Location = new Point(0, 0);
-            keranjangDGV.Name = "keranjangDGV";
-            keranjangDGV.RowHeadersWidth = 51;
-            keranjangDGV.Size = new Size(240, 150);
-            keranjangDGV.TabIndex = 0;
+            backToMainMenuButton.Location = new Point(0, 0);
+            backToMainMenuButton.Name = "backToMainMenuButton";    // Descriptive name + camelCase
+            backToMainMenuButton.Size = new Size(75, 23);
+            backToMainMenuButton.TabIndex = 0;
+            // 
+            // cartDataGridView
+            // 
+            cartDataGridView.ColumnHeadersHeight = 29;
+            cartDataGridView.Location = new Point(0, 0);
+            cartDataGridView.Name = "cartDataGridView";        // English + no abbreviation + camelCase
+            cartDataGridView.RowHeadersWidth = 51;
+            cartDataGridView.Size = new Size(240, 150);
+            cartDataGridView.TabIndex = 0;
             // 
             // totalLabel
             // 
@@ -172,78 +199,84 @@ namespace SpareHub
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SpareHub - Sistem Pemesanan";
             Load += SistemPemesanan_Load_1;
-            ((ISupportInitialize)keranjangDGV).EndInit();
+            ((ISupportInitialize)cartDataGridView).EndInit();
             ResumeLayout(false);
         }
 
+        /// <summary>
+        /// Membuat section input untuk nama produk, jumlah, dan harga
+        /// </summary>
         private void CreateInputSection()
         {
-            // Labels
-            Label namaLabel = new Label();
-            namaLabel.Text = "Nama Produk:";
-            namaLabel.Location = new Point(20, 60);
-            namaLabel.Size = new Size(100, 20);
-            this.Controls.Add(namaLabel);
+            // Local variables: camelCase + English
+            Label productNameLabel = new Label();             // camelCase + English
+            productNameLabel.Text = "Nama Produk:";
+            productNameLabel.Location = new Point(20, 60);
+            productNameLabel.Size = new Size(100, 20);
+            this.Controls.Add(productNameLabel);
 
-            Label jumlahLabel = new Label();
-            jumlahLabel.Text = "Jumlah:";
-            jumlahLabel.Location = new Point(300, 60);
-            jumlahLabel.Size = new Size(60, 20);
-            this.Controls.Add(jumlahLabel);
+            Label quantityLabel = new Label();                // camelCase + English
+            quantityLabel.Text = "Jumlah:";
+            quantityLabel.Location = new Point(300, 60);
+            quantityLabel.Size = new Size(60, 20);
+            this.Controls.Add(quantityLabel);
 
-            Label hargaLabel = new Label();
-            hargaLabel.Text = "Harga:";
-            hargaLabel.Location = new Point(450, 60);
-            hargaLabel.Size = new Size(60, 20);
-            this.Controls.Add(hargaLabel);
+            Label priceLabel = new Label();                   // camelCase + English
+            priceLabel.Text = "Harga:";
+            priceLabel.Location = new Point(450, 60);
+            priceLabel.Size = new Size(60, 20);
+            this.Controls.Add(priceLabel);
 
-            // TextBoxes 
-            nama_produkTxtBox.Location = new Point(20, 85);
-            nama_produkTxtBox.Size = new Size(250, 25);
-            nama_produkTxtBox.TextChanged += nama_produkTxtBox_TextChanged;
-            this.Controls.Add(nama_produkTxtBox);
+            // TextBoxes configuration
+            productNameTextBox.Location = new Point(20, 85);
+            productNameTextBox.Size = new Size(250, 25);
+            productNameTextBox.TextChanged += productNameTextBox_TextChanged;
+            this.Controls.Add(productNameTextBox);
 
-            jumlahTxtBox.Location = new Point(300, 85);
-            jumlahTxtBox.Size = new Size(80, 25);
-            jumlahTxtBox.TextChanged += jumlahTxtBox_TextChanged;
-            this.Controls.Add(jumlahTxtBox);
+            quantityTextBox.Location = new Point(300, 85);
+            quantityTextBox.Size = new Size(80, 25);
+            quantityTextBox.TextChanged += quantityTextBox_TextChanged;
+            this.Controls.Add(quantityTextBox);
 
-            hargaTxtBox.Location = new Point(450, 85);
-            hargaTxtBox.Size = new Size(120, 25);
-            hargaTxtBox.TextChanged += hargaTxtBox_TextChanged;
-            this.Controls.Add(hargaTxtBox);
+            priceTextBox.Location = new Point(450, 85);
+            priceTextBox.Size = new Size(120, 25);
+            priceTextBox.TextChanged += priceTextBox_TextChanged;
+            this.Controls.Add(priceTextBox);
 
-            // Add Button
-            tambah_ke_keranjangBTN.Text = "Tambah ke Keranjang";
-            tambah_ke_keranjangBTN.Location = new Point(600, 83);
-            tambah_ke_keranjangBTN.Size = new Size(150, 30);
-            tambah_ke_keranjangBTN.BackColor = Color.Blue;
-            tambah_ke_keranjangBTN.ForeColor = Color.White;
-            tambah_ke_keranjangBTN.Click += tambah_ke_keranjangBTN_Click;
-            this.Controls.Add(tambah_ke_keranjangBTN);
+            // Add Button configuration
+            addToCartButton.Text = "Tambah ke Keranjang";
+            addToCartButton.Location = new Point(600, 83);
+            addToCartButton.Size = new Size(150, 30);
+            addToCartButton.BackColor = Color.Blue;
+            addToCartButton.ForeColor = Color.White;
+            addToCartButton.Click += addToCartButton_Click;
+            this.Controls.Add(addToCartButton);
         }
 
+        /// <summary>
+        /// Membuat section keranjang belanja dengan DataGridView dan tombol clear
+        /// </summary>
         private void CreateCartSection()
         {
-            Label cartLabel = new Label();
+            Label cartLabel = new Label();                    // camelCase + English
             cartLabel.Text = "Keranjang Belanja:";
             cartLabel.Font = new Font("Arial", 12, FontStyle.Bold);
             cartLabel.Location = new Point(20, 130);
             cartLabel.Size = new Size(200, 25);
             this.Controls.Add(cartLabel);
 
-            // Setup DataGridView
-            keranjangDGV.Location = new Point(20, 160);
-            keranjangDGV.Size = new Size(840, 200);
-            keranjangDGV.ReadOnly = true;
-            keranjangDGV.AllowUserToAddRows = false;
-            keranjangDGV.AllowUserToDeleteRows = false;
-            keranjangDGV.BackgroundColor = Color.LightGray;
-            keranjangDGV.BorderStyle = BorderStyle.Fixed3D;
-            keranjangDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            keranjangDGV.AutoGenerateColumns = true;
-            keranjangDGV.CellContentClick += keranjangDGV_CellContentClick;
-            this.Controls.Add(keranjangDGV);
+            // DataGridView setup
+            cartDataGridView.Location = new Point(20, 160);
+            cartDataGridView.Size = new Size(840, 200);
+            cartDataGridView.ReadOnly = true;
+            cartDataGridView.AllowUserToAddRows = false;
+            cartDataGridView.AllowUserToDeleteRows = false;
+            cartDataGridView.BackgroundColor = Color.LightGray;
+            cartDataGridView.BorderStyle = BorderStyle.Fixed3D;
+            cartDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            cartDataGridView.AutoGenerateColumns = true;
+            cartDataGridView.CellContentClick += cartDataGridView_CellContentClick;
+            this.Controls.Add(cartDataGridView);
 
             // Total label
             totalLabel.Text = "Total: Rp 0";
@@ -254,20 +287,23 @@ namespace SpareHub
             totalLabel.TextAlign = ContentAlignment.MiddleRight;
             this.Controls.Add(totalLabel);
 
-            // Clear button
-            clearBTN.Text = "Kosongkan Keranjang";
-            clearBTN.Location = new Point(20, 370);
-            clearBTN.Size = new Size(150, 30);
-            clearBTN.BackColor = Color.Blue;
-            clearBTN.ForeColor = Color.White;
-            clearBTN.FlatStyle = FlatStyle.Flat;
-            clearBTN.Click += clearBTN_Click;
-            this.Controls.Add(clearBTN);
+            // Clear button configuration
+            clearCartButton.Text = "Kosongkan Keranjang";
+            clearCartButton.Location = new Point(20, 370);
+            clearCartButton.Size = new Size(150, 30);
+            clearCartButton.BackColor = Color.Blue;
+            clearCartButton.ForeColor = Color.White;
+            clearCartButton.FlatStyle = FlatStyle.Flat;
+            clearCartButton.Click += clearCartButton_Click;
+            this.Controls.Add(clearCartButton);
         }
 
+        /// <summary>
+        /// Membuat section pembayaran dengan ComboBox metode dan tombol checkout
+        /// </summary>
         private void CreatePaymentSection()
         {
-            Label paymentLabel = new Label();
+            Label paymentLabel = new Label();                 // camelCase
             paymentLabel.Text = "Metode Pembayaran:";
             paymentLabel.Location = new Point(20, 420);
             paymentLabel.Size = new Size(130, 20);
@@ -279,17 +315,37 @@ namespace SpareHub
             paymentComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             this.Controls.Add(paymentComboBox);
 
-            // Checkout button
-            checkoutBTN.Text = "Proses Pesanan";
-            checkoutBTN.Location = new Point(350, 415);
-            checkoutBTN.Size = new Size(120, 30);
-            checkoutBTN.BackColor = Color.Blue;
-            checkoutBTN.ForeColor = Color.White;
-            checkoutBTN.FlatStyle = FlatStyle.Flat;
-            checkoutBTN.Click += checkoutBTN_Click;
-            this.Controls.Add(checkoutBTN);
+            // Checkout button configuration
+            checkoutButton.Text = "Proses Pesanan";
+            checkoutButton.Location = new Point(350, 415);
+            checkoutButton.Size = new Size(120, 30);
+            checkoutButton.BackColor = Color.Blue;
+            checkoutButton.ForeColor = Color.White;
+            checkoutButton.FlatStyle = FlatStyle.Flat;
+            checkoutButton.Click += checkoutButton_Click;
+            this.Controls.Add(checkoutButton);
         }
 
+        /// <summary>
+        /// Membuat section navigasi dengan tombol kembali ke main menu
+        /// </summary>
+        private void CreateNavigationSection()
+        {
+            // Back to main menu button - positioned at top right corner
+            backToMainMenuButton.Text = "Kembali ke Menu";
+            backToMainMenuButton.Location = new Point(730, 15);
+            backToMainMenuButton.Size = new Size(140, 35);
+            backToMainMenuButton.BackColor = Color.Gray;
+            backToMainMenuButton.ForeColor = Color.White;
+            backToMainMenuButton.FlatStyle = FlatStyle.Flat;
+            backToMainMenuButton.Font = new Font("Arial", 9, FontStyle.Bold);
+            backToMainMenuButton.Click += backToMainMenuButton_Click;
+            this.Controls.Add(backToMainMenuButton);
+        }
+
+        /// <summary>
+        /// Membuat section status untuk menampilkan informasi sistem
+        /// </summary>
         private void CreateStatusSection()
         {
             // Status label
@@ -303,6 +359,9 @@ namespace SpareHub
             this.Controls.Add(statusLabel);
         }
 
+        /// <summary>
+        /// Setup form dengan data dan event handlers
+        /// </summary>
         private void SetupForm()
         {
             // Load payment methods
@@ -314,13 +373,19 @@ namespace SpareHub
             order.OnCartUpdated += OnCartUpdated;
         }
 
+        /// <summary>
+        /// Load data keranjang ke DataGridView dan update total
+        /// </summary>
         private void LoadCartToGrid()
         {
             var cart = order.LoadCart();
-            keranjangDGV.DataSource = cart;
+            cartDataGridView.DataSource = cart;
             UpdateTotal();
         }
 
+        /// <summary>
+        /// Update label total berdasarkan isi keranjang
+        /// </summary>
         private void UpdateTotal()
         {
             var cart = order.LoadCart();
@@ -332,41 +397,66 @@ namespace SpareHub
             totalLabel.Text = $"Total: Rp {total:N0}";
         }
 
+        /// <summary>
+        /// Update status label dengan pesan baru
+        /// </summary>
+        /// <param name="message">Pesan status yang akan ditampilkan</param>
         private void UpdateStatus(string message)
         {
             statusLabel.Text = message;
         }
 
+        /// <summary>
+        /// Event handler ketika keranjang diupdate dari Order class
+        /// </summary>
+        /// <param name="cart">List item dalam keranjang yang telah diupdate</param>
         private void OnCartUpdated(List<CartItem> cart)
         {
             LoadCartToGrid();
         }
 
-        private void nama_produkTxtBox_TextChanged(object sender, EventArgs e)
+        // Event handlers: methodName_EventType pattern
+        /// <summary>
+        /// Event handler untuk perubahan text di nama produk
+        /// </summary>
+        private void productNameTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void jumlahTxtBox_TextChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Event handler untuk perubahan text di jumlah
+        /// </summary>
+        private void quantityTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void hargaTxtBox_TextChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Event handler untuk perubahan text di harga
+        /// </summary>
+        private void priceTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void keranjangDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        /// <summary>
+        /// Event handler untuk click di cell DataGridView keranjang
+        /// </summary>
+        private void cartDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void tambah_ke_keranjangBTN_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Event handler untuk tombol tambah ke keranjang
+        /// Validasi input dan menambahkan produk ke keranjang
+        /// </summary>
+        private void addToCartButton_Click(object sender, EventArgs e)
         {
             try
             {
-                string nama = nama_produkTxtBox.Text.Trim();
+                string nama = productNameTextBox.Text.Trim();
 
                 if (string.IsNullOrEmpty(nama))
                 {
@@ -374,18 +464,18 @@ namespace SpareHub
                     return;
                 }
 
-                int jumlah = int.Parse(jumlahTxtBox.Text);
-                decimal harga = decimal.Parse(hargaTxtBox.Text);
+                int jumlah = int.Parse(quantityTextBox.Text);
+                decimal harga = decimal.Parse(priceTextBox.Text);
 
                 if (order.AddToCart(nama, jumlah, harga, out string error))
                 {
                     MessageBox.Show("Produk berhasil ditambahkan!");
 
-                    // Clear input
-                    nama_produkTxtBox.Clear();
-                    jumlahTxtBox.Clear();
-                    hargaTxtBox.Clear();
-                    nama_produkTxtBox.Focus();
+                    // Clear input fields
+                    productNameTextBox.Clear();
+                    quantityTextBox.Clear();
+                    priceTextBox.Clear();
+                    productNameTextBox.Focus();
 
                     LoadCartToGrid();
                 }
@@ -400,7 +490,11 @@ namespace SpareHub
             }
         }
 
-        private void checkoutBTN_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Event handler untuk tombol checkout
+        /// Memproses pesanan dengan metode pembayaran yang dipilih
+        /// </summary>
+        private void checkoutButton_Click(object sender, EventArgs e)
         {
             var cart = order.LoadCart();
             if (cart.Count == 0)
@@ -428,7 +522,11 @@ namespace SpareHub
             }
         }
 
-        private void clearBTN_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Event handler untuk tombol kosongkan keranjang
+        /// Menghapus semua item dari keranjang setelah konfirmasi
+        /// </summary>
+        private void clearCartButton_Click(object sender, EventArgs e)
         {
             if (order.LoadCart().Count == 0)
             {
@@ -447,16 +545,54 @@ namespace SpareHub
             }
         }
 
+        /// <summary>
+        /// Event handler untuk tombol kembali ke main menu
+        /// Menutup form sistem pemesanan dan kembali ke menu utama
+        /// </summary>
+        private void backToMainMenuButton_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Kembali ke menu utama?", "Konfirmasi",
+                                       MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Clear keranjang jika ada isinya sebelum keluar
+                if (order.LoadCart().Count > 0)
+                {
+                    var clearCart = MessageBox.Show("Kosongkan keranjang sebelum keluar?", "Konfirmasi",
+                                                   MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (clearCart == DialogResult.Yes)
+                    {
+                        order.ClearCart();
+                    }
+                }
+
+                this.Close();
+                
+            }
+        }
+
+        // Public methods: PascalCase
+        /// <summary>
+        /// Mendapatkan data keranjang saat ini
+        /// </summary>
+        /// <returns>List item dalam keranjang</returns>
         public List<CartItem> GetCurrentCart()
         {
             return order.LoadCart();
         }
 
+        /// <summary>
+        /// Menambahkan produk dari external source ke form input
+        /// </summary>
+        /// <param name="productName">Nama produk yang akan ditambahkan</param>
+        /// <param name="price">Harga produk</param>
+        /// <returns>True jika berhasil, false jika gagal</returns>
         public bool AddProductFromExternal(string productName, decimal price)
         {
-            nama_produkTxtBox.Text = productName;
-            hargaTxtBox.Text = price.ToString();
-            jumlahTxtBox.Focus();
+            productNameTextBox.Text = productName;
+            priceTextBox.Text = price.ToString();
+            quantityTextBox.Focus();
             return true;
         }
     }
