@@ -13,7 +13,7 @@ namespace Customerservis.Controller
     public class CustomerServiceController : ControllerBase
     {
         // List statis untuk menyimpan pesan-pesan yang masuk
-        private static readonly List<Pesan> _PesanMasuk = new List<Pesan>();
+        private readonly List<Pesan> _PesanMasuk = new List<Pesan>();
 
         /// <summary>
         /// Mengambil seluruh pesan yang telah dikirim.
