@@ -1,0 +1,18 @@
+[
+  {
+    "OrderId": "SPH20250616164519",
+    "Items": [
+      {
+        "ProductId": "e6ff27df-c083-4e58-a7e2-c07a50ed2c5b",
+        "ProductName": "Lampu",
+        "Quantity": 1,
+        "Price": 200000
+      }
+    ],
+    "PaymentMethod": "Transfer",
+    "ShippingMethod": "gosend",
+    "Total": 200000,
+    "Status": "Sedang Diproses",
+    "OrderDate": "2025-06-16T16:45:19.599521+07:00"
+  }
+]

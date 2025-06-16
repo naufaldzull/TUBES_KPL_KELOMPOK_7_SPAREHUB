@@ -1,0 +1,7 @@
+{
+  "payment": "e-wallet",
+  "shipping": "gosend",
+  "language": "id",
+  "discount": "0",
+  "payment_method": "Transfer"
+}
