@@ -89,6 +89,22 @@
     "ShippingMethod": "gosend",
     "Total": 977047364716,
     "Status": "Sedang Diproses",
-    "OrderDate": "2025-06-16T13:42:31.3085671+07:00"
+    "OrderDate": "2025-06-16T13:42:31.3085671\u002B07:00"
+  },
+  {
+    "OrderId": "SPH20250616142916",
+    "Items": [
+      {
+        "ProductId": "48762e99-ce45-4b00-ba21-442e93aa81c6",
+        "ProductName": "akshdkajsh",
+        "Quantity": 1,
+        "Price": 23874324
+      }
+    ],
+    "PaymentMethod": "Kartu Kredit",
+    "ShippingMethod": "gosend",
+    "Total": 23874324,
+    "Status": "Sedang Diproses",
+    "OrderDate": "2025-06-16T14:29:16.5334643+07:00"
   }
 ]

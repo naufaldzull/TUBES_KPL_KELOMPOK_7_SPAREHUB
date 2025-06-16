@@ -342,7 +342,6 @@ namespace SpareHub
             LoadCartToGrid();
         }
 
-        // Event handlers - keep original lu
         private void nama_produkTxtBox_TextChanged(object sender, EventArgs e)
         {
 
