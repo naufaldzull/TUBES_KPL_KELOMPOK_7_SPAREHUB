@@ -32,7 +32,10 @@ namespace SpareHub
 
         private void btnUlasanRating_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Fitur \"Ulasan & Rating\" diklik!");
+            UlasanDanRatingProdukForm ulasanDanRatingProdukForm = new UlasanDanRatingProdukForm();
+            this.Hide();
+            ulasanDanRatingProdukForm.ShowDialog();
+            this.Show();
         }
 
         private void btnWishlist_Click(object sender, EventArgs e)
